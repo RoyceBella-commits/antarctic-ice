@@ -1,0 +1,186 @@
+<!--
+title: 社区
+description: Antarctic 社区：Disc-cold 社群、冰钓 Meetup、年度大会 ColdConf、社区作品展与社区守则。保持冷静，不要往别人的冰里倒热水。
+nav:
+-->
+<!--head--><style>
+.cm-hub .x-card { min-height: 100%; }
+.cm-hub .x-num { display: flex; align-items: center; gap: 10px; }
+.cm-hub .x-btn { margin-top: auto; align-self: flex-start; border: 0; cursor: pointer; }
+.cm-hub .x-card p:last-of-type { margin-bottom: 28px; }
+.cm-hub__count { font: 400 13px/1 var(--x-mono); color: var(--x-ink-3); margin-top: 16px; }
+.cm-event { display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; gap: 8px 28px; align-items: center; padding: 24px 0; }
+.cm-event__date { text-align: center; padding: 10px 0; border: 1px solid var(--x-line-2); border-radius: 12px; background: var(--x-card); }
+.cm-event__date b { display: block; font: 500 28px/1 var(--x-serif); color: var(--x-ink); }
+.cm-event__date span { display: block; margin-top: 4px; font-size: 12px; color: var(--x-ink-3); }
+.cm-event .x-btn { min-height: 40px; padding: 0 16px; font-size: 14px; border: 1px solid var(--x-line-2); cursor: pointer; }
+@media (max-width: 600px) { .cm-event { grid-template-columns: 72px minmax(0, 1fr); } .cm-event .x-btn { grid-column: 2; justify-self: start; } }
+.cm-show .x-paper__art { display: grid; place-items: center; padding: 16px; }
+.cm-haiku { font: 400 15px/1.9 var(--x-serif); color: var(--x-ink); text-align: center; background: rgba(255,255,255,0.7); padding: 12px 18px; border-radius: 10px; position: relative; }
+.cm-topic .x-row { width: 100%; text-align: left; background: none; border: 0; cursor: pointer; font: inherit; color: inherit; }
+.cm-topic .x-row::after { content: "→"; grid-column: 2; grid-row: 1 / span 2; color: var(--x-ink-3); }
+.cm-topic .x-row:hover .x-row__title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.cm-rules { counter-reset: cm; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
+.cm-rules li { counter-increment: cm; padding: 22px 0 22px 52px; position: relative; border-top: 1px solid rgba(255,255,255,0.12); }
+.cm-rules li::before { content: counter(cm, decimal-leading-zero); position: absolute; left: 0; top: 24px; font: 400 13px/1 var(--x-mono); color: #8FB0CC; }
+.cm-rules b { display: block; font: 500 18px/1.45 var(--x-serif); color: #fff; }
+.cm-rules span { display: block; margin-top: 6px; font-size: 15px; color: #A9B7C3; }
+@media (max-width: 760px) { .cm-rules { grid-template-columns: 1fr; } }
+</style><!--/head-->
+<section class="x-phero">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="{{root}}index.html">首页</a></li><li>社区</li></ol>
+    <p class="x-eyebrow">Antarctic 社区</p>
+    <h1 class="x-h1">一群冷静的人，<br />和更多的狗。</h1>
+    <p class="x-lead">全球 48,000 位开发者、雪橇手、马具爱好者和至少 300 只会自己按键盘的哈士奇，在这里交流 Colding 心得、分享冰雕作品，偶尔一起去凿个冰洞钓鱼。</p>
+    <div class="x-phero__btns">
+      <button class="x-btn x-btn--dark" type="button" style="border:0;cursor:pointer" data-toast="欢迎加入 Disc-cold。请先在 #自我介绍 频道说出你的最低耐受温度。">加入 Disc-cold</button>
+      <a class="x-btn x-btn--ghost" href="#events">近期活动</a>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">社区入口</p>
+      <h2 class="x-h2">三种方式，<br />找到你的冰友。</h2>
+    </div>
+    <div class="x-cards3 x-mt0 cm-hub">
+      <article class="x-card x-fade">
+        <p class="x-num">01 · 线上</p>
+        <h3 class="x-h3">Disc-cold 社群</h3>
+        <p>全天候在线的冷静聊天室。频道包括 #colding-求助、#哈士奇日常、#马具晒单 和 #不要发火锅照片。</p>
+        <p class="cm-hub__count">48,212 位成员 · 3,904 人在线</p>
+        <button class="x-btn x-btn--dark" type="button" data-toast="已为你预留一个位置。请注意：#不要发火锅照片 频道是认真的。">加入 Disc-cold</button>
+      </article>
+      <article class="x-card x-fade">
+        <p class="x-num">02 · 线下</p>
+        <h3 class="x-h3">冰钓 Meetup</h3>
+        <p>每月一次，在城市附近的冰湖上凿一个洞，坐下来，安静地讨论推理延迟。钓不到鱼是常态，钓到灵感也算。</p>
+        <p class="cm-hub__count">已覆盖 37 座城市 · 冰层 ≥ 15 cm 才开放</p>
+        <button class="x-btn x-btn--dark" type="button" data-toast="报名成功。请带好冰镐、保温杯和一颗不急的心。">报名下一场</button>
+      </article>
+      <article class="x-card x-fade">
+        <p class="x-num">03 · 年度</p>
+        <h3 class="x-h3">ColdConf 2027</h3>
+        <p>年度开发者大会，在一座真正的冰屋酒店里举行。主题演讲、动手工作坊与哈士奇见面会。演讲者请勿站在原地超过十分钟。</p>
+        <p class="cm-hub__count">2027 年 2 月 · 地点：一座冰屋（具体待冻）</p>
+        <button class="x-btn x-btn--dark" type="button" data-toast="早鸟票已锁定。门票是一块刻了二维码的冰，请冷藏保存。">预约早鸟票</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint" id="events">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">近期活动</p>
+      <h2 class="x-h2">接下来的冷事</h2>
+    </div>
+    <ul class="x-rows x-fade">
+      <li><div class="cm-event"><div class="cm-event__date"><b>28</b><span>11 月</span></div><div><p class="x-row__title">冰钓 Meetup · 第 42 期：用 Cold Hail-ku 给鱼起名</p><p class="x-row__meta"><span>线下 · 某城郊冰湖</span><span>冰层厚度：待测</span></p></div><button class="x-btn x-btn--ghost" type="button" data-toast="已报名。若冰层不足 15 cm，活动将改为“在岸边看冰”。">报名</button></div></li>
+      <li><div class="cm-event"><div class="cm-event__date"><b>05</b><span>12 月</span></div><div><p class="x-row__title">线上工作坊：从零开始写一个 Mush 指令协议服务器</p><p class="x-row__meta"><span>线上直播</span><span>讲师：驯犬工程师团队</span></p></div><button class="x-btn x-btn--ghost" type="button" data-toast="已预约。直播开始前 10 分钟，会有一只哈士奇来提醒你。">预约</button></div></li>
+      <li><div class="cm-event"><div class="cm-event__date"><b>12</b><span>12 月</span></div><div><p class="x-row__title">马具晒单大会：今年你给谁系了背带？</p><p class="x-row__meta"><span>线上 · Disc-cold #马具晒单</span><span>评委：首席对齐官</span></p></div><button class="x-btn x-btn--ghost" type="button" data-toast="已报名。人类背带晒单请注意打码同事的脸。">报名</button></div></li>
+      <li><div class="cm-event"><div class="cm-event__date"><b>21</b><span>12 月</span></div><div><p class="x-row__title">冬至特别活动：一年中最长的夜，一起冷静地写代码</p><p class="x-row__meta"><span>线上 + 线下（南极站点直播）</span><span>南极此时是夏天，直播间会很亮</span></p></div><button class="x-btn x-btn--ghost" type="button" data-toast="已加入。南极此时是极昼，请自备眼罩。">加入</button></div></li>
+      <li><div class="cm-event"><div class="cm-event__date"><b>14</b><span>2 月</span></div><div><p class="x-row__title">ColdConf 2027 · 冰屋酒店</p><p class="x-row__meta"><span>两天 · 主题演讲 + 工作坊 + 哈士奇见面会</span><span>情人节当天，请勿携带巧克力（狗不能吃）</span></p></div><button class="x-btn x-btn--ghost" type="button" data-toast="早鸟票已锁定。房间温度 −5°C，睡袋由主办方提供。">预约</button></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="x-sec">
+  <div class="x-wrap">
+    <div class="x-head-row x-fade" style="margin-bottom:48px">
+      <div><p class="x-eyebrow">社区作品</p><h2 class="x-h2">冰雕展</h2></div>
+      <button class="x-textlink" type="button" style="background:none;border:0;border-bottom:1px solid var(--x-line-2);cursor:pointer;padding:0 0 2px" data-toast="投稿通道已打开。作品请冷冻后提交，融化的不收。">提交你的作品 →</button>
+    </div>
+    <div class="x-cards3 x-mt0 cm-show">
+      <article class="x-card x-paper x-fade">
+        <div class="x-paper__art"><p class="cm-haiku" id="cm-haiku">冰箱门开了<br />冷气奔向我的脸<br />忘了拿什么</p></div>
+        <p class="x-paper__meta">作者 @冻梨 · 基于 Cold Hail-ku</p>
+        <h3 class="x-h3">冰箱贴俳句生成器</h3>
+        <p>每次打开都生成一首 5-7-5 的冰箱贴俳句。已被 2 万户家庭贴在冰箱门上。</p>
+        <button class="x-textlink" type="button" id="cm-haiku-btn" style="background:none;border:0;border-bottom:1px solid var(--x-line-2);cursor:pointer;padding:0 0 2px;margin-top:16px;align-self:flex-start">再来一首 →</button>
+      </article>
+      <article class="x-card x-paper x-fade">
+        <div class="x-paper__art" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#0E1A24" stroke-opacity=".35" stroke-width=".8"><path d="M20 80h120"/><path d="M30 80c10-30 30-50 50-50s40 20 50 50"/><path d="M80 30v50M55 42l50 26M105 42L55 68"/><circle cx="80" cy="30" r="3"/></svg></div>
+        <p class="x-paper__meta">作者 @北纬66 · 基于 Cold Floe</p>
+        <h3 class="x-h3">雪橇路线冷静规划器</h3>
+        <p>输入起点和终点，输出一条“全程不经过松鼠出没区”的路线。哈士奇偏航率降低 64%。</p>
+      </article>
+      <article class="x-card x-paper x-fade">
+        <div class="x-paper__art" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width=".8"><rect x="50" y="20" width="60" height="60" rx="4"/><path d="M60 34h40M60 46h28M60 58h34M60 70h20"/><path d="M118 30l10-6M120 50h12M118 70l10 6"/></svg></div>
+        <p class="x-paper__meta">作者 @马厩里的程序员 · 基于 Cold Sleet</p>
+        <h3 class="x-h3">马语翻译插件</h3>
+        <p>把马的鼻息声翻译成文字。目前能稳定识别的词汇只有“胡萝卜”和“不”，但准确率 100%。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">论坛热帖</p>
+      <h2 class="x-h2">大家正在冷静地讨论</h2>
+    </div>
+    <ul class="x-rows cm-topic x-fade">
+      <li><button class="x-row" type="button" data-toast="该帖已被锁定：楼主在 #不要发火锅照片 频道发了火锅照片。"><span class="x-row__title">为什么我的哈士奇 Agent 总往左跑？已经试过重启了</span><span class="x-row__meta"><span>#colding-求助</span><span>412 条回复</span><span>精华</span></span></button></li>
+      <li><button class="x-row" type="button" data-toast="最佳答案：别吃。"><span class="x-row__title">冰块计费：化掉的冰真的不收钱吗？我把冰放在暖气上测了一下</span><span class="x-row__meta"><span>#计费</span><span>288 条回复</span><span>官方已回复</span></span></button></li>
+      <li><button class="x-row" type="button" data-toast="楼主更新：已换成 Harness for Humans，同事表示很安心。"><span class="x-row__title">开放式办公室里，人类背带系太紧会不会影响写代码？</span><span class="x-row__meta"><span>#马具晒单</span><span>176 条回复</span></span></button></li>
+      <li><button class="x-row" type="button" data-toast="Cold Hail-ku 回复：长度刚刚好 / 再多一字就会化 / 这就是俳句"><span class="x-row__title">Cold Hail-ku 只用 5-7-5 回复我，这正常吗？</span><span class="x-row__meta"><span>#模型</span><span>903 条回复</span><span>热门</span></span></button></li>
+      <li><button class="x-row" type="button" data-toast="此帖已移至 #不要发火锅照片。"><span class="x-row__title">【讨论】冷启动到底是 bug 还是 feature</span><span class="x-row__meta"><span>#哲学</span><span>1,204 条回复</span><span>已冻结</span></span></button></li>
+    </ul>
+  </div>
+</section>
+
+<section class="x-sec x-dark">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">社区守则</p>
+      <h2 class="x-h2">六条守则，<br />请在发帖前读完。</h2>
+      <p class="x-lead">违反守则的成员将被暂时冷冻（禁言），时长视情节而定，最长一个冰期。</p>
+    </div>
+    <ol class="cm-rules x-fade">
+      <li><b>保持冷静</b><span>讨论可以激烈，体温不可以。感觉自己要上头时，请先去冰箱前站一会儿。</span></li>
+      <li><b>不要往别人的冰里倒热水</b><span>包括但不限于：提示词注入、阴阳怪气、以及字面意义上的热水。</span></li>
+      <li><b>对狗好</b><span>社区里有很多狗，有些会自己发帖。请包容它们的错别字，它们是用鼻子打的。</span></li>
+      <li><b>不要剧透冰芯</b><span>80 万年的气候数据请标注剧透。有人还没读到间冰期。</span></li>
+      <li><b>禁止发布火锅照片</b><span>除非在 #不要发火锅照片 频道——不，在那里也不行。</span></li>
+      <li><b>系好 Harness</b><span>分享 Agent 作品前，请确认它已经系好背带。没系背带的 Agent 会被管理员牵回去。</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="x-dark x-close" style="border-top:1px solid rgba(255,255,255,0.08)">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">来吧，冰面已经够厚了。</h2>
+    <div class="x-close__btns x-fade">
+      <button class="x-btn x-btn--light" type="button" style="border:0;cursor:pointer" data-toast="欢迎加入 Disc-cold。请先在 #自我介绍 频道说出你的最低耐受温度。">加入 Disc-cold</button>
+      <a class="x-btn x-btn--line-light" href="{{root}}docs.html">阅读文档</a>
+    </div>
+  </div>
+</section>
+<!--scripts-->
+<script>
+(function () {
+  var poems = [
+    ["冰箱门开了", "冷气奔向我的脸", "忘了拿什么"],
+    ["哈士奇向左", "雪橇也只好向左", "终点在右边"],
+    ["冰块在杯中", "慢慢说出它的话", "叮当，然后化"],
+    ["冷启动很慢", "可是它从不发热", "我愿意等它"],
+    ["背带系好了", "马说今天不想跑", "那就明天吧"],
+    ["一块万年冰", "放进我的咖啡里", "回甘八十万"],
+    ["上下文很深", "三千二百米冰芯", "它全都记得"],
+    ["柯基在奔跑", "看起来非常努力", "其实没动过"]
+  ];
+  var box = document.getElementById("cm-haiku"), btn = document.getElementById("cm-haiku-btn"), i = 0;
+  if (!box || !btn) return;
+  btn.addEventListener("click", function () {
+    var n;
+    do { n = Math.floor(Math.random() * poems.length); } while (n === i && poems.length > 1);
+    i = n;
+    box.innerHTML = poems[i].join("<br />");
+  });
+})();
+</script>

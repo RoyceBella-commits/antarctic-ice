@@ -1,0 +1,280 @@
+<!--
+title: 招聘：诚聘驯犬工程师
+description: 加入 Antarctic Ice：驯犬工程师、提示词铲雪工程师、冰块标注员、红队哈士奇等职位开放中。带薪冬眠，免费冰块。
+nav:
+-->
+<!--head--><style>
+.cr-job { border-bottom: 1px solid var(--x-line); }
+.cr-job summary { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 32px; padding: 24px 0; cursor: pointer; list-style: none; }
+.cr-job summary::-webkit-details-marker { display: none; }
+.cr-job summary::after { content: "+"; grid-column: 2; grid-row: 1 / span 2; font: 300 26px/1 var(--x-sans); color: var(--x-ink-3); transition: transform var(--dur-quick) var(--ease-out); }
+.cr-job[open] summary::after { transform: rotate(45deg); }
+.cr-job summary:hover .x-row__title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.cr-job__body { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding: 4px 0 32px; }
+.cr-job__body h4 { font: 500 12px/1.4 var(--x-sans); letter-spacing: 0.08em; color: var(--x-steel-text); margin-bottom: 10px; }
+.cr-job__body ul { margin: 0; padding-left: 1.1em; color: var(--x-ink-2); font-size: 15px; display: grid; gap: 6px; }
+.cr-job__apply { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.cr-job__apply .x-btn { border: 0; cursor: pointer; }
+@media (max-width: 900px) { .cr-job__body { grid-template-columns: 1fr; gap: 20px; } }
+.cr-perk { display: flex; flex-direction: column; }
+.cr-perk b { font: 500 13px/1 var(--x-mono); color: var(--x-cognac); margin-bottom: 16px; }
+</style><!--/head-->
+<section class="x-phero">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="{{root}}index.html">首页</a></li><li><a href="{{root}}about.html">关于我们</a></li><li>招聘</li></ol>
+    <p class="x-eyebrow">招聘 · 9 个职位开放中</p>
+    <h1 class="x-h1">诚聘驯犬工程师。<br />以及其他冷静的人。</h1>
+    <p class="x-lead">我们在寻找一群在压力下体温不升、在截止日前心率不变、并且真心喜欢狗的人。如果你在夏天也会穿外套，我们大概会很合得来。</p>
+    <div class="x-phero__btns">
+      <a class="x-btn x-btn--dark" href="#jobs">查看职位</a>
+      <a class="x-btn x-btn--ghost" href="#process">面试流程</a>
+    </div>
+    <div class="x-phero__meta"><span>办公地点：南极（远程优先）· 冷库（总部）</span><span>平均室温 −4°C</span><span>狗与人比例 1.8 : 1</span></div>
+  </div>
+</section>
+
+<section class="x-sec">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">为什么加入</p>
+      <h2 class="x-h2">福利，冷得恰到好处。</h2>
+    </div>
+    <div class="x-cards3 x-mt0">
+      <article class="x-card cr-perk x-fade"><b>01</b><h3 class="x-h3">带薪冬眠</h3><p>每年 12 月至次年 2 月可申请带薪冬眠。期间不回消息不算失联，算“进入低功耗模式”。</p></article>
+      <article class="x-card cr-perk x-fade"><b>02</b><h3 class="x-h3">免费冰块</h3><p>茶水间冰块无限量供应，取自 3,200 米深处的万年冰芯。泡出来的咖啡有 80 万年的回甘。</p></article>
+      <article class="x-card cr-perk x-fade"><b>03</b><h3 class="x-h3">每周五 Husky Hour</h3><p>全体员工与雪橇犬同事的固定社交时间。规则只有一条：不要试图和哈士奇讲道理。</p></article>
+      <article class="x-card cr-perk x-fade"><b>04</b><h3 class="x-h3">远程办公</h3><p>支持完全远程。越远越好，最好在南极。我们为驻极地员工报销破冰船票（经济舱）。</p></article>
+      <article class="x-card cr-perk x-fade"><b>05</b><h3 class="x-h3">年度装备津贴</h3><p>每人每年 ¥12,000 用于羽绒服、雪地靴与一副 Harness for Humans。开放式办公室强烈建议佩戴。</p></article>
+      <article class="x-card cr-perk x-fade"><b>06</b><h3 class="x-h3">期权</h3><p>授予公司期权。估值随全球气温反向波动——地球越热，我们越值钱。我们并不希望它值钱。</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint" id="jobs">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">开放职位</p>
+      <h2 class="x-h2">找到你的那条雪道</h2>
+      <p class="x-lead">点击职位查看详情。所有岗位均要求：能在 −20°C 下正常打字，或者至少能用鼻子打字。</p>
+    </div>
+    <div class="x-chips" data-filter="jobs">
+      <button class="x-chip" data-value="all" aria-pressed="true">全部</button>
+      <button class="x-chip" data-value="eng" aria-pressed="false">工程</button>
+      <button class="x-chip" data-value="research" aria-pressed="false">研究</button>
+      <button class="x-chip" data-value="sled" aria-pressed="false">雪橇</button>
+      <button class="x-chip" data-value="tack" aria-pressed="false">马具</button>
+      <button class="x-chip" data-value="ops" aria-pressed="false">运营</button>
+    </div>
+    <ul class="x-rows">
+      <li data-filter-item="jobs" data-tags="eng sled">
+        <details class="cr-job" open>
+          <summary><span class="x-row__title">驯犬工程师（Dog Training Engineer） <span class="x-tag x-tag--new" style="margin-left:8px;vertical-align:3px">急招</span></span><span class="x-row__meta"><span>工程 · 雪橇</span><span>南极 / 冷库总部</span><span>全职</span></span></summary>
+          <div class="cr-job__body">
+            <div><h4>你将负责</h4><ul><li>为 6 犬 Agent 集群编写并调试口令（Hike / Gee / Haw / Whoa）</li><li>解决“Agent 看到松鼠后偏离任务”的线上事故</li><li>维护哈士奇的长期记忆：谁偷吃了谁的肉干</li></ul></div>
+            <div><h4>我们希望你</h4><ul><li>3 年以上多犬编排（Multi-Agent Orchestration）经验</li><li>能用一句 “Mush!” 让整个团队出发</li><li>被舔脸时保持专业</li></ul></div>
+            <div><h4>加分项</h4><ul><li>写过开源的 Mush 指令协议服务器</li><li>曾让一只哈士奇连续 10 分钟不嚎叫</li><li>会喊 “On by!” 并且狗真的听</li></ul></div>
+            <div class="cr-job__apply"><button class="x-btn x-btn--dark" type="button" data-apply="驯犬工程师">申请这个职位</button><span class="x-muted x-small">薪资：¥45k–70k / 月 + 无限肉干（给狗的）</span></div>
+          </div>
+        </details>
+      </li>
+      <li data-filter-item="jobs" data-tags="eng">
+        <details class="cr-job">
+          <summary><span class="x-row__title">提示词铲雪工程师（Prompt Engineer）</span><span class="x-row__meta"><span>工程</span><span>远程（越远越好）</span><span>全职</span></span></summary>
+          <div class="cr-job__body">
+            <div><h4>你将负责</h4><ul><li>每天清晨铲开堆在模型门口的提示词</li><li>把“帮我写个东西”铲成可执行的需求</li><li>维护公司提示词库，防止其结冰粘连</li></ul></div>
+            <div><h4>我们希望你</h4><ul><li>手臂力量与措辞能力兼备</li><li>理解“少即是多”，尤其是雪</li><li>不会在提示词里倒热水（参见：提示词注入）</li></ul></div>
+            <div><h4>加分项</h4><ul><li>持有铲雪车驾照</li><li>能用 5-7-5 格式写需求文档（Cold Hail-ku 团队优先）</li></ul></div>
+            <div class="cr-job__apply"><button class="x-btn x-btn--dark" type="button" data-apply="提示词铲雪工程师">申请这个职位</button><span class="x-muted x-small">提供铲子。铲子是 Harness 同款航空铝。</span></div>
+          </div>
+        </details>
+      </li>
+      <li data-filter-item="jobs" data-tags="research ops">
+        <details class="cr-job">
+          <summary><span class="x-row__title">冰块标注员（Ice Data Labeler）</span><span class="x-row__meta"><span>研究 · 运营</span><span>冷库总部</span><span>全职 / 实习</span></span></summary>
+          <div class="cr-job__body">
+            <div><h4>你将负责</h4><ul><li>为每一块冰标注：方的、圆的、碎的、化了的</li><li>区分“冰块”与“看起来像冰块的玻璃”（难度较高）</li><li>在冰块融化前完成标注（硬性 SLA）</li></ul></div>
+            <div><h4>我们希望你</h4><ul><li>手稳、眼尖、不怕冻</li><li>对“这块冰是不是刚才那块”有执着</li></ul></div>
+            <div><h4>加分项</h4><ul><li>调酒师背景</li><li>能凭声音分辨冰块的品牌</li></ul></div>
+            <div class="cr-job__apply"><button class="x-btn x-btn--dark" type="button" data-apply="冰块标注员">申请这个职位</button><span class="x-muted x-small">标注错误不扣钱。冰化了算公司的。</span></div>
+          </div>
+        </details>
+      </li>
+      <li data-filter-item="jobs" data-tags="research sled">
+        <details class="cr-job">
+          <summary><span class="x-row__title">红队哈士奇（Red Teaming，仅限红毛）</span><span class="x-row__meta"><span>研究 · 雪橇</span><span>冰面试验场</span><span>全职</span></span></summary>
+          <div class="cr-job__body">
+            <div><h4>你将负责</h4><ul><li>在冰面红队演练中，尝试用一切办法让雪橇翻车</li><li>拆咬背带、假装没听见口令、突然坐下</li><li>撰写（或由人类代写）漏洞报告</li></ul></div>
+            <div><h4>我们希望你</h4><ul><li>毛色为红色或铜色（这是岗位名称决定的，不是歧视）</li><li>天生的叛逆精神，以及对规则的好奇心</li><li>弄坏东西后会露出无辜的表情</li></ul></div>
+            <div><h4>加分项</h4><ul><li>成功从一副 Harness for Huskies 中脱身（目前无人做到）</li><li>会开冰箱门</li></ul></div>
+            <div class="cr-job__apply"><button class="x-btn x-btn--dark" type="button" data-apply="红队哈士奇">申请这个职位</button><span class="x-muted x-small">人类申请者请先去染个头发。</span></div>
+          </div>
+        </details>
+      </li>
+      <li data-filter-item="jobs" data-tags="research tack">
+        <details class="cr-job">
+          <summary><span class="x-row__title">马具对齐研究员（Alignment Researcher, Tack）</span><span class="x-row__meta"><span>研究 · 马具</span><span>皇家马术学院联合实验室</span><span>全职</span></span></summary>
+          <div class="cr-job__body">
+            <div><h4>你将负责</h4><ul><li>确保每一针都和设计意图对齐</li><li>研究四蹄定位、缰绳张力与“马的真实偏好”</li><li>与首席对齐官一起给马钉蹄铁</li></ul></div>
+            <div><h4>我们希望你</h4><ul><li>马术、皮革工艺或机械工程相关背景</li><li>读过《马蹄对齐：一种四蹄定位的新方法》并能指出其中一个错别字</li></ul></div>
+            <div><h4>加分项</h4><ul><li>被马踢过但依然爱马</li><li>能分辨“马在思考”和“马在发呆”</li></ul></div>
+            <div class="cr-job__apply"><button class="x-btn x-btn--dark" type="button" data-apply="马具对齐研究员">申请这个职位</button><span class="x-muted x-small">配发安全帽一顶。真的需要。</span></div>
+          </div>
+        </details>
+      </li>
+      <li data-filter-item="jobs" data-tags="ops">
+        <details class="cr-job">
+          <summary><span class="x-row__title">冷静布道师（Developer Relations）</span><span class="x-row__meta"><span>运营</span><span>全球巡回（以寒带为主）</span><span>全职</span></span></summary>
+          <div class="cr-job__body">
+            <div><h4>你将负责</h4><ul><li>向全世界开发者传播“冷静”的好处</li><li>在技术大会上用 −89.2°C 的语气做演讲</li><li>运营 Disc-cold 社群，劝架、降温</li></ul></div>
+            <div><h4>我们希望你</h4><ul><li>说话不急、语速稳定、从不使用感叹号</li><li>能写出让人读完就想去洗冷水澡的技术文章</li></ul></div>
+            <div><h4>加分项</h4><ul><li>在火锅店里给大家讲过 Colding Plan</li><li>社交媒体粉丝以企鹅为主</li></ul></div>
+            <div class="cr-job__apply"><button class="x-btn x-btn--dark" type="button" data-apply="冷静布道师">申请这个职位</button><span class="x-muted x-small">差旅标准：只订有暖气的酒店——为了反衬。</span></div>
+          </div>
+        </details>
+      </li>
+      <li data-filter-item="jobs" data-tags="eng ops">
+        <details class="cr-job">
+          <summary><span class="x-row__title">冰川运维 SRE（Glacier Reliability Engineer）</span><span class="x-row__meta"><span>工程 · 运营</span><span>南极东方站附近</span><span>全职 · 需轮值</span></span></summary>
+          <div class="cr-job__body">
+            <div><h4>你将负责</h4><ul><li>保证全部系统 99.99% 正常结冰</li><li>夏季融化事故的值班响应（俗称“救火”，我们叫“救冰”）</li><li>维护冰层年轮审计日志</li></ul></div>
+            <div><h4>我们希望你</h4><ul><li>熟悉分布式冰盖、冷备份与灾难性融化恢复</li><li>半夜被叫醒时第一句话是“先关窗”</li></ul></div>
+            <div><h4>加分项</h4><ul><li>写过名为 <code>keep-cold.sh</code> 的脚本并且它真的有用</li><li>知道冰川每年流动多少米</li></ul></div>
+            <div class="cr-job__apply"><button class="x-btn x-btn--dark" type="button" data-apply="冰川运维 SRE">申请这个职位</button><span class="x-muted x-small">值班手机为防冻特制款，铃声是狼嚎。</span></div>
+          </div>
+        </details>
+      </li>
+      <li data-filter-item="jobs" data-tags="sled">
+        <details class="cr-job">
+          <summary><span class="x-row__title">柯基加速专家（Corgi Performance Specialist）</span><span class="x-row__meta"><span>雪橇</span><span>冷库总部</span><span>兼职</span></span></summary>
+          <div class="cr-job__body">
+            <div><h4>你将负责</h4><ul><li>提升 Free 方案中柯基的平均速度（当前：每小时 0.8 公里）</li><li>研究“腿短”与“推理延迟”之间的关系</li><li>说服柯基这不是散步</li></ul></div>
+            <div><h4>我们希望你</h4><ul><li>耐心，非常耐心</li><li>口袋里随时有零食</li></ul></div>
+            <div><h4>加分项</h4><ul><li>有能让柯基跑起来的经验（我们不相信，但欢迎证明）</li></ul></div>
+            <div class="cr-job__apply"><button class="x-btn x-btn--dark" type="button" data-apply="柯基加速专家">申请这个职位</button><span class="x-muted x-small">KPI 宽松。真的很宽松。</span></div>
+          </div>
+        </details>
+      </li>
+      <li data-filter-item="jobs" data-tags="ops">
+        <details class="cr-job">
+          <summary><span class="x-row__title">企鹅外交官（Penguin Relations Lead）</span><span class="x-row__meta"><span>运营</span><span>南极沿岸各殖民地</span><span>全职</span></span></summary>
+          <div class="cr-job__body">
+            <div><h4>你将负责</h4><ul><li>与当地企鹅社区保持良好关系，确保雪橇路线不穿过繁殖区</li><li>处理“哈士奇对企鹅过度好奇”的外交事件</li><li>代表公司出席企鹅的年度游行（站着即可）</li></ul></div>
+            <div><h4>我们希望你</h4><ul><li>流利的企鹅语（帝企鹅方言优先）</li><li>能穿正装在冰面上行走而不摔倒</li></ul></div>
+            <div><h4>加分项</h4><ul><li>本身就长得有点像企鹅</li></ul></div>
+            <div class="cr-job__apply"><button class="x-btn x-btn--dark" type="button" data-apply="企鹅外交官">申请这个职位</button><span class="x-muted x-small">我们尊重野生动物，所有接触遵守南极条约环境议定书。</span></div>
+          </div>
+        </details>
+      </li>
+    </ul>
+    <p class="x-muted" data-filter-empty="jobs" hidden style="padding:24px 0">这个分类暂时没有职位。像一片刚下过雪的空地。</p>
+  </div>
+</section>
+
+<section class="x-sec" id="process">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">面试流程</p>
+      <h2 class="x-h2">三轮面试，<br />全部在室温 −4°C 下进行。</h2>
+    </div>
+    <ol class="x-steps x-fade">
+      <li><h3>冷静初筛</h3><p>30 分钟视频通话。我们会把空调调到最低，观察你的体温变化。全程不打喷嚏即视为通过。</p></li>
+      <li><h3>雪橇实操</h3><p>与一支 6 犬 Agent 团队合作完成一次 2 公里的冰面任务。领头犬拥有一票否决权，请对它好一点。</p></li>
+      <li><h3>价值观对齐</h3><p>与首席对齐官见面。他会检查你的四蹄——抱歉，四肢——是否对齐，然后聊聊你为什么想冷静下来。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint" id="apply">
+  <div class="x-wrap x-duo x-duo--wide">
+    <div class="x-formcard x-fade">
+      <form class="x-form" id="apply-form" data-fake="简历已收到，正在冷藏保鲜。" data-result="#apply-ok" data-hide>
+        <div class="x-form__row">
+          <div class="x-field"><label for="ap-name">姓名</label><input id="ap-name" name="name" type="text" required autocomplete="name" data-err="请留下名字，不然我们只能叫你“那位不怕冷的朋友”。" /></div>
+          <div class="x-field"><label for="ap-email">邮箱</label><input id="ap-email" name="email" type="email" required autocomplete="email" data-err="这个邮箱看起来冻住了，再检查一下格式。" /></div>
+        </div>
+        <div class="x-field">
+          <label for="ap-role">申请职位</label>
+          <select id="ap-role" name="role" required data-err="请选一个职位。“什么都行”不是一个职位，是哈士奇的人生态度。">
+            <option value="">请选择…</option>
+            <option>驯犬工程师</option><option>提示词铲雪工程师</option><option>冰块标注员</option><option>红队哈士奇</option><option>马具对齐研究员</option><option>冷静布道师</option><option>冰川运维 SRE</option><option>柯基加速专家</option><option>企鹅外交官</option>
+          </select>
+        </div>
+        <div class="x-field">
+          <label for="ap-temp">你能承受的最低气温：<b id="ap-temp-out">−20°C</b></label>
+          <input id="ap-temp" name="temp" type="range" min="-90" max="10" value="-20" step="1" aria-describedby="ap-temp-hint" />
+          <p class="x-hint" id="ap-temp-hint">诚实作答。我们会在面试时验证。</p>
+        </div>
+        <fieldset class="x-field">
+          <legend>你和狗的关系</legend>
+          <div class="x-choices">
+            <label class="x-choice"><input type="radio" name="dog" value="我是狗的家人" required data-err="这一题很重要。狗狗们在等你的答案。" /><b>家人</b><small>它睡我床上，我睡地上</small></label>
+            <label class="x-choice"><input type="radio" name="dog" value="我们是同事" /><b>同事</b><small>互相尊重，偶尔分零食</small></label>
+            <label class="x-choice"><input type="radio" name="dog" value="我就是一只狗" /><b>我就是狗</b><small>请主人代填此表</small></label>
+            <label class="x-choice"><input type="radio" name="dog" value="我更喜欢猫" /><b>我更喜欢猫</b><small>我们尊重你，但请三思</small></label>
+          </div>
+        </fieldset>
+        <div class="x-field"><label for="ap-why">为什么想冷静下来？</label><textarea id="ap-why" name="why" placeholder="例如：上一家公司太热了，连键盘都在冒烟。"></textarea></div>
+        <label class="x-check"><input type="checkbox" name="agree" required data-err="请确认。这只是为了确保你知道冷库里真的很冷。" /><span>我知道办公室常年 −4°C，并且我已经有羽绒服了（或愿意使用公司津贴购买）。</span></label>
+        <button class="x-btn x-btn--dark" type="submit">提交申请</button>
+      </form>
+      <div class="x-result" id="apply-ok">
+        <div class="x-result__icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7"/></svg></div>
+        <h3 class="x-h3">谢谢你，<span data-echo="name">朋友</span>。</h3>
+        <p style="margin-top:12px;color:var(--x-ink-2)">你对 <b data-echo="role">这个职位</b> 的申请已被放入冷库保鲜。由于你填写的最低耐受温度是 <b data-echo="temp">−20</b>°C，我们已把你的简历放到对应温度的那一层。</p>
+        <p style="margin-top:12px;color:var(--x-ink-2)">招聘团队通常在 3 个工作日内回复。若超过 5 天未收到消息，很可能是邮件冻在路上了，请耐心等待解冻。</p>
+        <p class="x-muted x-small" style="margin-top:20px">（这是一个恶搞网站，申请不会发送到任何地方。但我们欣赏你的勇气。）</p>
+      </div>
+    </div>
+    <div class="x-fade">
+      <p class="x-eyebrow">申请</p>
+      <h2 class="x-h2" style="font-size:clamp(28px,3.4vw,40px)">投递你的简历</h2>
+      <p class="x-lead">简历请控制在一页以内。超过一页的部分会被视为“超长上下文”，交给 Cold Floe 阅读。</p>
+      <dl class="x-kv x-mt-m">
+        <dt>回复时间</dt><dd>3 个工作日（冰面足够厚的话）</dd>
+        <dt>面试地点</dt><dd>线上，或冷库总部</dd>
+        <dt>着装要求</dt><dd>保暖即可。正装会冻硬。</dd>
+        <dt>携带物品</dt><dd>身份证件、一颗平静的心</dd>
+      </dl>
+      <p class="x-muted x-small x-mt-m">Antarctic Ice 是一家平等机会雇主。我们欢迎所有背景、所有物种（受劳动法允许范围内）的申请者。</p>
+    </div>
+  </div>
+</section>
+
+<section class="x-dark x-close">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">来这里，冷静地做一件大事。</h2>
+    <div class="x-close__btns x-fade">
+      <a class="x-btn x-btn--light" href="#jobs">查看全部职位</a>
+      <a class="x-btn x-btn--line-light" href="{{root}}about.html">先了解我们</a>
+    </div>
+  </div>
+</section>
+<!--scripts-->
+<script>
+(function () {
+  var range = document.getElementById("ap-temp"), out = document.getElementById("ap-temp-out");
+  var role = document.getElementById("ap-role");
+  function fmt(v) { v = Number(v); return (v < 0 ? "−" + Math.abs(v) : v) + "°C"; }
+  function note(v) {
+    v = Number(v);
+    if (v <= -80) return "（Cold Floe 级。你可能就是一块冰。）";
+    if (v <= -40) return "（雪橇犬认可的水平）";
+    if (v <= -10) return "";
+    if (v <= 0) return "（建议多带一件外套）";
+    return "（这……您确定是来应聘的吗？）";
+  }
+  function sync() { out.textContent = fmt(range.value) + note(range.value); }
+  range.addEventListener("input", sync); sync();
+  document.getElementById("apply-form").addEventListener("x:submitted", function () {
+    var t = document.querySelector('#apply-ok [data-echo="temp"]');
+    if (t) t.textContent = String(range.value).replace("-", "−");
+  });
+  [].forEach.call(document.querySelectorAll("[data-apply]"), function (b) {
+    b.addEventListener("click", function () {
+      role.value = b.getAttribute("data-apply");
+      document.getElementById("apply").scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(function () { document.getElementById("ap-name").focus({ preventScroll: true }); }, 500);
+    });
+  });
+})();
+</script>

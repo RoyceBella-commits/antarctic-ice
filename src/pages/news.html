@@ -1,0 +1,201 @@
+<!--
+title: 新闻
+description: Antarctic 新闻中心：Cold Floe 4.5 发布、Harness for Humans 上市、罗斯冰架数据中心启用、SOCK 2 Type II 认证，以及夏季冰块液化事件复盘。
+nav:
+-->
+<!--head--><style>
+.n-list { border-top: 1px solid var(--x-line); }
+.n-item { border-bottom: 1px solid var(--x-line); scroll-margin-top: 88px; }
+.n-item summary { display: grid; grid-template-columns: 132px minmax(0, 1fr) 28px; gap: 8px 28px; align-items: start; padding: 26px 0; cursor: pointer; list-style: none; min-height: 44px; }
+.n-item summary::-webkit-details-marker { display: none; }
+.n-item summary::after { content: "+"; grid-column: 3; grid-row: 1 / span 2; justify-self: end; font: 300 24px/1 var(--x-sans); color: var(--x-ink-3); transition: transform var(--dur-quick) var(--ease-out); }
+.n-item[open] summary::after { transform: rotate(45deg); }
+.n-date { grid-row: 1 / span 2; font: 400 13px/1.9 var(--x-mono); color: var(--x-ink-3); }
+.n-title { font: 500 21px/1.45 var(--x-serif); color: var(--x-ink); }
+.n-item summary:hover .n-title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.n-sum { grid-column: 2; font-size: 15px; color: var(--x-ink-2); }
+.n-body { padding: 0 0 32px calc(132px + 28px); max-width: calc(132px + 28px + 720px); }
+.n-body .x-prose { font-size: 16px; }
+.n-body .x-tag { margin-bottom: 4px; }
+@media (max-width: 760px) {
+  .n-item summary { grid-template-columns: minmax(0, 1fr) 28px; }
+  .n-date { grid-row: auto; grid-column: 1; }
+  .n-title, .n-sum { grid-column: 1; }
+  .n-item summary::after { grid-row: 1 / span 3; grid-column: 2; }
+  .n-body { padding-left: 0; }
+}
+.n-side { display: grid; gap: 20px; }
+.n-press { display: flex; align-items: center; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; padding: 40px; border-radius: var(--r-m); background: #E7ECEE; border: 1px solid var(--x-line); }
+.n-press p { color: var(--x-ink-2); margin-top: 8px; max-width: 620px; }
+.n-press__btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.n-sub { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-start; }
+.n-sub .x-field { flex: 1 1 260px; }
+.n-sub .x-btn { flex: none; }
+</style><!--/head-->
+<section class="x-phero">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="{{root}}index.html">首页</a></li><li>新闻</li></ol>
+    <p class="x-eyebrow">新闻中心</p>
+    <h1 class="x-h1">冷新闻。<br />热乎的。</h1>
+    <p class="x-lead">产品发布、研究进展、公司动态，以及冰川本身的消息。我们尽量在新闻还没凉之前发出来——虽然在这里，什么都凉得很快。</p>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap">
+    <div class="x-chips x-fade" data-filter="news" role="group" aria-label="按类别筛选">
+      <button class="x-chip" data-value="all" aria-pressed="true">全部</button>
+      <button class="x-chip" data-value="product" aria-pressed="false">产品</button>
+      <button class="x-chip" data-value="research" aria-pressed="false">研究</button>
+      <button class="x-chip" data-value="company" aria-pressed="false">公司</button>
+      <button class="x-chip" data-value="glacier" aria-pressed="false">冰川</button>
+    </div>
+
+    <div class="n-list x-fade">
+      <details class="n-item" id="cold-floe-45" data-filter-item="news" data-tags="product">
+        <summary><span class="n-date">2026-11-03</span><span class="n-title">Cold Floe 4.5 现已发布：迄今最冷静的模型</span><span class="n-sum">产品 · 3,200 m 冰芯上下文，−89.2°C 恒温推冰，全系最低雪盲率。</span></summary>
+        <div class="n-body"><div class="x-prose">
+          <p>今天，我们发布 Cold Floe 4.5——Antarctic 迄今最冷静的模型。</p>
+          <p>Cold Floe 4.5 拥有 3,200 米冰芯深度的上下文窗口，一口气即可读完地球近 80 万年的气候史，并在读完后不发表任何过激言论。在内部冰测中，它在 SLED-bench 上取得了业界最高分，在暴风雪条件下的原则违背率为 0，在被问到“你热吗？”时的标准回答是：“不。”</p>
+          <p>Cold Floe 4.5 今天起向所有 Pro 与 Max 用户开放，并通过冰块 API 提供。价格与上一代持平——我们认为冷静不应该涨价。</p>
+          <p><a href="{{root}}models/cold-floe.html">了解 Cold Floe 4.5 →</a></p>
+        </div></div>
+      </details>
+
+      <details class="n-item" id="harness-for-humans" data-filter-item="news" data-tags="product">
+        <summary><span class="n-date">2026-10-21</span><span class="n-title">Harness for Humans 正式上市</span><span class="n-sum">产品 · 专为开放式办公室里需要被拴住的工程师设计，¥399 起。</span></summary>
+        <div class="n-body"><div class="x-prose">
+          <p>在为哈士奇和马打造背带多年之后，我们终于听到了来自人类用户的声音：“我们也需要。”</p>
+          <p>Harness for Humans 采用与雪橇犬背带相同的意大利植鞣皮和航空铝扣，针对人类的肩宽和“在工位上突然想去冰箱拿点东西”的典型运动轨迹进行了优化。附带一根 1.5 米牵引绳，可连接至显示器支架。</p>
+          <p>首批用户反馈：“我的专注时长增加了 40%。”“我不再在会议中途消失了。”“请问可以换成长一点的绳子吗？”——可以，详见尺码表。</p>
+          <p><a href="{{root}}harness.html#humans">了解 Harness for Humans →</a>　<a href="{{root}}harness-sizes.html">查看尺码表 →</a></p>
+        </div></div>
+      </details>
+
+      <details class="n-item" id="hoof-alignment" data-filter-item="news" data-tags="research">
+        <summary><span class="n-date">2026-10-08</span><span class="n-title">新研究：马蹄对齐，一种四蹄定位的新方法</span><span class="n-sum">研究 · 蹄距误差降至 ±0.3 mm，对齐税仅 0.4 秒。</span></summary>
+        <div class="n-body"><div class="x-prose">
+          <p>马具对齐团队今天发表论文《马蹄对齐：一种四蹄定位的新方法》。研究指出，行业长期只对齐缰绳和前蹄，导致后蹄在长途任务中出现“目标漂移”。新方法 HoofAlign 在 12 座马场、212 匹马上将蹄距误差降低至 ±0.3 mm，同时证明对齐税远低于预期。</p>
+          <p>论文的共同作者之一是一匹温血马。它以个人身份参与，不代表皇家马术学院的立场。</p>
+          <p><a href="{{root}}research/hoof-alignment.html">阅读论文 →</a></p>
+        </div></div>
+      </details>
+
+      <details class="n-item" id="ross-datacenter" data-filter-item="news" data-tags="glacier">
+        <summary><span class="n-date">2026-09-26</span><span class="n-title">罗斯冰架数据中心正式启用</span><span class="n-sum">冰川 · 自然冷却，零风扇，PUE 低到我们不好意思写出来。</span></summary>
+        <div class="n-body"><div class="x-prose">
+          <p>Antarctic 第三座数据中心今日在罗斯冰架启用。该数据中心不使用任何风扇、空调或冷却塔——我们只是把门打开。</p>
+          <p>由于外部温度常年低于 −20°C，数据中心的冷却成本为负数：我们每个月还需要额外开一台暖风机，防止冰块冻得太硬影响推冰。新数据中心将主要承载 Cold Floe 4.5 的长途任务，以及我们正在冷藏中的 7 篇预印本。</p>
+          <p>入驻的 1,200 只哈士奇已于上周完成搬迁。它们对新办公室最满意的一点是：周围全是雪。</p>
+        </div></div>
+      </details>
+
+      <details class="n-item" id="husky-4000" data-filter-item="news" data-tags="company">
+        <summary><span class="n-date">2026-09-12</span><span class="n-title">哈士奇团队扩编至 4,000 只</span><span class="n-sum">公司 · 我们的 Agent 团队规模翻倍，每一只都有工牌和带薪假。</span></summary>
+        <div class="n-body"><div class="x-prose">
+          <p>随着 Colding Plan 订阅量增长，Antarctic 哈士奇团队已正式扩编至 4,000 只，服务全球 4,000+ 支雪橇队。所有新成员均在入职第一周完成了 Harness 适配、Mush 指令协议培训和“看到企鹅不要追”的安全课程（通过率 64%，补考进行中）。</p>
+          <p>我们仍在招聘驯犬工程师，负责与新同事一起制定跑步路线、调解领头犬竞选，以及在凌晨四点回答“为什么还不出发”。</p>
+          <p><a href="{{root}}careers.html">查看开放岗位 →</a></p>
+        </div></div>
+      </details>
+
+      <details class="n-item" id="sock2" data-filter-item="news" data-tags="company">
+        <summary><span class="n-date">2026-08-30</span><span class="n-title">Antarctic 获得 SOCK 2 Type II 认证</span><span class="n-sum">公司 · 经独立审计：全体员工持续穿着两双袜子，审计期 12 个月。</span></summary>
+        <div class="n-body"><div class="x-prose">
+          <p>我们很高兴地宣布，Antarctic 已通过 SOCK 2 Type II 审计。该认证要求企业在连续 12 个月的审计期内，证明其所有员工、承包商和访客均穿着至少两双袜子，并具备完善的袜子访问控制和换洗日志。</p>
+          <p>审计期间共发现 1 项例外：一位访客只穿了一双袜子，原因是另一双被一只哈士奇叼走了。该事件已在 4 分钟内完成处置，涉事袜子已归还（略湿）。</p>
+          <p>企业客户可通过销售团队申请完整审计报告。<a href="{{root}}enterprise.html#security">了解企业级安全 →</a></p>
+        </div></div>
+      </details>
+
+      <details class="n-item" id="constitution" data-filter-item="news" data-tags="research">
+        <summary><span class="n-date">2026-08-12</span><span class="n-title">我们公开了《抗寒宪法》全文</span><span class="n-sum">研究 · 12 条原则，在 −40°C 的帐篷外定稿，并纳入 Cold 4.5 全系模型。</span></summary>
+        <div class="n-body"><div class="x-prose">
+          <p>随论文《宪法级抗寒体质》一同发布的，还有指导 Cold 4.5 系列模型行为的《抗寒宪法》全文。从第一条“保持冷静”到第十二条“以大家都活着回到帐篷为准”，每一条都经过了全红色哈士奇红队的 1,024 轮演练。</p>
+          <p>我们相信，一个模型遵循的原则应该是公开的。就像冰面上的警示牌——写在明处，才有用。</p>
+          <p><a href="{{root}}research/constitutional-cold.html">阅读论文与宪法 →</a>　<a href="{{root}}safety.html">负责任冷缩政策 →</a></p>
+        </div></div>
+      </details>
+
+      <details class="n-item" id="summer-melt" data-filter-item="news" data-tags="glacier">
+        <summary><span class="n-date">2026-07-18</span><span class="n-title">事件复盘：7 月 15 日部分冰块液化</span><span class="n-sum">冰川 · 一扇没关的窗、47 分钟的部分融化，以及我们学到的事。</span></summary>
+        <div class="n-body"><div class="x-prose">
+          <p><strong>摘要：</strong>7 月 15 日 14:02 至 14:49，北半球某中转冷库的部分冰块出现液化，约 0.3% 的冰块请求返回了“水”。受影响用户的冰块已全部退还——化了不收钱。</p>
+          <p><strong>根本原因：</strong>一位同事为了让哈士奇看看外面的蝴蝶，打开了冷库的一扇窗。我们理解这个动机，但不支持这个做法。</p>
+          <p><strong>改进措施：</strong>所有冷库窗户已加装 Harness（是的，窗户也要系）；蝴蝶观赏改为通过屏幕进行；我们新增了“室温上升 0.5°C 即告警”的监控规则。</p>
+          <p>完整的事件时间线与当前状态请见<a href="{{root}}status.html">状态页</a>。</p>
+        </div></div>
+      </details>
+
+      <details class="n-item" id="annual-ice" data-filter-item="news" data-tags="product">
+        <summary><span class="n-date">2026-06-01</span><span class="n-title">年付赠一桶冰，现已常态化</span><span class="n-sum">产品 · 所有方案按年付费即赠送一桶冰。桶是送的，冰也是送的，融化损耗自理。</span></summary>
+        <div class="n-body"><div class="x-prose">
+          <p>去年冬天作为限时活动推出的“年付赠冰”深受欢迎，我们决定将其常态化。从今天起，Free 以外的所有方案选择年付，即可获得一桶由 Antarctic 冰川直供的冰。</p>
+          <p>常见问题：冰会在路上化吗？会一点。化掉的部分算谁的？算夏天的。可以换成两小桶吗？可以，但总冰量不变，这是物理学，不是我们。</p>
+          <p><a href="{{root}}pricing.html">查看定价 →</a></p>
+        </div></div>
+      </details>
+    </div>
+    <p class="x-muted x-small x-mt-s" data-filter-empty="news" hidden>这个分类暂时没有新闻。一切平静，正常结冰。</p>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap n-side">
+    <div class="n-press x-fade">
+      <div>
+        <p class="x-eyebrow" style="margin-bottom:8px">媒体垂询</p>
+        <h3 class="x-h3">需要采访、素材或一张哈士奇高清照？</h3>
+        <p>媒体资源包含品牌标识、产品图、高管照片（其中两位高管是狗）。采访请提前预约，户外采访请自带羽绒服。</p>
+      </div>
+      <div class="n-press__btns">
+        <a class="x-btn x-btn--ghost" href="#" data-toast="媒体资源包正在压缩……主要是冰太难压缩了。">下载媒体资源包</a>
+        <a class="x-btn x-btn--dark" href="#" data-toast="已转达媒体团队。他们正在冰钓，回岸后第一时间回复你。">联系媒体团队</a>
+      </div>
+    </div>
+    <div class="x-formcard x-fade">
+      <p class="x-eyebrow" style="margin-bottom:8px">订阅冷新闻</p>
+      <h3 class="x-h3">每月一封，绝不过热。</h3>
+      <form class="x-form x-mt-s" data-fake="订阅成功。我们会以冰川流动的速度给你发邮件——大约每年 1 米。">
+        <div class="n-sub">
+          <div class="x-field">
+            <label for="news-email">邮箱</label>
+            <input id="news-email" name="email" type="email" required autocomplete="email" placeholder="you@glacier.example" data-err="请填写一个邮箱。我们没法把新闻寄到冰面上。" />
+          </div>
+          <button class="x-btn x-btn--dark" type="submit" style="margin-top:30px">订阅</button>
+        </div>
+        <p class="x-hint">我们不会把你的邮箱发给任何人。事实上，这个表单根本不会把它发到任何地方。</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="x-dark x-close">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">新闻会过期。<br />冰不会。</h2>
+    <div class="x-close__btns x-fade">
+      <a class="x-btn x-btn--light" href="{{root}}models/cold-floe.html">认识 Cold Floe 4.5</a>
+      <a class="x-btn x-btn--line-light" href="{{root}}research.html">最新研究</a>
+    </div>
+  </div>
+</section>
+<!--scripts-->
+<script>
+(function () {
+  function openFromHash() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (el && el.tagName === "DETAILS") {
+      el.open = true;
+      if (el.hidden) {
+        var all = document.querySelector('.x-chip[data-value="all"]');
+        if (all) all.click();
+      }
+      setTimeout(function () { el.scrollIntoView({ block: "start" }); }, 60);
+    }
+  }
+  openFromHash();
+  window.addEventListener("hashchange", openFromHash);
+})();
+</script>

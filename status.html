@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>系统状态 · Antarctic 南极冰</title>
+    <meta name="description" content="Antarctic 系统状态：全部系统正常结冰。冰盖 API、推冰集群、雪橇调度与马具仓库的实时冻结率。" />
+    <meta property="og:title" content="系统状态 · Antarctic 南极冰" />
+    <meta property="og:description" content="Antarctic 系统状态：全部系统正常结冰。冰盖 API、推冰集群、雪橇调度与马具仓库的实时冻结率。" />
+    <meta name="theme-color" content="#0E1A24" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script>document.documentElement.classList.add("x-js");</script>
+
+  </head>
+  <body>
+    <div class="x-site" id="top">
+      <a class="x-skip" href="#main">跳到正文</a>
+      <a class="x-announce" href="models/cold-floe.html"><b>Cold Floe 4.5</b>&nbsp;现已发布 — <span>迄今最冷静的模型 →</span></a>
+
+      <header class="x-nav" id="x-nav">
+        <div class="x-wrap x-nav__in">
+          <a class="x-logo" href="index.html" aria-label="Antarctic 首页">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+            Antarctic
+          </a>
+          <ul class="x-nav__links" id="x-links">
+            <li><a href="models.html">模型</a></li>
+            <li><a href="colding.html">Colding Plan</a></li>
+            <li><a href="harness.html">Harness</a></li>
+            <li><a href="research.html">研究</a></li>
+            <li><a href="enterprise.html">企业</a></li>
+            <li><a href="pricing.html">定价</a></li>
+          </ul>
+          <a class="x-btn x-btn--dark x-nav__cta" href="start.html">开始冷却</a>
+          <button class="x-menu" id="x-menu" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="x-links">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 7h16M3 15h16" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main">
+<section class="x-phero">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="index.html">首页</a></li><li>系统状态</li></ol>
+    <p class="x-eyebrow">Status · 罗斯冰架数据中心</p>
+    <h1 class="x-h1">全部系统正常结冰。</h1>
+    <p class="x-lead">这里实时显示 Antarctic 各项服务的冻结情况。绿色代表冻得很好，橙色代表有点软，红色代表我们正在关窗。</p>
+    <div class="x-statusbar x-mt-m" id="overall">所有系统冻结正常 · 冰面平整 · 狗狗状态良好</div>
+    <div class="x-phero__meta">
+      <span>最后更新：<span id="updated">刚刚</span></span>
+      <span>数据中心室外温度：<b id="temp" class="x-tabular">−52.3°C</b></span>
+      <span>风速：12 m/s（适合冷静）</span>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap">
+    <div class="x-stats x-fade">
+      <div><b>99.99%</b><span>过去 90 天冻结率</span></div>
+      <div><b id="dogs" class="x-tabular">4,012</b><span>在岗哈士奇（另有 <span id="naps">84</span> 只在午睡）</span></div>
+      <div><b>38 ms</b><span>平均推冰延迟（Cold Hail-ku）</span></div>
+      <div><b>2,160 m</b><span>当前冰盖厚度（足够厚）</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight" id="components">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">组件</p>
+      <h2 class="x-h2">过去 90 天</h2>
+      <p class="x-lead">每一格是一天。把鼠标放上去可以看到那天发生了什么——大多数时候什么都没发生，这正是我们想要的。</p>
+    </div>
+    <div class="x-fade" id="comp-list"></div>
+    <div class="x-uptime__legend x-fade"><span>90 天前</span><span>今天</span></div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint" id="maintenance">
+  <div class="x-wrap x-duo">
+    <div class="x-fade">
+      <p class="x-eyebrow">计划维护</p>
+      <h2 class="x-h2">冬至维护窗口</h2>
+      <p class="x-lead">2026 年 12 月 21 日起，南极进入持续的白昼。我们会把数据中心照明从“极光模式”切换为“太阳一直不下山模式”，预计影响：零。哈士奇会戴上墨镜。</p>
+    </div>
+    <dl class="x-kv x-formcard x-fade">
+      <dt>开始</dt><dd>2026-12-21 00:00（南极时间，如果南极有时间的话）</dd>
+      <dt>结束</dt><dd>2026-12-21 00:01</dd>
+      <dt>影响范围</dt><dd>无。冰块照常冻结，只是更亮了。</dd>
+      <dt>需要做什么</dt><dd>什么也不用做。保持冷静。</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="x-sec" id="incidents">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">历史事件</p>
+      <h2 class="x-h2">我们犯过的错，都冻在这里了。</h2>
+      <p class="x-lead">每一次事件都有完整复盘。我们相信透明，就像相信冰块一样。</p>
+    </div>
+    <ul class="x-rows x-fade">
+      <li id="incident-1103">
+        <div class="x-row">
+          <span class="x-row__title">Cold Hail-ku 回复偶尔多出一个音节</span>
+          <span class="x-row__meta"><span>2026-11-03</span><span>Cold Hail-ku</span><span>持续 47 分钟</span></span>
+          <p class="x-row__desc">部分俳句变成了 5-7-6 结构。原因：一片雪花落在了值班工程师的键盘上。已修复，已为该键盘配备防风窗。</p>
+          <span class="x-row__side"><span class="x-tag x-tag--ok">已解决</span></span>
+        </div>
+      </li>
+      <li id="incident-1012">
+        <div class="x-row">
+          <span class="x-row__title">雪橇调度延迟升高</span>
+          <span class="x-row__meta"><span>2026-10-12</span><span>雪橇调度</span><span>持续 12 分钟</span></span>
+          <p class="x-row__desc">领头犬“饺子”在 3 号冰原发现了一只松鼠。我们发送了 <code>On by</code> 指令，第二次生效。根因分析见《哈士奇为什么总往左跑？》。</p>
+          <span class="x-row__side"><span class="x-tag x-tag--ok">已解决</span></span>
+        </div>
+      </li>
+      <li id="incident-summer-melt">
+        <div class="x-row">
+          <span class="x-row__title">部分冰块液化（夏季事件）</span>
+          <span class="x-row__meta"><span>2026-07-15 至 08-20</span><span>Colding Plan 冷链配送</span><span>持续 36 天</span></span>
+          <p class="x-row__desc">北半球进入夏季后，部分冷链节点出现了液态冰块。经过 36 天的深入调查，工程团队确认根因是“夏天”。已通过关窗解决。所有液化冰块均未计费。</p>
+          <span class="x-row__side"><span class="x-tag x-tag--ok">已解决</span></span>
+        </div>
+      </li>
+      <li id="incident-0601">
+        <div class="x-row">
+          <span class="x-row__title">计划维护：冰面重铺</span>
+          <span class="x-row__meta"><span>2026-06-01</span><span>冰盖 API</span><span>持续 3 小时</span></span>
+          <p class="x-row__desc">我们为主干冰面重新浇了一层水。期间请求被排队处理，排队的哈士奇表现得非常有耐心（有肉干）。</p>
+          <span class="x-row__side"><span class="x-tag">维护</span></span>
+        </div>
+      </li>
+      <li id="incident-0401">
+        <div class="x-row">
+          <span class="x-row__title">全部模型开始讲热笑话</span>
+          <span class="x-row__meta"><span>2026-04-01</span><span>全部模型</span><span>持续 24 小时</span></span>
+          <p class="x-row__desc">所有模型的输出温度短暂升至 +3°C，并开始讲一些让人尴尬的笑话。事后确认这是愚人节，不是事故。为保险起见，我们仍然写了这份复盘。</p>
+          <span class="x-row__side"><span class="x-tag x-tag--warn">已降温</span></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint" id="subscribe">
+  <div class="x-wrap x-duo">
+    <div class="x-fade">
+      <p class="x-eyebrow">订阅更新</p>
+      <h2 class="x-h2">冰面一有裂缝，<br />第一时间告诉你。</h2>
+      <p class="x-lead">选择你喜欢的通知方式。冬季信鸽可能会被冻住，请谨慎选择。</p>
+    </div>
+    <div class="x-fade">
+      <form class="x-form x-formcard" data-fake="订阅成功。下一次裂缝出现时，你会第一个知道。" data-result="#sub-ok" data-hide>
+        <div class="x-field">
+          <label for="sub-name">怎么称呼你</label>
+          <input id="sub-name" name="name" type="text" required autocomplete="nickname" placeholder="例如：冷静的小李" data-err="我们得知道该向谁报告冰面情况。" />
+        </div>
+        <fieldset class="x-field">
+          <legend>通知方式</legend>
+          <div class="x-choices">
+            <label class="x-choice"><input type="radio" name="via" value="邮件" checked /><b>邮件</b><small>最普通，最可靠</small></label>
+            <label class="x-choice"><input type="radio" name="via" value="信鸽" /><b>信鸽</b><small>冬季可能冻住</small></label>
+            <label class="x-choice"><input type="radio" name="via" value="狼嚎" /><b>狼嚎</b><small>由哈士奇代劳，覆盖 5 公里</small></label>
+          </div>
+        </fieldset>
+        <label class="x-check"><input type="checkbox" name="minor" value="yes" /><span>连“一片雪花落在键盘上”这种小事也通知我</span></label>
+        <button class="x-btn x-btn--dark" type="submit">订阅状态更新</button>
+      </form>
+      <div class="x-result x-formcard" id="sub-ok">
+        <div class="x-result__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></div>
+        <h3 class="x-h3">好的，<span data-echo="name">朋友</span>。</h3>
+        <p class="x-muted" style="margin-top:10px">今后的冰面状况将通过<b data-echo="via">邮件</b>送达。目前一切正常结冰，所以你大概很久都不会收到消息——这是好消息。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="x-dark x-close">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">一切正常。<br />就像冰本来的样子。</h2>
+    <div class="x-close__btns x-fade">
+      <a class="x-btn x-btn--light" href="docs.html#errors">查看错误码</a>
+      <a class="x-btn x-btn--line-light" href="community.html">去社区聊聊</a>
+    </div>
+  </div>
+</section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <div class="x-foot__grid">
+            <div class="x-foot__brand">
+              <a class="x-logo" href="index.html" aria-label="Antarctic 首页">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+                Antarctic
+              </a>
+              <p>冷静、可控、不会过热的智能。</p>
+            </div>
+            <div><h4>产品</h4><ul><li><a href="models/cold-floe.html">Cold Floe</a></li><li><a href="models/cold-sleet.html">Cold Sleet</a></li><li><a href="models/cold-hail-ku.html">Cold Hail-ku</a></li><li><a href="colding.html">Colding Plan</a></li><li><a href="harness.html">Harness</a></li></ul></div>
+            <div><h4>公司</h4><ul><li><a href="about.html">关于我们</a></li><li><a href="careers.html">招聘：诚聘驯犬工程师</a></li><li><a href="news.html">新闻</a></li><li><a href="partners.html">冰川合作伙伴</a></li><li><a href="safety.html">负责任冷缩政策</a></li></ul></div>
+            <div><h4>资源</h4><ul><li><a href="docs.html">文档</a></li><li><a href="harness-sizes.html">马具尺码表</a></li><li><a href="status.html" class="x-status">状态：全部系统正常结冰</a></li><li><a href="community.html">社区</a></li></ul></div>
+            <div><h4>法律</h4><ul><li><a href="privacy.html">隐私政策</a></li><li><a href="terms.html">使用条款</a></li><li><a href="disclaimer.html">冷责声明</a></li></ul></div>
+          </div>
+          <div class="x-foot__bottom">
+            <p>© 2026 Antarctic Ice, Inc. 保留所有冰块。</p>
+            <p class="x-disc">本网站为虚构品牌恶搞创作，不代表任何真实公司或产品。</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/js/site.js"></script>
+    <script>
+(function () {
+  var comps = [
+    { name: "冰盖 API", sub: "api.antarctic.ice", events: {} },
+    { name: "推冰集群 · Cold Floe 4.5", sub: "深度冷思考", events: {} },
+    { name: "推冰集群 · Cold Sleet 4.5", sub: "日常冷链", events: {} },
+    { name: "推冰集群 · Cold Hail-ku 4.5", sub: "5-7-5 校验器", events: { 14: "warn" } },
+    { name: "Colding Plan 冷链配送", sub: "含夏季液化事件", events: { 89: "warn", 90: "bad", 91: "bad", 92: "warn" } },
+    { name: "雪橇调度（哈士奇集群）", sub: "4,096 只", events: { 36: "warn" } },
+    { name: "防风窗（Context Window）", sub: "双层中空 Low-E", events: {} },
+    { name: "Harness 商城与马具仓库", sub: "意大利植鞣皮库存充足", events: {} }
+  ];
+  var notes = { warn: "部分冰面变软，已处理", bad: "冰块液化，已关窗" };
+  var host = document.getElementById("comp-list");
+  var today = new Date();
+  comps.forEach(function (c) {
+    var bars = "";
+    for (var i = 89; i >= 0; i--) {
+      var d = new Date(today.getTime() - i * 864e5);
+      var label = (d.getMonth() + 1) + "月" + d.getDate() + "日";
+      // events are keyed by "days ago" offsets so the page always looks current
+      var st = c.events[i] || "";
+      bars += '<i class="' + (st ? "is-" + st : "") + '" title="' + label + "：" + (st ? notes[st] : "冻结正常") + '"></i>';
+    }
+    var hasWarn = Object.keys(c.events).some(function (k) { return +k < 90; });
+    var div = document.createElement("div");
+    div.className = "x-comp";
+    div.innerHTML = '<div class="x-comp__head"><span><span class="x-comp__name">' + c.name + '</span> <span class="x-muted x-small">· ' + c.sub + '</span></span>' +
+      '<span class="x-comp__state">正常结冰</span></div><div class="x-uptime" role="img" aria-label="' + c.name + ' 过去 90 天' + (hasWarn ? "有少量软化记录" : "全部冻结正常") + '">' + bars + "</div>";
+    host.appendChild(div);
+  });
+
+  var temp = document.getElementById("temp"), upd = document.getElementById("updated");
+  var dogs = document.getElementById("dogs"), naps = document.getElementById("naps");
+  var t = -52.3, secs = 0, nap = 84;
+  setInterval(function () {
+    t = Math.max(-58, Math.min(-48, t + (Math.random() - 0.5) * 0.4));
+    temp.textContent = "−" + Math.abs(t).toFixed(1) + "°C";
+    secs += 5;
+    upd.textContent = secs < 60 ? secs + " 秒前" : Math.floor(secs / 60) + " 分钟前";
+    if (Math.random() < 0.3) {
+      nap = Math.max(60, Math.min(110, nap + (Math.random() < 0.5 ? -1 : 1)));
+      naps.textContent = nap;
+      dogs.textContent = (4096 - nap).toLocaleString("en-US");
+    }
+  }, 5000);
+})();
+</script>
+  </body>
+</html>

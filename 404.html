@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>页面融化了 · Antarctic 南极冰</title>
+    <meta name="description" content="你要找的页面被放在室温下太久，已经融化了。" />
+    <meta property="og:title" content="页面融化了 · Antarctic 南极冰" />
+    <meta property="og:description" content="你要找的页面被放在室温下太久，已经融化了。" />
+    <meta name="theme-color" content="#0E1A24" />
+    <link rel="icon" href="/-antarctic-ice/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/-antarctic-ice/assets/css/site.css" />
+    <script>document.documentElement.classList.add("x-js");</script>
+    <style>
+.x-melt { width: 120px; height: 150px; margin: 0 auto 32px; }
+.x-melt__cube { animation: x-melt 6s var(--ease-out) infinite alternate; transform-origin: 60px 110px; }
+.x-melt__drop { animation: x-drip 2.4s ease-in infinite; }
+.x-melt__drop:nth-of-type(2) { animation-delay: 1.2s; }
+@keyframes x-melt { from { transform: scaleY(1); } to { transform: scaleY(0.72); } }
+@keyframes x-drip { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 100% { transform: translateY(26px); opacity: 0; } }
+.x-404 ul { list-style: none; margin: 28px auto 0; padding: 0; max-width: 460px; text-align: left; color: var(--x-ink-2); }
+.x-404 li { padding: 10px 0; border-bottom: 1px solid var(--x-line); font-size: 15px; }
+@media (prefers-reduced-motion: reduce) { .x-melt__cube, .x-melt__drop { animation: none; } }
+</style>
+  </head>
+  <body>
+    <div class="x-site" id="top">
+      <a class="x-skip" href="#main">跳到正文</a>
+      <a class="x-announce" href="/-antarctic-ice/models/cold-floe.html"><b>Cold Floe 4.5</b>&nbsp;现已发布 — <span>迄今最冷静的模型 →</span></a>
+
+      <header class="x-nav" id="x-nav">
+        <div class="x-wrap x-nav__in">
+          <a class="x-logo" href="/-antarctic-ice/index.html" aria-label="Antarctic 首页">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+            Antarctic
+          </a>
+          <ul class="x-nav__links" id="x-links">
+            <li><a href="/-antarctic-ice/models.html">模型</a></li>
+            <li><a href="/-antarctic-ice/colding.html">Colding Plan</a></li>
+            <li><a href="/-antarctic-ice/harness.html">Harness</a></li>
+            <li><a href="/-antarctic-ice/research.html">研究</a></li>
+            <li><a href="/-antarctic-ice/enterprise.html">企业</a></li>
+            <li><a href="/-antarctic-ice/pricing.html">定价</a></li>
+          </ul>
+          <a class="x-btn x-btn--dark x-nav__cta" href="/-antarctic-ice/start.html">开始冷却</a>
+          <button class="x-menu" id="x-menu" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="x-links">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 7h16M3 15h16" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main">
+<section class="x-404">
+  <div class="x-wrap">
+    <svg class="x-melt" viewBox="0 0 120 150" fill="none" stroke="#46657F" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true">
+      <g class="x-melt__cube">
+        <path d="M30 40l30-14 30 14v44l-30 14-30-14z" fill="#DCE4EA" fill-opacity=".6" />
+        <path d="M30 40l30 14 30-14M60 54v44" stroke-opacity=".6" />
+        <path d="M40 48l8 4" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+      </g>
+      <path d="M14 120c14-8 30-6 46-6s32-2 46 6c-12 6-30 8-46 8s-34-2-46-8z" fill="#DCE4EA" fill-opacity=".5" stroke-opacity=".5" />
+      <path class="x-melt__drop" d="M56 102c0 3 2 5 4 5s4-2 4-5-4-8-4-8-4 5-4 8z" fill="#98AEC1" stroke="none" />
+      <path class="x-melt__drop" d="M74 98c0 2.4 1.6 4 3.2 4s3.2-1.6 3.2-4-3.2-6.4-3.2-6.4-3.2 4-3.2 6.4z" fill="#98AEC1" stroke="none" />
+    </svg>
+    <p class="x-eyebrow">错误 404 · 冰块未找到</p>
+    <h1 class="x-h1">404</h1>
+    <p class="x-lead" style="margin-inline:auto">这个页面在室温下放得太久，已经融化了。</p>
+    <ul>
+      <li>可能的原因一：链接拼错了。请检查有没有把 Colding 写成 Coding。</li>
+      <li>可能的原因二：领头犬看见了一只松鼠，把你带偏了。</li>
+      <li>可能的原因三：现在是夏天。</li>
+    </ul>
+    <div class="x-close__btns">
+      <a class="x-btn x-btn--dark" href="/-antarctic-ice/index.html">回到首页</a>
+      <a class="x-btn x-btn--ghost" href="/-antarctic-ice/status.html">查看系统状态</a>
+    </div>
+  </div>
+</section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <div class="x-foot__grid">
+            <div class="x-foot__brand">
+              <a class="x-logo" href="/-antarctic-ice/index.html" aria-label="Antarctic 首页">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+                Antarctic
+              </a>
+              <p>冷静、可控、不会过热的智能。</p>
+            </div>
+            <div><h4>产品</h4><ul><li><a href="/-antarctic-ice/models/cold-floe.html">Cold Floe</a></li><li><a href="/-antarctic-ice/models/cold-sleet.html">Cold Sleet</a></li><li><a href="/-antarctic-ice/models/cold-hail-ku.html">Cold Hail-ku</a></li><li><a href="/-antarctic-ice/colding.html">Colding Plan</a></li><li><a href="/-antarctic-ice/harness.html">Harness</a></li></ul></div>
+            <div><h4>公司</h4><ul><li><a href="/-antarctic-ice/about.html">关于我们</a></li><li><a href="/-antarctic-ice/careers.html">招聘：诚聘驯犬工程师</a></li><li><a href="/-antarctic-ice/news.html">新闻</a></li><li><a href="/-antarctic-ice/partners.html">冰川合作伙伴</a></li><li><a href="/-antarctic-ice/safety.html">负责任冷缩政策</a></li></ul></div>
+            <div><h4>资源</h4><ul><li><a href="/-antarctic-ice/docs.html">文档</a></li><li><a href="/-antarctic-ice/harness-sizes.html">马具尺码表</a></li><li><a href="/-antarctic-ice/status.html" class="x-status">状态：全部系统正常结冰</a></li><li><a href="/-antarctic-ice/community.html">社区</a></li></ul></div>
+            <div><h4>法律</h4><ul><li><a href="/-antarctic-ice/privacy.html">隐私政策</a></li><li><a href="/-antarctic-ice/terms.html">使用条款</a></li><li><a href="/-antarctic-ice/disclaimer.html">冷责声明</a></li></ul></div>
+          </div>
+          <div class="x-foot__bottom">
+            <p>© 2026 Antarctic Ice, Inc. 保留所有冰块。</p>
+            <p class="x-disc">本网站为虚构品牌恶搞创作，不代表任何真实公司或产品。</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/-antarctic-ice/assets/js/site.js"></script>
+
+  </body>
+</html>

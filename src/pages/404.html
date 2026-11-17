@@ -1,0 +1,42 @@
+<!--
+title: 页面融化了
+description: 你要找的页面被放在室温下太久，已经融化了。
+nav:
+-->
+<!--head--><style>
+.x-melt { width: 120px; height: 150px; margin: 0 auto 32px; }
+.x-melt__cube { animation: x-melt 6s var(--ease-out) infinite alternate; transform-origin: 60px 110px; }
+.x-melt__drop { animation: x-drip 2.4s ease-in infinite; }
+.x-melt__drop:nth-of-type(2) { animation-delay: 1.2s; }
+@keyframes x-melt { from { transform: scaleY(1); } to { transform: scaleY(0.72); } }
+@keyframes x-drip { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 100% { transform: translateY(26px); opacity: 0; } }
+.x-404 ul { list-style: none; margin: 28px auto 0; padding: 0; max-width: 460px; text-align: left; color: var(--x-ink-2); }
+.x-404 li { padding: 10px 0; border-bottom: 1px solid var(--x-line); font-size: 15px; }
+@media (prefers-reduced-motion: reduce) { .x-melt__cube, .x-melt__drop { animation: none; } }
+</style><!--/head-->
+<section class="x-404">
+  <div class="x-wrap">
+    <svg class="x-melt" viewBox="0 0 120 150" fill="none" stroke="#46657F" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true">
+      <g class="x-melt__cube">
+        <path d="M30 40l30-14 30 14v44l-30 14-30-14z" fill="#DCE4EA" fill-opacity=".6" />
+        <path d="M30 40l30 14 30-14M60 54v44" stroke-opacity=".6" />
+        <path d="M40 48l8 4" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+      </g>
+      <path d="M14 120c14-8 30-6 46-6s32-2 46 6c-12 6-30 8-46 8s-34-2-46-8z" fill="#DCE4EA" fill-opacity=".5" stroke-opacity=".5" />
+      <path class="x-melt__drop" d="M56 102c0 3 2 5 4 5s4-2 4-5-4-8-4-8-4 5-4 8z" fill="#98AEC1" stroke="none" />
+      <path class="x-melt__drop" d="M74 98c0 2.4 1.6 4 3.2 4s3.2-1.6 3.2-4-3.2-6.4-3.2-6.4-3.2 4-3.2 6.4z" fill="#98AEC1" stroke="none" />
+    </svg>
+    <p class="x-eyebrow">错误 404 · 冰块未找到</p>
+    <h1 class="x-h1">404</h1>
+    <p class="x-lead" style="margin-inline:auto">这个页面在室温下放得太久，已经融化了。</p>
+    <ul>
+      <li>可能的原因一：链接拼错了。请检查有没有把 Colding 写成 Coding。</li>
+      <li>可能的原因二：领头犬看见了一只松鼠，把你带偏了。</li>
+      <li>可能的原因三：现在是夏天。</li>
+    </ul>
+    <div class="x-close__btns">
+      <a class="x-btn x-btn--dark" href="{{root}}index.html">回到首页</a>
+      <a class="x-btn x-btn--ghost" href="{{root}}status.html">查看系统状态</a>
+    </div>
+  </div>
+</section>

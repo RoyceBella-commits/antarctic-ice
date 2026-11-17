@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>企业版 · Antarctic 南极冰</title>
+    <meta name="description" content="Antarctic 企业版：为冷链、极地科考与大型马场打造。私有化部署于贵司自有冰川，单点冰封登录，SOCK 2 Type II 认证，冰层厚度保障协议。" />
+    <meta property="og:title" content="企业版 · Antarctic 南极冰" />
+    <meta property="og:description" content="Antarctic 企业版：为冷链、极地科考与大型马场打造。私有化部署于贵司自有冰川，单点冰封登录，SOCK 2 Type II 认证，冰层厚度保障协议。" />
+    <meta name="theme-color" content="#0E1A24" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script>document.documentElement.classList.add("x-js");</script>
+    <style>
+.en-logos { display: flex; flex-wrap: wrap; gap: 14px 40px; margin-top: 48px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.12); font: 600 16px/1.3 var(--x-serif); color: #8FA2B2; }
+.en-deploy .x-card { gap: 0; }
+.en-deploy svg { width: 100%; height: 120px; margin-bottom: 24px; border-radius: var(--r-s); background: linear-gradient(135deg, #DCE4EA, #B9C9D6); }
+.en-deploy .x-card:nth-child(2) svg { background: linear-gradient(135deg, #E4E7E3, #C5CEC8); }
+.en-deploy .x-card:nth-child(3) svg { background: linear-gradient(135deg, #D6DDE3, #98AEC1); }
+.en-sec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--x-line); border: 1px solid var(--x-line); border-radius: var(--r-m); overflow: hidden; }
+.en-sec-grid > div { background: var(--x-card); padding: 28px; }
+.en-sec-grid h3 { font: 500 17px/1.4 var(--x-sans); color: var(--x-ink); }
+.en-sec-grid p { margin-top: 8px; font-size: 15px; color: var(--x-ink-2); }
+.en-sec-grid .x-tag { margin-bottom: 14px; }
+@media (max-width: 900px) { .en-sec-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .en-sec-grid { grid-template-columns: 1fr; } }
+.en-case { display: flex; flex-direction: column; }
+.en-list { list-style: none; padding: 20px 0 0; margin: auto 0 0; display: grid; gap: 8px; font-size: 14px; color: var(--x-ink-2); border-top: 1px solid var(--x-line); }
+.en-list li { padding-left: 18px; position: relative; }
+.en-list li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 1px; background: var(--x-steel); }
+.x-card > p:has(+ .en-list) { margin-bottom: 24px; }
+.en-case__nums { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--x-line); }
+.en-case__nums b { display: block; font: 500 28px/1.1 var(--x-serif); color: var(--x-ink); }
+.en-case__nums span { font-size: 13px; color: var(--x-ink-3); }
+.en-case blockquote { margin: 20px 0 0; font: 400 16px/1.6 var(--x-serif); color: var(--x-ink); }
+.en-case cite { display: block; margin-top: 10px; font: 400 13px/1.4 var(--x-sans); font-style: normal; color: var(--x-ink-3); }
+</style>
+  </head>
+  <body>
+    <div class="x-site" id="top">
+      <a class="x-skip" href="#main">跳到正文</a>
+      <a class="x-announce" href="models/cold-floe.html"><b>Cold Floe 4.5</b>&nbsp;现已发布 — <span>迄今最冷静的模型 →</span></a>
+
+      <header class="x-nav" id="x-nav">
+        <div class="x-wrap x-nav__in">
+          <a class="x-logo" href="index.html" aria-label="Antarctic 首页">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+            Antarctic
+          </a>
+          <ul class="x-nav__links" id="x-links">
+            <li><a href="models.html">模型</a></li>
+            <li><a href="colding.html">Colding Plan</a></li>
+            <li><a href="harness.html">Harness</a></li>
+            <li><a href="research.html">研究</a></li>
+            <li><a href="enterprise.html" aria-current="page">企业</a></li>
+            <li><a href="pricing.html">定价</a></li>
+          </ul>
+          <a class="x-btn x-btn--dark x-nav__cta" href="start.html">开始冷却</a>
+          <button class="x-menu" id="x-menu" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="x-links">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 7h16M3 15h16" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main">
+<section class="x-phero x-phero--dark">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="index.html">首页</a></li><li>企业版</li></ol>
+    <p class="x-eyebrow">Antarctic 企业版</p>
+    <h1 class="x-h1">为整个组织，<br />统一降温。</h1>
+    <p class="x-lead">为冷链、极地科考与大型马场打造。私有化部署于贵司自有冰川，数据永不离开南极——主要是因为它也走不了。</p>
+    <div class="x-phero__btns">
+      <a class="x-btn x-btn--light" href="contact.html">联系销售</a>
+      <a class="x-btn x-btn--line-light" href="#security">安全与合规</a>
+    </div>
+    <ul class="en-logos" aria-label="企业客户" style="list-style:none;padding-left:0;margin-bottom:0">
+      <li>北极熊物流</li><li>冷链速运</li><li>哈士奇联合会</li><li>皇家马术学院</li><li>某不愿透露姓名的冰淇淋品牌</li>
+    </ul>
+  </div>
+</section>
+
+<section class="x-sec">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">行业方案</p>
+      <h2 class="x-h2">三个行业，<br />同一个温度。</h2>
+      <p class="x-lead">我们只服务对温度有要求的行业。如果您的业务在赤道，我们建议您先搬家。</p>
+    </div>
+    <div class="x-cards3 x-mt0">
+      <article class="x-card x-fade">
+        <div class="x-card__top"><span class="x-tag x-tag--solid">冷链</span><span class="x-ver">−18°C 起</span></div>
+        <h3 class="x-h3">冷链物流</h3>
+        <p>Cold Sleet 实时规划冷藏车路线，在冰淇淋融化前完成配送。路线规划考虑交通、天气、以及司机有没有偷偷开空调。</p>
+        <ul class="en-list"><li>全程温度可追溯至 0.1°C</li><li>融化预警提前 40 分钟</li><li>冷藏车门未关自动提醒</li></ul>
+      </article>
+      <article class="x-card x-fade">
+        <div class="x-card__top"><span class="x-tag x-tag--solid">科考</span><span class="x-ver">−60°C 起</span></div>
+        <h3 class="x-h3">极地科考</h3>
+        <p>Cold Floe 以 3,200 米冰芯上下文辅助气候研究，一口气读完 80 万年的数据，然后冷静地告诉你：情况不太妙。</p>
+        <ul class="en-list"><li>离线运行，无需卫星网络</li><li>支持手套操作的超大按钮界面</li><li>内置企鹅繁殖区避让</li></ul>
+      </article>
+      <article class="x-card x-fade">
+        <div class="x-card__top"><span class="x-tag x-tag--solid">马场</span><span class="x-ver">全温区</span></div>
+        <h3 class="x-h3">大型马场</h3>
+        <p>马匹排班、饲料预测、蹄铁更换提醒，加上整套 Harness for Horses。这才是真正的“大马型”企业部署。</p>
+        <ul class="en-list"><li>四蹄对齐巡检</li><li>胡萝卜库存智能补货</li><li>专属马术顾问 7×24 在线</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">部署方式</p>
+      <h2 class="x-h2">私有化部署于<br />贵司自有冰川。</h2>
+      <p class="x-lead">没有冰川？没关系。我们提供三种部署方式，总有一种足够冷。</p>
+    </div>
+    <div class="x-cards3 x-mt0 en-deploy">
+      <article class="x-card x-fade">
+        <svg viewBox="0 0 320 120" fill="none" stroke="#0E1A24" stroke-opacity=".4" stroke-width="1" aria-hidden="true"><path d="M0 92l50-34 30 16 46-46 40 30 34-20 50 40 40-18 30 18v42H0z"/><path d="M126 28l10 18M166 58l-8 12M80 74l-6 10"/><rect x="138" y="80" width="44" height="22" rx="2"/><path d="M146 88h28M146 94h18"/></svg>
+        <p class="x-eyebrow" style="margin:0 0 10px">方案 A</p>
+        <h3 class="x-h3">自有冰川部署</h3>
+        <p>模型直接冻存于贵司冰川内部。物理隔离，冷却免费，唯一的风险是冰川本身在移动（每年约 10 至 100 米，已计入 SLA）。</p>
+      </article>
+      <article class="x-card x-fade">
+        <svg viewBox="0 0 320 120" fill="none" stroke="#0E1A24" stroke-opacity=".4" stroke-width="1" aria-hidden="true"><path d="M0 70h320"/><path d="M40 70V50h240v20"/><path d="M40 70l-10 30h260l-10-30"/><path d="M80 50V36h40v14M200 50V30h44v20"/><path d="M0 84c20 4 40-4 60 0s40 4 60 0 40-4 60 0 40 4 60 0 40-4 80 0" stroke-dasharray="3 4"/></svg>
+        <p class="x-eyebrow" style="margin:0 0 10px">方案 B</p>
+        <h3 class="x-h3">托管冰架</h3>
+        <p>部署在 Antarctic 管理的专属冰架上，单租户隔离。每位客户分到一块独立冰架，边界清晰，偶尔有海豹借住。</p>
+      </article>
+      <article class="x-card x-fade">
+        <svg viewBox="0 0 320 120" fill="none" stroke="#0E1A24" stroke-opacity=".4" stroke-width="1" aria-hidden="true"><rect x="124" y="14" width="72" height="96" rx="6"/><path d="M124 50h72M134 28v12M134 62v18"/><rect x="146" y="66" width="12" height="12" rx="1"/><rect x="162" y="70" width="10" height="10" rx="1"/><rect x="152" y="82" width="11" height="11" rx="1"/></svg>
+        <p class="x-eyebrow" style="margin:0 0 10px">方案 C</p>
+        <h3 class="x-h3">冰箱边缘部署</h3>
+        <p>适合门店与小型站点：部署在任意一台冷冻室 ≤ −18°C 的冰箱里。请勿与速冻水饺放在同一层，以免争夺上下文。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec" id="security">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">安全与合规</p>
+      <h2 class="x-h2">冻得住，才守得住。</h2>
+      <p class="x-lead">企业级安全不是一句口号，是一层层冰。我们通过了所有我们自己发明的认证。</p>
+    </div>
+    <div class="en-sec-grid x-fade">
+      <div><span class="x-tag x-tag--ok">已启用</span><h3>单点冰封登录（SSO）</h3><p>员工只需登录一次，身份即被冻结保存。离职员工账号自动解冻销毁。</p></div>
+      <div><span class="x-tag x-tag--ok">已认证</span><h3>SOCK 2 Type II</h3><p>经第三方审计确认：公司所有员工在工作期间均穿着两双袜子。连续 12 个月无一例冻脚事故。</p></div>
+      <div><span class="x-tag x-tag--ok">合规</span><h3>GDPR（冰川数据保护条例）</h3><p>Glacial Data Protection Regulation。您有权要求删除您的数据——我们会把它放在太阳底下，等它自然融化。</p></div>
+      <div><span class="x-tag x-tag--ok">默认</span><h3>数据驻留南极</h3><p>所有数据存储于南纬 60° 以南。依据《南极条约》，这片大陆不属于任何国家，您的数据也一样安全中立。</p></div>
+      <div><span class="x-tag x-tag--ok">99.99%</span><h3>冻结率</h3><p>过去 12 个月，99.99% 的时间里所有系统处于正常结冰状态。剩下的 0.01% 是有人开了一次冷库门。</p></div>
+      <div><span class="x-tag x-tag--ok">不可篡改</span><h3>冰层年轮审计日志</h3><p>每一次操作都会冻进一层新冰，像树的年轮一样记录在案。想篡改？请先把整座冰川凿开。</p></div>
+    </div>
+    <div class="x-callout x-mt-m x-fade"><strong>关于模型训练：</strong>企业版客户的数据默认不用于训练。我们的模型已经冻了 2,000 万年，不缺你这一点。</div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint" id="sla">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">服务保障</p>
+      <h2 class="x-h2">冰层厚度保障协议（SLA）</h2>
+      <p class="x-lead">别人承诺可用性，我们承诺冰层厚度。厚度不达标，按比例退还冰块。</p>
+    </div>
+    <div class="x-spec-wrap x-fade">
+      <table class="x-spec">
+        <thead><tr><th scope="col">等级</th><th scope="col">保障冰层厚度</th><th scope="col">冻结率</th><th scope="col">响应时间</th><th scope="col">能承载</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">标准</th><td class="x-m">≥ 10 cm</td><td class="x-m">99.9%</td><td>1 个工作日</td><td>一辆雪地摩托</td></tr>
+          <tr class="x-hl"><th scope="row">高级</th><td class="x-m">≥ 30 cm</td><td class="x-m">99.95%</td><td>4 小时</td><td>一辆小汽车 + 6 犬雪橇队</td></tr>
+          <tr><th scope="row">极地</th><td class="x-m">≥ 2,000 m</td><td class="x-m">99.99%</td><td>15 分钟（狗跑过来的时间）</td><td>整个企业，外加一座科考站</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="5">注：冰层厚度以贵司冰面中心点测量为准。因全球变暖导致的厚度下降不在赔付范围内，但我们会和您一起难过。</td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow">客户案例</p>
+      <h2 class="x-h2">他们已经冷静下来了</h2>
+    </div>
+    <div class="x-cards3 x-mt0">
+      <article class="x-card en-case x-fade">
+        <p class="x-eyebrow" style="margin:0 0 10px">冷链 · 北极熊物流</p>
+        <h3 class="x-h3">配送途中零融化</h3>
+        <p>部署 Cold Sleet 后，北极熊物流将冰淇淋配送的平均融化率从 12% 降到 0.3%。剩下的 0.3% 经调查是司机吃掉的。</p>
+        <div class="en-case__nums"><div><b>−97%</b><span>融化损耗</span></div><div><b>2.4×</b><span>配送效率</span></div></div>
+        <blockquote>“以前我们的货车像一锅温水。现在像一块冰。我很满意。”<cite>—— 调度主管，一头北极熊（经翻译）</cite></blockquote>
+      </article>
+      <article class="x-card en-case x-fade">
+        <p class="x-eyebrow" style="margin:0 0 10px">马场 · 皇家马术学院</p>
+        <h3 class="x-h3">四蹄全部对齐</h3>
+        <p>学院为 140 匹马全面换装 Harness for Horses，并接入马蹄对齐巡检系统。马匹跑偏投诉下降至每季度一次（同一匹马，它只是想去吃草）。</p>
+        <div class="en-case__nums"><div><b>140</b><span>匹马完成对齐</span></div><div><b>0</b><span>次缰绳断裂</span></div></div>
+        <blockquote>“真正的大马型，不需要那么多参数，只需要一副好马具。”<cite>—— 首席教练</cite></blockquote>
+      </article>
+      <article class="x-card en-case x-fade">
+        <p class="x-eyebrow" style="margin:0 0 10px">零售 · 某不愿透露姓名的冰淇淋品牌</p>
+        <h3 class="x-h3">高峰期不再排队</h3>
+        <p>夏季门店接入 Cold Hail-ku，点单延迟低至一次眨眼。顾客还没决定口味，推荐已经出来了；顾客还没付钱，冰淇淋已经开始化了。</p>
+        <div class="en-case__nums"><div><b>38 ms</b><span>平均推荐延迟</span></div><div><b>[已隐去]</b><span>门店数量</span></div></div>
+        <blockquote>“请不要写我们的名字。”<cite>—— 该品牌（我们尊重了这个要求）</cite></blockquote>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint">
+  <div class="x-wrap">
+    <div class="x-sec__head x-sec__head--center x-fade">
+      <p class="x-eyebrow">常见问题</p>
+      <h2 class="x-h2">采购前，您可能想问</h2>
+    </div>
+    <div class="x-faq x-faq--center x-fade">
+      <details><summary>我们公司没有冰川，可以买企业版吗？</summary><div><p>可以。您可以选择托管冰架或冰箱边缘部署。若您坚持要拥有自己的冰川，可以联系我们的<a class="x-textlink" style="min-height:0" href="partners.html">冰川合作伙伴</a>。</p></div></details>
+      <details><summary>部署需要多久？</summary><div><p>软件部署约 2 周。冰川冻结需要额外 2,000 万年，但我们已经提前替您冻好了。</p></div></details>
+      <details><summary>可以按座位数计费吗？</summary><div><p>我们按雪橇位计费。一副雪橇有 6 个犬位、1 个驾驶位。人类员工请坐驾驶位。</p></div></details>
+      <details><summary>你们提供本地化支持吗？</summary><div><p>提供中文、英文与企鹅语支持。哈士奇语正在内测，目前只能理解“嗷呜”的 17 种含义。</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="x-dark x-close">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">让整个组织冷静下来。</h2>
+    <div class="x-close__btns x-fade">
+      <a class="x-btn x-btn--light" href="contact.html">联系销售</a>
+      <a class="x-btn x-btn--line-light" href="partners.html">成为冰川合作伙伴</a>
+    </div>
+  </div>
+</section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <div class="x-foot__grid">
+            <div class="x-foot__brand">
+              <a class="x-logo" href="index.html" aria-label="Antarctic 首页">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+                Antarctic
+              </a>
+              <p>冷静、可控、不会过热的智能。</p>
+            </div>
+            <div><h4>产品</h4><ul><li><a href="models/cold-floe.html">Cold Floe</a></li><li><a href="models/cold-sleet.html">Cold Sleet</a></li><li><a href="models/cold-hail-ku.html">Cold Hail-ku</a></li><li><a href="colding.html">Colding Plan</a></li><li><a href="harness.html">Harness</a></li></ul></div>
+            <div><h4>公司</h4><ul><li><a href="about.html">关于我们</a></li><li><a href="careers.html">招聘：诚聘驯犬工程师</a></li><li><a href="news.html">新闻</a></li><li><a href="partners.html">冰川合作伙伴</a></li><li><a href="safety.html">负责任冷缩政策</a></li></ul></div>
+            <div><h4>资源</h4><ul><li><a href="docs.html">文档</a></li><li><a href="harness-sizes.html">马具尺码表</a></li><li><a href="status.html" class="x-status">状态：全部系统正常结冰</a></li><li><a href="community.html">社区</a></li></ul></div>
+            <div><h4>法律</h4><ul><li><a href="privacy.html">隐私政策</a></li><li><a href="terms.html">使用条款</a></li><li><a href="disclaimer.html">冷责声明</a></li></ul></div>
+          </div>
+          <div class="x-foot__bottom">
+            <p>© 2026 Antarctic Ice, Inc. 保留所有冰块。</p>
+            <p class="x-disc">本网站为虚构品牌恶搞创作，不代表任何真实公司或产品。</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/js/site.js"></script>
+
+  </body>
+</html>

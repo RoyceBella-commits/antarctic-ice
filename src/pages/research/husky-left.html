@@ -1,0 +1,182 @@
+<!--
+title: 哈士奇为什么总往左跑？雪橇犬行为的可解释性分析
+description: Antarctic 可解释性团队论文：在 6 犬雪橇队中定位到“松鼠神经元”与“左边有肉干”特征，首次从机制上解释了雪橇的系统性左偏。
+nav: research
+-->
+<!--head--><style>
+.p-authors { margin-top: 28px; font-size: 15px; color: var(--x-ink); line-height: 1.8; }
+.p-authors sup { color: var(--x-steel-text); font-size: 11px; margin-left: 1px; }
+.p-affil { margin-top: 6px; font-size: 13px; color: var(--x-ink-3); line-height: 1.7; }
+.p-abstract { padding: 28px 32px; border-radius: var(--r-m); background: var(--x-card); border: 1px solid var(--x-line); }
+.p-abstract h2 { margin-top: 0 !important; font: 500 12px/1.4 var(--x-sans) !important; letter-spacing: 0.14em; color: var(--x-steel-text); }
+.p-abstract p { color: var(--x-ink) !important; }
+.p-refs { font-size: 14px; padding-left: 2em !important; }
+.p-refs li { color: var(--x-ink-2); }
+.p-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.p-pager a { display: block; padding: 24px; border: 1px solid var(--x-line); border-radius: var(--r-m); background: var(--x-card); transition: border-color var(--dur-quick); }
+.p-pager a:hover { border-color: var(--x-ink); }
+.p-pager small { display: block; font-size: 13px; color: var(--x-ink-3); margin-bottom: 8px; }
+.p-pager span { font: 500 17px/1.5 var(--x-serif); color: var(--x-ink); }
+.p-pager a:last-child { text-align: right; }
+@media (max-width: 760px) { .p-pager { grid-template-columns: 1fr; } .p-pager a:last-child { text-align: left; } }
+.p-fig { padding: 24px; border-radius: var(--r-m); background: var(--x-card); border: 1px solid var(--x-line); }
+.p-fig svg { width: 100%; height: auto; display: block; }
+.p-feats { display: grid; gap: 10px; padding: 0 !important; list-style: none; }
+.p-feats li { display: grid; grid-template-columns: 88px 1fr; gap: 16px; padding: 14px 18px; border-radius: 12px; background: var(--x-card); border: 1px solid var(--x-line); margin: 0 !important; }
+.p-feats code { justify-self: start; align-self: start; }
+@media (max-width: 600px) { .p-feats li { grid-template-columns: 1fr; gap: 6px; } }
+</style><!--/head-->
+<section class="x-phero">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="{{root}}index.html">首页</a></li><li><a href="{{root}}research.html">研究</a></li><li>哈士奇左偏</li></ol>
+    <p class="x-eyebrow">2026年9月 · 可解释性</p>
+    <h1 class="x-h1" style="max-width:22ch">哈士奇为什么总往左跑？雪橇犬行为的可解释性分析</h1>
+    <p class="p-authors">沈默<sup>1</sup>、Tove Lindqvist<sup>1</sup>、二哈<sup>2</sup>、阿拉斯加·大白<sup>2</sup>、林小满<sup>1,3</sup></p>
+    <p class="p-affil"><sup>1</sup>Antarctic 可解释性团队 &nbsp; <sup>2</sup>哈士奇联合会（受试犬兼共同作者） &nbsp; <sup>3</sup>阿拉斯加狗拉雪橇协会</p>
+    <div class="x-phero__btns">
+      <a class="x-btn x-btn--dark" href="#" data-toast="PDF 被一只哈士奇叼走了，正在往左追。">下载 PDF</a>
+      <a class="x-btn x-btn--ghost" href="#cite">引用本文</a>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap x-doc">
+    <aside class="x-toc" aria-label="目录">
+      <p>目录</p>
+      <ol>
+        <li><a href="#abstract">摘要</a></li>
+        <li><a href="#intro">1 引言</a></li>
+        <li><a href="#method">2 方法：稀疏肉干编码器</a></li>
+        <li><a href="#experiments">3 实验</a></li>
+        <li><a href="#results">4 结果</a></li>
+        <li><a href="#limitations">5 局限性</a></li>
+        <li><a href="#conclusion">6 结论</a></li>
+        <li><a href="#refs">参考文献</a></li>
+        <li><a href="#cite">引用本文</a></li>
+      </ol>
+    </aside>
+    <article class="x-prose">
+      <div class="p-abstract" id="abstract">
+        <h2>摘要</h2>
+        <p>雪橇队的系统性左偏是极地物流中一个长期存在却缺乏机制解释的现象。我们使用<strong>稀疏肉干编码器</strong>（Sparse Jerky Autoencoder, SJA）对 6 犬雪橇队的行为进行分解，识别出约 3,400 万个可解释特征。其中两个特征起决定性作用：<strong>“松鼠神经元”</strong>（#S-0417），在视野边缘出现任何毛茸茸的物体时激活；以及<strong>“左边有肉干”</strong>特征（#J-2048），在训犬师左侧口袋鼓起时激活。通过对 #J-2048 进行特征钳制（feature clamping），我们可以把雪橇的偏航角从 7.3° 降至 0.2°，也可以——在一次失控的实验中——让整支队伍原地绕圈 41 分钟。</p>
+      </div>
+
+      <h2 id="intro">1 引言</h2>
+      <p>每一位雪橇手都知道：哈士奇会往左跑。它们在平地往左，在上坡往左，在被明确喊出 “Gee!”（右转）时，依然会先往左看一眼。</p>
+      <p>传统观点将其归因于风向、地形或“哈士奇就是这样”。后者在学术上被称为<strong>哈士奇黑箱假说</strong>，在过去二十年中统治了这一领域。我们认为黑箱不应该是终点。如果我们要把冷静、可控的智能交给一支雪橇队，我们就必须理解它们在想什么——至少是在想什么吃的。</p>
+
+      <h2 id="method">2 方法：稀疏肉干编码器</h2>
+      <h3>2.1 数据采集</h3>
+      <p>我们为 24 只哈士奇佩戴了 Antarctic Harness for Huskies，并在背带的 X 型受力结构中嵌入了拉力传感器、耳朵角度计和尾巴摆幅记录仪。共采集 1,200 小时冰面奔跑数据，其中有效数据 1,140 小时，剩余 60 小时为“停下来闻东西”。</p>
+      <h3>2.2 特征分解</h3>
+      <p>SJA 将每一时刻的拉力向量分解为少量同时激活的特征。我们要求特征尽可能稀疏、单义，并且能被训犬师用一句话解释。无法用一句话解释的特征被归入“它就是开心”类别（约占 11%）。</p>
+      <p>部分已命名特征如下：</p>
+      <ul class="p-feats">
+        <li><code>#S-0417</code><span><strong>松鼠神经元。</strong>视野中出现毛茸茸的小东西时强烈激活。在南极没有松鼠的情况下依然会激活，目标通常是一只企鹅、一顶帽子或摄影师的围巾。</span></li>
+        <li><code>#J-2048</code><span><strong>左边有肉干。</strong>当训犬师站在队伍左侧且左口袋体积大于右口袋时激活。与实际是否有肉干的相关系数仅 0.31——它们是在赌。</span></li>
+        <li><code>#M-0001</code><span><strong>Mush。</strong>听到口令后激活。强度与口令音量无关，与喊口令的人是否刚开过肉干袋高度相关。</span></li>
+        <li><code>#L-0730</code><span><strong>领头犬说了算。</strong>在队伍其余成员中广泛存在，激活后会覆盖 #S-0417，是雪橇队最重要的“安全特征”。</span></li>
+        <li><code>#W-1111</code><span><strong>嚎叫共振。</strong>一只狗开始嚎叫时，其余五只在 0.8 秒内同步激活。暂无实际功能，但很好听。</span></li>
+      </ul>
+
+      <h2 id="experiments">3 实验</h2>
+      <p>我们在 200 米标准冰道上进行了三组对照实验：训犬师站左侧、站右侧、站在雪橇正后方。每组 30 趟，测量平均偏航角。</p>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">条件</th><th scope="col">平均偏航角</th><th scope="col">#J-2048 激活</th><th scope="col">#S-0417 激活</th><th scope="col">备注</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">训犬师站左侧</th><td class="x-m">−7.3°</td><td class="x-m">0.92</td><td class="x-m">0.12</td><td>典型左偏</td></tr>
+            <tr><th scope="row">训犬师站右侧</th><td class="x-m">−2.1°</td><td class="x-m">0.40</td><td class="x-m">0.15</td><td>仍然偏左，原因见 4.2</td></tr>
+            <tr><th scope="row">训犬师站正后方</th><td class="x-m">−0.9°</td><td class="x-m">0.18</td><td class="x-m">0.09</td><td>狗频繁回头</td></tr>
+            <tr class="x-hl"><th scope="row">钳制 #J-2048 = 0</th><td class="x-m">−0.2°</td><td class="x-m">0.00</td><td class="x-m">0.11</td><td>笔直，但略显失落</td></tr>
+            <tr><th scope="row">钳制 #J-2048 = 10×</th><td class="x-m">−360°/min</td><td class="x-m">9.80</td><td class="x-m">0.40</td><td>原地绕圈 41 分钟</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="p-fig">
+        <svg viewBox="0 0 400 200" role="img" aria-label="雪橇轨迹俯视图：基线轨迹向左弯曲，钳制肉干特征后轨迹笔直">
+          <g stroke="#0E1A24" stroke-opacity=".2" stroke-dasharray="3 3"><path d="M200 190V12"/></g>
+          <path d="M200 190C200 130 180 80 120 20" fill="none" stroke="#5B7C99" stroke-width="1.6"/>
+          <path d="M206 190C206 140 205 80 204 20" fill="none" stroke="#0E1A24" stroke-width="1.6"/>
+          <g fill="#9A5B34"><rect x="92" y="54" width="14" height="8" rx="2"/><rect x="74" y="74" width="14" height="8" rx="2"/></g>
+          <g font-family="ui-monospace, monospace" font-size="9" fill="#5A6670">
+            <text x="60" y="48">肉干（疑似）</text>
+            <text x="112" y="14">基线：−7.3°</text>
+            <text x="212" y="24">钳制 #J-2048：−0.2°</text>
+            <text x="212" y="186">起点</text>
+          </g>
+        </svg>
+        <figcaption>图 1　200 米冰道俯视轨迹。左侧方块为训犬师口袋位置的肉干（未经证实）。</figcaption>
+      </figure>
+
+      <h2 id="results">4 结果</h2>
+      <h3>4.1 左偏的主要来源</h3>
+      <p>归因分析显示，雪橇偏航可分解如下：</p>
+      <div class="x-bars x-fade" aria-label="雪橇左偏的归因">
+        <div class="x-bar x-bar--ours"><span class="x-bar__label">#J-2048 左边有肉干</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:73%"></span></span><span class="x-bar__val">73%</span></div>
+        <div class="x-bar"><span class="x-bar__label">#S-0417 松鼠神经元</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:14%"></span></span><span class="x-bar__val">14%</span></div>
+        <div class="x-bar"><span class="x-bar__label">风向与地形</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:8%"></span></span><span class="x-bar__val">8%</span></div>
+        <div class="x-bar"><span class="x-bar__label">“它就是开心”</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:5%"></span></span><span class="x-bar__val">5%</span></div>
+      </div>
+      <h3>4.2 为什么训犬师站右侧时仍然左偏？</h3>
+      <p>我们发现 #J-2048 存在<strong>记忆残留</strong>：只要训犬师在过去 72 小时内曾经站在左侧发过肉干，特征就会保持低水平激活。换言之，哈士奇往左跑不是因为现在左边有肉干，而是因为<strong>左边曾经有过肉干</strong>。我们认为这是迄今为止在雪橇犬中观察到的最早的“上下文学习”。</p>
+      <h3>4.3 领头犬的抑制作用</h3>
+      <p>当领头犬激活 #L-0730 时，其余犬只的 #S-0417 被抑制 82%。这意味着一支队伍的可靠性主要取决于领头犬是否足够冷静。我们建议所有 Colding Plan 用户优先投资领头犬。</p>
+
+      <h2 id="limitations">5 局限性</h2>
+      <ul>
+        <li>研究仅覆盖哈士奇。阿拉斯加雪橇犬表现出更强的右偏倾向，但它们拒绝佩戴传感器超过 20 分钟。</li>
+        <li>特征 #S-0417 在南极缺乏真实松鼠，可能存在分布外泛化问题。</li>
+        <li>钳制实验中有一只狗在绕圈 41 分钟后表示“还想再来一次”，这对实验伦理提出了新的挑战。</li>
+        <li>所有受试犬均获得了足额肉干报酬。这可能进一步强化了 #J-2048，我们对此感到抱歉，但狗不觉得。</li>
+      </ul>
+
+      <h2 id="conclusion">6 结论</h2>
+      <p>哈士奇不是黑箱。它们是一个由松鼠、肉干和领头犬组成的、可以被理解的系统。通过可解释性工具，我们第一次能够回答“它为什么往左跑”，并在必要时，温柔地让它往前跑。</p>
+      <p>下一步，我们将研究为什么哈士奇在拍照时总是闭眼。</p>
+
+      <h2 id="refs">参考文献</h2>
+      <ol class="p-refs">
+        <li>Lindqvist, T., &amp; 沈默. (2025). Toward Monosemantic Sled Dogs. <em>Journal of Polar Interpretability</em>, 4(2), 11–29.</li>
+        <li>哈士奇联合会. (2023). 《关于“往左跑”的立场声明》（共 1 页，大部分是爪印）.</li>
+        <li>Antarctic 可解释性团队. (2026). 稀疏肉干编码器：从拉力信号中提取单义特征. <em>Antarctic 技术报告</em>, AT-2026-07.</li>
+        <li>林小满. (2024). 领头犬作为天然安全层. <em>阿拉斯加狗拉雪橇协会年刊</em>.</li>
+        <li>柏千里 等. (2026). 马蹄对齐：一种四蹄定位的新方法. <em>Antarctic Research</em>.</li>
+      </ol>
+
+      <h2 id="cite">引用本文</h2>
+      <div class="x-term">
+        <div class="x-term__bar"><i></i><i></i><i></i><span>husky-left.bib</span></div>
+        <button class="x-copy" data-copy="#bib-husky">复制</button>
+<pre id="bib-husky"><span class="k">@article</span>{shen2026huskyleft,
+  title   = {<span class="s">哈士奇为什么总往左跑？雪橇犬行为的可解释性分析</span>},
+  author  = {<span class="s">沈默 and Lindqvist, Tove and 二哈 and 大白 and 林小满</span>},
+  journal = {<span class="s">Antarctic Research</span>},
+  year    = {<span class="s">2026</span>},
+  month   = {<span class="s">sep</span>},
+  note    = {<span class="s">共同作者以爪印签名</span>}
+}</pre>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap">
+    <nav class="p-pager x-fade" aria-label="其他论文">
+      <a href="{{root}}research/constitutional-cold.html"><small>← 上一篇 · 2026年8月</small><span>宪法级抗寒体质：让模型在暴风雪中保持原则</span></a>
+      <a href="{{root}}research/hoof-alignment.html"><small>下一篇 · 2026年10月 →</small><span>马蹄对齐：一种四蹄定位的新方法</span></a>
+    </nav>
+  </div>
+</section>
+
+<section class="x-dark x-close">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">理解了它为什么往左，<br />就能让它一直向前。</h2>
+    <div class="x-close__btns x-fade">
+      <a class="x-btn x-btn--light" href="{{root}}harness.html#huskies">了解 Harness for Huskies</a>
+      <a class="x-btn x-btn--line-light" href="{{root}}research.html">返回全部研究</a>
+    </div>
+  </div>
+</section>

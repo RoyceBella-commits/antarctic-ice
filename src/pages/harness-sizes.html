@@ -1,0 +1,241 @@
+<!--
+title: 马具尺码表
+description: Antarctic Harness 尺码表与尺码计算器：哈士奇、马与人类背带的尺码对照，外加测量指南。
+nav: harness
+-->
+<!--head--><style>
+.s-calc { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; }
+.s-calc__out { display: flex; flex-direction: column; justify-content: center; background: var(--x-ink); color: #DCE4EA; border-radius: var(--r-l); padding: clamp(28px, 4vw, 48px); min-height: 320px; }
+.s-calc__out .x-eyebrow { color: #C9A27F; }
+.s-size { font: 500 clamp(64px, 9vw, 112px)/1 var(--x-serif); color: #fff; letter-spacing: -0.03em; }
+.s-size-name { margin-top: 10px; font: 500 20px/1.4 var(--x-serif); color: #fff; }
+.s-note { margin-top: 16px; color: #A9B7C3; font-size: 15px; }
+.s-meta { margin-top: 24px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.12); font: 400 13px/1.6 var(--x-mono); color: #8FA2B2; }
+.s-out-num { font-variant-numeric: tabular-nums; }
+.s-fields[hidden] { display: none; }
+.s-range { display: flex; align-items: center; gap: 14px; }
+.s-range output { min-width: 72px; text-align: right; font: 400 14px/1 var(--x-mono); color: var(--x-ink); }
+@media (max-width: 900px) { .s-calc { grid-template-columns: 1fr; } }
+.s-tablehead { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; scroll-margin-top: 88px; }
+.s-tablehead + .x-spec-wrap .x-spec { margin-top: 20px; }
+.s-block + .s-block { margin-top: 72px; }
+</style><!--/head-->
+<section class="x-phero">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="{{root}}index.html">首页</a></li><li><a href="{{root}}harness.html">Harness</a></li><li>马具尺码表</li></ol>
+    <p class="x-eyebrow" style="color:var(--x-cognac)">尺码表</p>
+    <h1 class="x-h1">合身，<br />是最好的对齐。</h1>
+    <p class="x-lead">太松，哈士奇会从背带里“越狱”；太紧，它会用一整天的眼神让你反思。量好尺寸，再下单。拿不准的话，直接<a class="x-textlink" style="min-height:0" href="{{root}}fitting.html">预约试穿</a>。</p>
+    <div class="x-phero__btns">
+      <a class="x-btn x-btn--dark" href="#calc">用尺码计算器</a>
+      <a class="x-btn x-btn--ghost" href="#measure">怎么量？</a>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight" id="calc" style="scroll-margin-top:64px">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow" style="color:var(--x-cognac)">尺码计算器</p>
+      <h2 class="x-h2">三秒给出推荐尺码。</h2>
+      <p class="x-lead">本计算器由 Cold Hail-ku 驱动，所以很快。推荐结果仅供参考，最终解释权归你的狗。</p>
+    </div>
+    <div class="s-calc x-fade">
+      <form class="x-formcard x-form" id="s-form" onsubmit="return false">
+        <fieldset class="x-field">
+          <legend>给谁量？</legend>
+          <div class="x-choices">
+            <label class="x-choice"><input type="radio" name="species" value="dog" checked /><b>雪橇犬</b><small>哈士奇、阿拉斯加、柯基…</small></label>
+            <label class="x-choice"><input type="radio" name="species" value="horse" /><b>马</b><small>从小马到挽马</small></label>
+            <label class="x-choice"><input type="radio" name="species" value="human" /><b>人类</b><small>开放式办公室适用</small></label>
+          </div>
+        </fieldset>
+
+        <div class="s-fields" data-for="dog">
+          <div class="x-field">
+            <label for="s-dog-chest">胸围</label>
+            <div class="s-range"><input type="range" id="s-dog-chest" min="30" max="110" value="68" /><output for="s-dog-chest" id="s-dog-chest-o">68 cm</output></div>
+          </div>
+          <div class="x-field">
+            <label for="s-dog-weight">体重</label>
+            <div class="s-range"><input type="range" id="s-dog-weight" min="5" max="60" value="23" /><output for="s-dog-weight" id="s-dog-weight-o">23 kg</output></div>
+          </div>
+          <label class="x-check"><input type="checkbox" id="s-dog-corgi" /><span>它是一只柯基（腿长 &lt; 15 cm）</span></label>
+        </div>
+
+        <div class="s-fields" data-for="horse" hidden>
+          <div class="x-field">
+            <label for="s-horse-height">肩高</label>
+            <div class="s-range"><input type="range" id="s-horse-height" min="90" max="190" value="160" /><output for="s-horse-height" id="s-horse-height-o">160 cm</output></div>
+          </div>
+          <div class="x-field">
+            <label for="s-horse-mood">它对你的态度</label>
+            <select id="s-horse-mood">
+              <option value="0">友好</option>
+              <option value="1">礼貌但有距离</option>
+              <option value="2">盯着你手里的胡萝卜</option>
+              <option value="3">刚踢过一位销售</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="s-fields" data-for="human" hidden>
+          <div class="x-field">
+            <label for="s-human-desk">工位面积</label>
+            <div class="s-range"><input type="range" id="s-human-desk" min="1" max="12" value="4" /><output for="s-human-desk" id="s-human-desk-o">4 m²</output></div>
+          </div>
+          <div class="x-field">
+            <label for="s-human-meet">每天开会时长</label>
+            <div class="s-range"><input type="range" id="s-human-meet" min="0" max="10" value="3" /><output for="s-human-meet" id="s-human-meet-o">3 小时</output></div>
+          </div>
+          <div class="x-field">
+            <label for="s-human-escape">想逃跑的程度</label>
+            <div class="s-range"><input type="range" id="s-human-escape" min="0" max="10" value="6" /><output for="s-human-escape" id="s-human-escape-o">6 / 10</output></div>
+          </div>
+        </div>
+      </form>
+
+      <div class="s-calc__out" aria-live="polite">
+        <p class="x-eyebrow">推荐尺码</p>
+        <p class="s-size" id="s-size">M</p>
+        <p class="s-size-name" id="s-size-name">标准哈士奇</p>
+        <p class="s-note" id="s-note">典型雪橇犬身材。这也是我们卖得最好的尺码。</p>
+        <p class="s-meta" id="s-meta">建议档位 2 · 牵引绳 2.4 m</p>
+        <div class="x-phero__btns" style="margin-top:24px">
+          <a class="x-btn x-btn--light" href="{{root}}fitting.html">预约试穿这个尺码</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint">
+  <div class="x-wrap">
+    <div class="s-block x-fade">
+      <div class="s-tablehead" id="dogs">
+        <h2 class="x-h3" style="font-size:28px">雪橇犬背带 · Harness for Huskies</h2>
+        <a class="x-textlink" href="{{root}}harness.html#huskies">查看产品 →</a>
+      </div>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">尺码</th><th scope="col">胸围</th><th scope="col">体重</th><th scope="col">典型成员</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">XS</th><td class="x-m">35–45 cm</td><td class="x-m">5–10 kg</td><td>幼犬实习生</td></tr>
+            <tr><th scope="row">S</th><td class="x-m">45–58 cm</td><td class="x-m">10–18 kg</td><td>体型偏小的母哈士奇</td></tr>
+            <tr><th scope="row">M</th><td class="x-m">58–72 cm</td><td class="x-m">18–27 kg</td><td>标准哈士奇（如 Blizzard）</td></tr>
+            <tr><th scope="row">L</th><td class="x-m">72–85 cm</td><td class="x-m">27–38 kg</td><td>阿拉斯加雪橇犬、冬季的 Kevin</td></tr>
+            <tr><th scope="row">XL</th><td class="x-m">85–105 cm</td><td class="x-m">38–60 kg</td><td>“它只是毛多”</td></tr>
+            <tr class="x-hl"><th scope="row">CG（柯基专属）</th><td class="x-m">50–70 cm</td><td class="x-m">10–14 kg</td><td>矮而宽。离地间隙 8 cm，防止背带拖地。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="s-block x-fade">
+      <div class="s-tablehead" id="horses">
+        <h2 class="x-h3" style="font-size:28px">马具套装 · Harness for Horses</h2>
+        <a class="x-textlink" href="{{root}}harness.html#horses">查看产品 →</a>
+      </div>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">尺码</th><th scope="col">肩高</th><th scope="col">额带长度</th><th scope="col">适用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Pony</th><td class="x-m">&lt; 148 cm</td><td class="x-m">36 cm</td><td>小马。轻量模型，同样认真。</td></tr>
+            <tr><th scope="row">Cob</th><td class="x-m">148–158 cm</td><td class="x-m">38 cm</td><td>结实的小个子，蒸馏版大马型</td></tr>
+            <tr><th scope="row">Full</th><td class="x-m">158–172 cm</td><td class="x-m">40 cm</td><td>标准成年马，我们的旗舰尺码</td></tr>
+            <tr><th scope="row">XL</th><td class="x-m">&gt; 172 cm</td><td class="x-m">43 cm</td><td>挽马、重型马，以及参数量特别大的马</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="s-block x-fade">
+      <div class="s-tablehead" id="humans">
+        <h2 class="x-h3" style="font-size:28px">人类背带 · Harness for Humans</h2>
+        <a class="x-textlink" href="{{root}}harness.html#humans">查看产品 →</a>
+      </div>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">尺码</th><th scope="col">工位面积</th><th scope="col">每天开会</th><th scope="col">想逃跑程度</th><th scope="col">牵引绳</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">实习生</th><td class="x-m">&lt; 2 m²</td><td class="x-m">0–1 h</td><td class="x-m">2/10</td><td>1.5 m，够到打印机</td></tr>
+            <tr><th scope="row">工程师</th><td class="x-m">2–5 m²</td><td class="x-m">1–3 h</td><td class="x-m">6/10</td><td>3 m，够到饮水机</td></tr>
+            <tr><th scope="row">资深工程师</th><td class="x-m">5–8 m²</td><td class="x-m">3–5 h</td><td class="x-m">8/10</td><td>3 m + 防挣脱扣</td></tr>
+            <tr><th scope="row">经理</th><td class="x-m">独立办公室</td><td class="x-m">5–8 h</td><td class="x-m">10/10</td><td>无需牵引，会议已经拴住了</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec" id="measure">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow" style="color:var(--x-cognac)">测量指南</p>
+      <h2 class="x-h2">三步量好，<br />一次合身。</h2>
+      <p class="x-lead">准备一根软尺、一根肉干（或胡萝卜，或一杯冰美式，视物种而定）。</p>
+    </div>
+    <ol class="x-steps x-fade">
+      <li><h3>让它站好</h3><p>四脚着地、自然站立、不要屏气。如果是哈士奇，这一步可能需要 20 分钟和两根肉干。</p></li>
+      <li><h3>量胸围最宽处</h3><p>软尺绕过前腿后方、胸腔最宽的位置，能塞进两根手指即可。读数时请无视它看你的眼神。</p></li>
+      <li><h3>称重并对照表格</h3><p>介于两个尺码之间时选大一号，然后用五档马鞍微调（Fine-tuning）。人类请诚实填写开会时长。</p></li>
+    </ol>
+    <div class="x-callout x-fade x-mt-m"><strong>提示：</strong>冬季毛量会让胸围增加 3–8 cm。秋天量的尺寸，冬天请调到第 3 档；春节后请调到第 4 档，我们不评判。</div>
+  </div>
+</section>
+
+<section class="x-dark x-close">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">量不准？<br />带它来店里。</h2>
+    <div class="x-close__btns x-fade">
+      <a class="x-btn x-btn--light" href="{{root}}fitting.html">预约马具试穿</a>
+      <a class="x-btn x-btn--line-light" href="{{root}}harness.html">逛逛 Harness 全系列</a>
+    </div>
+  </div>
+</section>
+<!--scripts-->
+<script>
+(function () {
+  var form = document.getElementById("s-form");
+  if (!form) return;
+  var $ = function (id) { return document.getElementById(id); };
+  var units = { "s-dog-chest": " cm", "s-dog-weight": " kg", "s-horse-height": " cm", "s-human-desk": " m²", "s-human-meet": " 小时", "s-human-escape": " / 10" };
+  function show(size, name, note, meta) {
+    $("s-size").textContent = size; $("s-size").style.fontSize = /[\u4e00-\u9fa5]/.test(size) && size.length > 2 ? "clamp(40px, 6vw, 64px)" : ""; $("s-size-name").textContent = name; $("s-note").textContent = note; $("s-meta").textContent = meta;
+  }
+  function calc() {
+    Object.keys(units).forEach(function (id) { $(id + "-o").textContent = $(id).value + units[id]; });
+    var sp = form.querySelector('input[name="species"]:checked').value;
+    [].forEach.call(form.querySelectorAll(".s-fields"), function (f) { f.hidden = f.getAttribute("data-for") !== sp; });
+    if (sp === "dog") {
+      var c = +$("s-dog-chest").value, w = +$("s-dog-weight").value;
+      if ($("s-dog-corgi").checked) return show("CG", "柯基专属 · 矮而宽", "我们为柯基单独开了一条生产线。背带离地 8 cm，跑起来不会扫地。它跑不快，但它很努力。", "建议档位 3 · 牵引绳 1.2 m · 附赠屁股防寒罩");
+      var s = c < 45 ? "XS" : c < 58 ? "S" : c < 72 ? "M" : c < 85 ? "L" : "XL";
+      var names = { XS: "幼犬实习生", S: "轻量雪橇犬", M: "标准哈士奇", L: "大型雪橇犬", XL: "毛量惊人型" };
+      var notes = { XS: "适合刚入职的幼犬。请注意：它长得比你的需求文档改得还快。", S: "灵活、轻快，适合领头。", M: "典型雪橇犬身材。这也是我们卖得最好的尺码。", L: "力气很大。建议同时购买一位更有耐心的主人。", XL: "确定不是一头小熊？如果是，请改选马具。" };
+      var ratio = w / c;
+      var note = notes[s] + (ratio > 0.5 ? " 另外，按这个体重，它可能最近吃得有点多。" : ratio < 0.2 ? " 另外，它可能该多吃一根肉干。" : "");
+      var gear = c > 90 ? 5 : c > 80 ? 4 : c > 65 ? 3 : 2;
+      return show(s, names[s], note, "建议档位 " + gear + " · 牵引绳 2.4 m");
+    }
+    if (sp === "horse") {
+      var h = +$("s-horse-height").value, mood = +$("s-horse-mood").value;
+      var hs = h < 148 ? "Pony" : h < 158 ? "Cob" : h < 172 ? "Full" : "XL";
+      var hn = { Pony: "小马", Cob: "结实小个子", Full: "标准成年马", XL: "大马型（大模型）" };
+      var moods = ["它看起来很期待。", "试穿时请先自我介绍。", "建议携带至少两根胡萝卜。", "建议由我们的马术顾问代为试穿，你在门外等。"];
+      return show(hs, hn[hs], "肩高 " + h + " cm。" + moods[mood], "建议档位 " + (mood + 2) + " · 缰绳 3.2 m");
+    }
+    var d = +$("s-human-desk").value, m = +$("s-human-meet").value, e = +$("s-human-escape").value;
+    var score = m * 0.6 + e * 0.8 - d * 0.2;
+    var hu = d >= 9 ? ["经理", "无需牵引", "你的会议已经替我们拴住了你。建议购买一副送给团队，作为团建礼物。"] :
+      score < 3 ? ["实习生", "轻度拴系", "你目前还很老实。牵引绳 1.5 m，够你走到打印机。"] :
+      score < 7 ? ["工程师", "标准拴系", "典型开放式办公室身材。牵引绳刚好够到饮水机，不够到隔壁组。"] :
+      ["资深工程师", "强化拴系", "你想逃跑的程度已超过行业平均。已为你加装防挣脱扣和一张请假条模板。"];
+    return show(hu[0], hu[1], hu[2], "开会 " + m + " h/天 · 逃跑指数 " + e + "/10 · 会议模式自动收紧 10%");
+  }
+  form.addEventListener("input", calc);
+  form.addEventListener("change", calc);
+  calc();
+})();
+</script>

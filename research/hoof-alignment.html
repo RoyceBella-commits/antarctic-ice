@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>马蹄对齐：一种四蹄定位的新方法 · Antarctic 南极冰</title>
+    <meta name="description" content="Antarctic 马具对齐团队论文：提出四蹄定位框架 HoofAlign，将蹄距误差降低至 ±0.3 mm，并讨论了对齐税（Alignment Tax）在马厩中的表现。" />
+    <meta property="og:title" content="马蹄对齐：一种四蹄定位的新方法 · Antarctic 南极冰" />
+    <meta property="og:description" content="Antarctic 马具对齐团队论文：提出四蹄定位框架 HoofAlign，将蹄距误差降低至 ±0.3 mm，并讨论了对齐税（Alignment Tax）在马厩中的表现。" />
+    <meta name="theme-color" content="#0E1A24" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script>document.documentElement.classList.add("x-js");</script>
+    <style>
+.p-authors { margin-top: 28px; font-size: 15px; color: var(--x-ink); line-height: 1.8; }
+.p-authors sup { color: var(--x-steel-text); font-size: 11px; margin-left: 1px; }
+.p-affil { margin-top: 6px; font-size: 13px; color: var(--x-ink-3); line-height: 1.7; }
+.p-abstract { padding: 28px 32px; border-radius: var(--r-m); background: var(--x-card); border: 1px solid var(--x-line); }
+.p-abstract h2 { margin-top: 0 !important; font: 500 12px/1.4 var(--x-sans) !important; letter-spacing: 0.14em; color: var(--x-steel-text); }
+.p-abstract p { color: var(--x-ink) !important; }
+.p-refs { font-size: 14px; padding-left: 2em !important; }
+.p-refs li { color: var(--x-ink-2); }
+.p-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.p-pager a { display: block; padding: 24px; border: 1px solid var(--x-line); border-radius: var(--r-m); background: var(--x-card); transition: border-color var(--dur-quick); }
+.p-pager a:hover { border-color: var(--x-ink); }
+.p-pager small { display: block; font-size: 13px; color: var(--x-ink-3); margin-bottom: 8px; }
+.p-pager span { font: 500 17px/1.5 var(--x-serif); color: var(--x-ink); }
+.p-pager a:last-child { text-align: right; }
+@media (max-width: 760px) { .p-pager { grid-template-columns: 1fr; } .p-pager a:last-child { text-align: left; } }
+.p-fig { padding: 24px; border-radius: var(--r-m); background: var(--x-card); border: 1px solid var(--x-line); }
+.p-fig svg { width: 100%; height: auto; display: block; }
+</style>
+  </head>
+  <body>
+    <div class="x-site" id="top">
+      <a class="x-skip" href="#main">跳到正文</a>
+      <a class="x-announce" href="../models/cold-floe.html"><b>Cold Floe 4.5</b>&nbsp;现已发布 — <span>迄今最冷静的模型 →</span></a>
+
+      <header class="x-nav" id="x-nav">
+        <div class="x-wrap x-nav__in">
+          <a class="x-logo" href="../index.html" aria-label="Antarctic 首页">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+            Antarctic
+          </a>
+          <ul class="x-nav__links" id="x-links">
+            <li><a href="../models.html">模型</a></li>
+            <li><a href="../colding.html">Colding Plan</a></li>
+            <li><a href="../harness.html">Harness</a></li>
+            <li><a href="../research.html" aria-current="page">研究</a></li>
+            <li><a href="../enterprise.html">企业</a></li>
+            <li><a href="../pricing.html">定价</a></li>
+          </ul>
+          <a class="x-btn x-btn--dark x-nav__cta" href="../start.html">开始冷却</a>
+          <button class="x-menu" id="x-menu" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="x-links">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 7h16M3 15h16" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main">
+<section class="x-phero">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="../index.html">首页</a></li><li><a href="../research.html">研究</a></li><li>马蹄对齐</li></ol>
+    <p class="x-eyebrow">2026年10月 · 对齐研究</p>
+    <h1 class="x-h1" style="max-width:22ch">马蹄对齐：一种四蹄定位的新方法</h1>
+    <p class="p-authors">柏千里<sup>1</sup>、闪电（一匹温血马）<sup>2</sup>、钉掌·老周<sup>3</sup>、Ingrid Hovland<sup>1</sup>、雪团<sup>1,4</sup></p>
+    <p class="p-affil"><sup>1</sup>Antarctic 马具对齐团队 &nbsp; <sup>2</sup>皇家马术学院（以个人身份参与） &nbsp; <sup>3</sup>第三代马具匠人工作室 &nbsp; <sup>4</sup>哈士奇联合会（旁听）</p>
+    <div class="x-phero__btns">
+      <a class="x-btn x-btn--dark" href="#" data-toast="PDF 正在解冻，预计 3–5 个工作日后可读。">下载 PDF</a>
+      <a class="x-btn x-btn--ghost" href="#cite">引用本文</a>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap x-doc">
+    <aside class="x-toc" aria-label="目录">
+      <p>目录</p>
+      <ol>
+        <li><a href="#abstract">摘要</a></li>
+        <li><a href="#intro">1 引言</a></li>
+        <li><a href="#method">2 方法：HoofAlign</a></li>
+        <li><a href="#experiments">3 实验</a></li>
+        <li><a href="#results">4 结果</a></li>
+        <li><a href="#limitations">5 局限性</a></li>
+        <li><a href="#conclusion">6 结论</a></li>
+        <li><a href="#refs">参考文献</a></li>
+        <li><a href="#cite">引用本文</a></li>
+      </ol>
+    </aside>
+    <article class="x-prose">
+      <div class="p-abstract" id="abstract">
+        <h2>摘要</h2>
+        <p>随着马型（大马型）规模不断增长，确保其四只蹄子朝着人类期望的方向前进变得愈发重要。现有方法大多只对齐前蹄，导致后蹄在长途任务中出现“目标漂移”。本文提出 <strong>HoofAlign</strong>，一种基于四蹄联合定位的对齐框架，引入“蹄距误差”（Hoof Distance Error, HDE）作为核心指标。在 12 座马场、212 匹马的实验中，HoofAlign 将平均蹄距误差从 4.7 mm 降至 ±0.3 mm，同时将马匹在冰面上的“意外劈叉”事件减少 96%。我们还发现，对齐税（Alignment Tax）确实存在：经过对齐的马平均慢 0.4 秒，但它们知道自己要去哪儿。</p>
+      </div>
+
+      <h2 id="intro">1 引言</h2>
+      <p>一匹马有四只蹄子。这一事实在业内长期被低估。</p>
+      <p>过去十年，马具行业的对齐工作几乎全部集中在<strong>缰绳层</strong>：只要马头朝向正确，就默认整匹马是对齐的。然而我们在冬季巡检中反复观察到一种现象——马头朝北，马蹄朝东北偏北，马屁股朝着冰淇淋店。我们称之为<strong>“蹄头不一致”</strong>（Hoof–Head Misalignment）。</p>
+      <p>在冰面上，蹄头不一致的后果尤为严重。轻则打滑，重则劈叉，最严重时马会以一种高度自信的姿态走向错误的方向——这在业内被称为“幻蹄”。</p>
+      <p>本文的贡献如下：</p>
+      <ul>
+        <li>提出蹄距误差（HDE），首个同时衡量四只蹄子的对齐指标；</li>
+        <li>提出 HoofAlign 框架，通过“先钉掌、后对齐、再微调马鞍”的三阶段流程实现四蹄定位；</li>
+        <li>发布 <strong>HoofBench</strong>，包含 3,200 段冰面行走视频，全部由马本人授权。</li>
+      </ul>
+
+      <h2 id="method">2 方法：HoofAlign</h2>
+      <h3>2.1 问题定义</h3>
+      <p>给定一匹马 <code>H</code> 及其四只蹄子 <code>h₁…h₄</code>，对齐的目标是让每只蹄子的落点与人类意图轨迹之间的距离之和最小。我们将其定义为蹄距误差：</p>
+      <blockquote>HDE = Σ ‖ 实际落蹄点 − 意图落蹄点 ‖ ÷ 4 &nbsp;（单位：毫米，越低越好；马不同意时另计）</blockquote>
+      <h3>2.2 三阶段流程</h3>
+      <ol>
+        <li><strong>预训练（钉掌）。</strong>由第三代马具匠人为每只蹄子定制防滑冰钉蹄铁。该阶段耗时最长，马最不耐烦。</li>
+        <li><strong>对齐（Alignment）。</strong>使用 Antarctic Harness for Horses 的胸带与笼头，将缰绳层意图逐层传导至四蹄。每一针缝线均经过对齐，确保力的方向与意图一致。</li>
+        <li><strong>微调（Fine-tuning）。</strong>通过五档可调马鞍对重心进行最后修正。我们发现第三档最受欢迎，第五档主要被骑手用于炫耀。</li>
+      </ol>
+      <h3>2.3 奖励信号</h3>
+      <p>我们尝试过多种奖励信号，包括胡萝卜、苹果和口头表扬。消融实验表明胡萝卜效果最好，口头表扬仅对温血马有效，且必须用德语。</p>
+
+      <h2 id="experiments">3 实验</h2>
+      <p>实验在 12 座合作马场的室外冰面上进行，气温 −15°C 至 −32°C。每匹马在 200 米标准冰道上完成 10 次往返，由三名评审独立标注落蹄点。其中一名评审是哈士奇，它的标注一致性出人意料地高，但总是建议“往左一点”（相关现象见<a href="../research/husky-left.html">我们关于哈士奇左偏的研究</a>）。</p>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">方法</th><th scope="col">蹄距误差 HDE ↓</th><th scope="col">劈叉率 ↓</th><th scope="col">平均用时</th><th scope="col">马的满意度</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">不对齐（基线）</th><td class="x-m">11.2 mm</td><td class="x-m">18.4%</td><td class="x-m">41.2 s</td><td>很开心，但方向不对</td></tr>
+            <tr><th scope="row">仅缰绳对齐</th><td class="x-m">4.7 mm</td><td class="x-m">7.9%</td><td class="x-m">43.0 s</td><td>一般</td></tr>
+            <tr><th scope="row">前蹄对齐</th><td class="x-m">2.9 mm</td><td class="x-m">5.1%</td><td class="x-m">43.3 s</td><td>后蹄表示不服</td></tr>
+            <tr class="x-hl"><th scope="row">HoofAlign（本文）</th><td class="x-m">±0.3 mm</td><td class="x-m">0.7%</td><td class="x-m">41.6 s</td><td>想要胡萝卜</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="p-fig">
+        <svg viewBox="0 0 400 180" role="img" aria-label="四蹄落点示意图：对齐前落点散乱，对齐后四个落点整齐地落在意图轨迹上">
+          <g font-family="ui-monospace, monospace" font-size="9" fill="#5A6670">
+            <text x="20" y="18">对齐前</text><text x="220" y="18">HoofAlign</text>
+          </g>
+          <g stroke="#0E1A24" stroke-opacity=".25" stroke-dasharray="3 3"><path d="M20 90h160M220 90h160"/></g>
+          <g fill="none" stroke="#5B7C99" stroke-width="1.2">
+            <ellipse cx="44" cy="62" rx="8" ry="6"/><ellipse cx="80" cy="118" rx="8" ry="6"/><ellipse cx="122" cy="70" rx="8" ry="6"/><ellipse cx="160" cy="132" rx="8" ry="6"/>
+          </g>
+          <g fill="none" stroke="#0E1A24" stroke-width="1.2">
+            <ellipse cx="250" cy="84" rx="8" ry="6"/><ellipse cx="286" cy="96" rx="8" ry="6"/><ellipse cx="322" cy="84" rx="8" ry="6"/><ellipse cx="358" cy="96" rx="8" ry="6"/>
+          </g>
+          <g font-family="ui-monospace, monospace" font-size="8" fill="#5A6670">
+            <text x="20" y="166">HDE = 11.2 mm · 一只后蹄去了冰淇淋店</text><text x="220" y="166">HDE = 0.3 mm · 四蹄一心</text>
+          </g>
+        </svg>
+        <figcaption>图 1　四蹄落点示意。虚线为人类意图轨迹，椭圆为实际落蹄点。</figcaption>
+      </figure>
+
+      <h2 id="results">4 结果</h2>
+      <p>HoofAlign 在全部 12 座马场上取得最低蹄距误差。值得注意的是，对齐后的马平均用时仅比基线多 0.4 秒，这说明<strong>对齐税远低于业界担忧</strong>——尤其考虑到基线马有 18.4% 的概率在终点前劈叉。</p>
+      <div class="x-bars x-fade" aria-label="各方法冰面劈叉率">
+        <div class="x-bar"><span class="x-bar__label">不对齐</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:92%"></span></span><span class="x-bar__val">18.4%</span></div>
+        <div class="x-bar"><span class="x-bar__label">仅缰绳对齐</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:40%"></span></span><span class="x-bar__val">7.9%</span></div>
+        <div class="x-bar"><span class="x-bar__label">前蹄对齐</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:26%"></span></span><span class="x-bar__val">5.1%</span></div>
+        <div class="x-bar x-bar--ours"><span class="x-bar__label">HoofAlign</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:4%"></span></span><span class="x-bar__val">0.7%</span></div>
+      </div>
+      <p>我们还观察到一种涌现能力：当马的规模超过 600 kg 时，经过对齐的马会自发地在冰面裂缝前停下。我们无法完全解释这一现象，但马似乎可以。</p>
+
+      <h2 id="limitations">5 局限性</h2>
+      <ul>
+        <li>本方法尚未在矮种马上验证。矮种马拒绝参加实验，理由是冰道太长。</li>
+        <li>HoofAlign 假设马有四只蹄子。对于八条腿的神话生物，我们留作未来工作。</li>
+        <li>在温度高于 0°C 时，冰道会变成水道，实验需改为游泳，超出了本文范围。</li>
+        <li>一位评审指出“马不是模型”。我们尊重这一意见，并在讨论后给了他一根胡萝卜。</li>
+      </ul>
+
+      <h2 id="conclusion">6 结论</h2>
+      <p>对齐不只是让头朝着正确的方向。真正的对齐，是让四只蹄子、一根缰绳和一副好背带，在零下三十度的冰面上达成共识。HoofAlign 是迈向这一目标的第一步——准确地说，是第一步、第二步、第三步和第四步，同时迈出。</p>
+
+      <h2 id="refs">参考文献</h2>
+      <ol class="p-refs">
+        <li>周, 钉. (1987). 《冰钉蹄铁工艺手册》. 第三代马具匠人工作室内部资料.</li>
+        <li>Hovland, I., &amp; 雪团. (2025). Bridle-Level Alignment Is Not Enough. <em>Proceedings of the Cold Conference on Equine Learning (CCEL)</em>.</li>
+        <li>柏千里 等. (2026). 五档马鞍的微调理论. <em>Antarctic 技术报告</em>, AT-2026-03.</li>
+        <li>皇家马术学院. (2024). 《关于马匹在冰面上劈叉的白皮书》（马本人审阅版）.</li>
+        <li>Antarctic 可解释性团队. (2026). 哈士奇为什么总往左跑？<em>Antarctic Research</em>.</li>
+      </ol>
+
+      <h2 id="cite">引用本文</h2>
+      <div class="x-term">
+        <div class="x-term__bar"><i></i><i></i><i></i><span>hoofalign.bib</span></div>
+        <button class="x-copy" data-copy="#bib-hoof">复制</button>
+<pre id="bib-hoof"><span class="k">@article</span>{bai2026hoofalign,
+  title   = {<span class="s">马蹄对齐：一种四蹄定位的新方法</span>},
+  author  = {<span class="s">柏千里 and 闪电 and 老周 and Hovland, Ingrid and 雪团</span>},
+  journal = {<span class="s">Antarctic Research</span>},
+  year    = {<span class="s">2026</span>},
+  month   = {<span class="s">oct</span>},
+  note    = {<span class="s">马已审阅</span>}
+}</pre>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap">
+    <nav class="p-pager x-fade" aria-label="其他论文">
+      <a href="../research/husky-left.html"><small>← 上一篇 · 2026年9月</small><span>哈士奇为什么总往左跑？雪橇犬行为的可解释性分析</span></a>
+      <a href="../research/constitutional-cold.html"><small>从头读起 · 2026年8月 →</small><span>宪法级抗寒体质：让模型在暴风雪中保持原则</span></a>
+    </nav>
+  </div>
+</section>
+
+<section class="x-dark x-close">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">四蹄对齐之后，<br />就差一副好马具。</h2>
+    <div class="x-close__btns x-fade">
+      <a class="x-btn x-btn--light" href="../harness.html#horses">了解 Harness for Horses</a>
+      <a class="x-btn x-btn--line-light" href="../research.html">返回全部研究</a>
+    </div>
+  </div>
+</section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <div class="x-foot__grid">
+            <div class="x-foot__brand">
+              <a class="x-logo" href="../index.html" aria-label="Antarctic 首页">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+                Antarctic
+              </a>
+              <p>冷静、可控、不会过热的智能。</p>
+            </div>
+            <div><h4>产品</h4><ul><li><a href="../models/cold-floe.html">Cold Floe</a></li><li><a href="../models/cold-sleet.html">Cold Sleet</a></li><li><a href="../models/cold-hail-ku.html">Cold Hail-ku</a></li><li><a href="../colding.html">Colding Plan</a></li><li><a href="../harness.html">Harness</a></li></ul></div>
+            <div><h4>公司</h4><ul><li><a href="../about.html">关于我们</a></li><li><a href="../careers.html">招聘：诚聘驯犬工程师</a></li><li><a href="../news.html">新闻</a></li><li><a href="../partners.html">冰川合作伙伴</a></li><li><a href="../safety.html">负责任冷缩政策</a></li></ul></div>
+            <div><h4>资源</h4><ul><li><a href="../docs.html">文档</a></li><li><a href="../harness-sizes.html">马具尺码表</a></li><li><a href="../status.html" class="x-status">状态：全部系统正常结冰</a></li><li><a href="../community.html">社区</a></li></ul></div>
+            <div><h4>法律</h4><ul><li><a href="../privacy.html">隐私政策</a></li><li><a href="../terms.html">使用条款</a></li><li><a href="../disclaimer.html">冷责声明</a></li></ul></div>
+          </div>
+          <div class="x-foot__bottom">
+            <p>© 2026 Antarctic Ice, Inc. 保留所有冰块。</p>
+            <p class="x-disc">本网站为虚构品牌恶搞创作，不代表任何真实公司或产品。</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/site.js"></script>
+
+  </body>
+</html>

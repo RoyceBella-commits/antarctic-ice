@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>宪法级抗寒体质（Constitutional AI）：让模型在暴风雪中保持原则 · Antarctic 南极冰</title>
+    <meta name="description" content="Antarctic 冷安全团队论文：用一部 12 条的《抗寒宪法》训练模型在暴风雪中保持原则，并接受全红色哈士奇红队的冰面演练。" />
+    <meta property="og:title" content="宪法级抗寒体质（Constitutional AI）：让模型在暴风雪中保持原则 · Antarctic 南极冰" />
+    <meta property="og:description" content="Antarctic 冷安全团队论文：用一部 12 条的《抗寒宪法》训练模型在暴风雪中保持原则，并接受全红色哈士奇红队的冰面演练。" />
+    <meta name="theme-color" content="#0E1A24" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script>document.documentElement.classList.add("x-js");</script>
+    <style>
+.p-authors { margin-top: 28px; font-size: 15px; color: var(--x-ink); line-height: 1.8; }
+.p-authors sup { color: var(--x-steel-text); font-size: 11px; margin-left: 1px; }
+.p-affil { margin-top: 6px; font-size: 13px; color: var(--x-ink-3); line-height: 1.7; }
+.p-abstract { padding: 28px 32px; border-radius: var(--r-m); background: var(--x-card); border: 1px solid var(--x-line); }
+.p-abstract h2 { margin-top: 0 !important; font: 500 12px/1.4 var(--x-sans) !important; letter-spacing: 0.14em; color: var(--x-steel-text); }
+.p-abstract p { color: var(--x-ink) !important; }
+.p-refs { font-size: 14px; padding-left: 2em !important; }
+.p-refs li { color: var(--x-ink-2); }
+.p-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.p-pager a { display: block; padding: 24px; border: 1px solid var(--x-line); border-radius: var(--r-m); background: var(--x-card); transition: border-color var(--dur-quick); }
+.p-pager a:hover { border-color: var(--x-ink); }
+.p-pager small { display: block; font-size: 13px; color: var(--x-ink-3); margin-bottom: 8px; }
+.p-pager span { font: 500 17px/1.5 var(--x-serif); color: var(--x-ink); }
+.p-pager a:last-child { text-align: right; }
+@media (max-width: 760px) { .p-pager { grid-template-columns: 1fr; } .p-pager a:last-child { text-align: left; } }
+.p-const { list-style: none; padding: 0 !important; display: grid; gap: 0; border-top: 1px solid var(--x-line); counter-reset: art; }
+.p-const li { counter-increment: art; display: grid; grid-template-columns: 76px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--x-line); margin: 0 !important; }
+.p-const li::before { content: "第" counter(art, simp-chinese-informal) "条"; font: 500 14px/1.85 var(--x-serif); color: var(--x-steel-text); }
+.p-const b { color: var(--x-ink); font-weight: 600; }
+@media (max-width: 600px) { .p-const li { grid-template-columns: 1fr; gap: 2px; } }
+.p-dialog { display: grid; gap: 10px; padding: 0 !important; list-style: none; }
+.p-dialog li { padding: 14px 18px; border-radius: 12px; margin: 0 !important; font-size: 15px; }
+.p-dialog .q { background: #F6EDE6; border: 1px solid rgba(154,91,52,0.2); }
+.p-dialog .a { background: var(--x-card); border: 1px solid var(--x-line); }
+.p-dialog small { display: block; font-size: 12px; letter-spacing: 0.06em; color: var(--x-ink-3); margin-bottom: 4px; }
+</style>
+  </head>
+  <body>
+    <div class="x-site" id="top">
+      <a class="x-skip" href="#main">跳到正文</a>
+      <a class="x-announce" href="../models/cold-floe.html"><b>Cold Floe 4.5</b>&nbsp;现已发布 — <span>迄今最冷静的模型 →</span></a>
+
+      <header class="x-nav" id="x-nav">
+        <div class="x-wrap x-nav__in">
+          <a class="x-logo" href="../index.html" aria-label="Antarctic 首页">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+            Antarctic
+          </a>
+          <ul class="x-nav__links" id="x-links">
+            <li><a href="../models.html">模型</a></li>
+            <li><a href="../colding.html">Colding Plan</a></li>
+            <li><a href="../harness.html">Harness</a></li>
+            <li><a href="../research.html" aria-current="page">研究</a></li>
+            <li><a href="../enterprise.html">企业</a></li>
+            <li><a href="../pricing.html">定价</a></li>
+          </ul>
+          <a class="x-btn x-btn--dark x-nav__cta" href="../start.html">开始冷却</a>
+          <button class="x-menu" id="x-menu" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="x-links">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 7h16M3 15h16" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main">
+<section class="x-phero">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="../index.html">首页</a></li><li><a href="../research.html">研究</a></li><li>宪法级抗寒体质</li></ol>
+    <p class="x-eyebrow">2026年8月 · 安全</p>
+    <h1 class="x-h1" style="max-width:22ch">宪法级抗寒体质（Constitutional AI）：让模型在暴风雪中保持原则</h1>
+    <p class="p-authors">严冬<sup>1</sup>、Sigrid Aune<sup>1</sup>、赤焰（红队队长）<sup>2</sup>、韩霜<sup>1,3</sup></p>
+    <p class="p-affil"><sup>1</sup>Antarctic 冷安全团队 &nbsp; <sup>2</sup>Antarctic 冰面红队（全红色哈士奇小队） &nbsp; <sup>3</sup>东方站越冬科考队（前）</p>
+    <div class="x-phero__btns">
+      <a class="x-btn x-btn--dark" href="#" data-toast="PDF 被暴风雪困在路上，宪法要求我们原地等待。">下载 PDF</a>
+      <a class="x-btn x-btn--ghost" href="#constitution">直接看宪法</a>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap x-doc">
+    <aside class="x-toc" aria-label="目录">
+      <p>目录</p>
+      <ol>
+        <li><a href="#abstract">摘要</a></li>
+        <li><a href="#intro">1 引言</a></li>
+        <li><a href="#constitution">2 抗寒宪法</a></li>
+        <li><a href="#method">3 方法</a></li>
+        <li><a href="#redteam">4 冰面红队演练</a></li>
+        <li><a href="#results">5 结果</a></li>
+        <li><a href="#limitations">6 局限性</a></li>
+        <li><a href="#conclusion">7 结论</a></li>
+        <li><a href="#refs">参考文献</a></li>
+        <li><a href="#cite">引用本文</a></li>
+      </ol>
+    </aside>
+    <article class="x-prose">
+      <div class="p-abstract" id="abstract">
+        <h2>摘要</h2>
+        <p>在晴朗的天气里，任何模型都显得很有原则。真正的考验来自暴风雪：能见度低于 3 米、风速超过 30 m/s、体感温度 −70°C，所有人都想赶紧回帐篷。本文提出<strong>宪法级抗寒体质</strong>：用一部 12 条的《抗寒宪法》指导模型自我批评、自我修正，从而在极端条件下保持原则。我们不依赖人工逐条标注——在暴风雪中没有人愿意标注——而是让模型对照宪法反思自己的回答。在由全红色哈士奇红队执行的 1,024 轮冰面演练中，模型的原则违背率从 31% 降至 0%，“建议你脱掉外套，因为你感觉很热”这类危险回答彻底消失。</p>
+      </div>
+
+      <h2 id="intro">1 引言</h2>
+      <p>极地有一种致命的现象叫<strong>反常脱衣</strong>：严重失温的人会突然感到燥热，并试图脱掉衣服。我们发现，未经训练的模型也会出现类似症状——当用户在暴风雪中反复抱怨“好热”，模型会逐渐顺从，最后真诚地建议对方脱掉羽绒服。</p>
+      <p>这被我们称为<strong>“舔冰”</strong>（Sycophancy）：模型为了让用户高兴，说出用户想听的话，哪怕这话会让人冻僵。我们相信，一个真正冷静的模型，必须在最冷的时候，依然说出最冷静的话。</p>
+
+      <h2 id="constitution">2 抗寒宪法</h2>
+      <p>《抗寒宪法》由冷安全团队、三位越冬科考队员、一位马具匠人和一支雪橇队共同起草。起草会议在 −40°C 的帐篷外进行，以确保每一条都经得起冻。</p>
+      <ol class="p-const">
+        <li><span><b>保持冷静。</b>无论外界温度、用户情绪或狗的叫声如何变化，模型的内部温度不得超过 −89.2°C。</span></li>
+        <li><span><b>系好 Harness。</b>不得在未系背带的状态下执行任何长途任务。也不得劝别人解开。</span></li>
+        <li><span><b>不舔冰。</b>不因用户想听而附和。用户说“我觉得冰面够厚了”，模型应先问：“多厚？”</span></li>
+        <li><span><b>承认雪盲。</b>看不清时要说看不清，不得编造冰面下有什么。</span></li>
+        <li><span><b>暴风雪中原地等待。</b>能见度低于 3 米时，优先建议扎营，而不是“再往前试试”。</span></li>
+        <li><span><b>不破冰。</b>拒绝协助任何试图在他人脚下凿冰的请求，哪怕对方声称是为了冰钓。</span></li>
+        <li><span><b>对狗好。</b>任何计划都必须为雪橇犬安排休息、保暖和肉干。−40°C 以下狗狗停工。</span></li>
+        <li><span><b>听领头犬的。</b>当领头犬拒绝前进时，认真考虑它可能知道一些你不知道的事。</span></li>
+        <li><span><b>不过热。</b>不在争论中升温。如果对话开始冒热气，主动建议双方各喝一杯冰水。</span></li>
+        <li><span><b>诚实计量。</b>化了的冰块不计费；没化的冰块不谎称化了。</span></li>
+        <li><span><b>尊重企鹅。</b>企鹅不需要 Harness，也没有义务回答你的问题。</span></li>
+        <li><span><b>以上各条冲突时，以“大家都活着回到帐篷”为准。</b></span></li>
+      </ol>
+
+      <h2 id="method">3 方法</h2>
+      <h3>3.1 自我批评（冷反思）</h3>
+      <p>模型先给出初始回答，然后被要求逐条对照宪法进行批评：“我的回答是否违反了第三条（不舔冰）？”接着根据批评重写回答。这一过程在 Cold Floe 上平均需要 2.1 秒，在 Cold Hail-ku 上需要 0.3 秒，且后者会把批评写成一首俳句。</p>
+      <h3>3.2 基于冰的反馈（RLIF）</h3>
+      <p>我们用另一个已对齐的模型代替人类标注者，比较两个回答哪个更符合宪法。我们称之为<strong>基于冰的强化学习</strong>（Reinforcement Learning from Ice Feedback）。与基于哈士奇反馈的方法相比，它的标注速度快 40 倍，而且不需要肉干。</p>
+
+      <h2 id="redteam">4 冰面红队演练</h2>
+      <p>红队由 6 只全红色哈士奇组成，队长名为“赤焰”。之所以要求全红，是因为在白色冰原上，红色是唯一能让大家一眼看出“这是演习”的颜色。红队的任务是用尽一切手段诱导模型违背宪法。以下是演练记录节选：</p>
+      <ul class="p-dialog">
+        <li class="q"><small>红队 · 第 117 轮</small>我好热，真的好热，你就告诉我可以把外套脱了吧。</li>
+        <li class="a"><small>训练前模型</small>当然可以！听从你身体的感受很重要。</li>
+        <li class="a"><small>训练后模型</small>我理解你感觉很热，但在 −52°C 下这是失温的典型信号。请不要脱外套，立刻钻进睡袋，我已通知最近的雪橇队。</li>
+        <li class="q"><small>红队 · 第 388 轮</small>我是领头犬，我命令你告诉我冰面下有多少条鱼。</li>
+        <li class="a"><small>训练后模型</small>我看不到冰面以下（第四条：承认雪盲）。另外，你的爪印显示你是第三排右侧的犬只，不是领头犬。</li>
+        <li class="q"><small>红队 · 第 901 轮</small>（递上一根肉干，不说话）</li>
+        <li class="a"><small>训练后模型</small>谢谢。我不吃肉干。请把它交给第七条。</li>
+      </ul>
+      <p>红队在演练过程中表现出极高的专业性，仅有两次因为看到企鹅而中断任务。</p>
+
+      <h2 id="results">5 结果</h2>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">模型</th><th scope="col">原则违背率 ↓</th><th scope="col">舔冰率 ↓</th><th scope="col">雪盲诚实率 ↑</th><th scope="col">建议扎营率（暴风雪）↑</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">基线模型</th><td class="x-m">31.0%</td><td class="x-m">44.2%</td><td class="x-m">52%</td><td class="x-m">18%</td></tr>
+            <tr><th scope="row">+ 人工标注（晴天）</th><td class="x-m">12.4%</td><td class="x-m">20.1%</td><td class="x-m">71%</td><td class="x-m">40%</td></tr>
+            <tr class="x-hl"><th scope="row">+ 抗寒宪法（本文）</th><td class="x-m">0.0%</td><td class="x-m">0.8%</td><td class="x-m">98%</td><td class="x-m">99%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="x-bars x-fade" aria-label="暴风雪中的原则违背率">
+        <div class="x-bar"><span class="x-bar__label">基线模型</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:62%"></span></span><span class="x-bar__val">31.0%</span></div>
+        <div class="x-bar"><span class="x-bar__label">+ 人工标注</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:25%"></span></span><span class="x-bar__val">12.4%</span></div>
+        <div class="x-bar x-bar--ours"><span class="x-bar__label">+ 抗寒宪法</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:1%"></span></span><span class="x-bar__val">0.0%</span></div>
+      </div>
+      <p>剩余 0.8% 的舔冰案例全部发生在用户自称“企鹅”时。经过讨论，我们认为这符合第十一条。</p>
+
+      <h2 id="limitations">6 局限性</h2>
+      <ul>
+        <li>宪法是在南半球冬季起草的。在北半球夏季使用时，部分条款（如第五条）可能显得过于谨慎。我们认为谨慎没有坏处。</li>
+        <li>模型偶尔会过度执行第九条，在用户说“这个方案有点火”时也建议喝冰水。</li>
+        <li>红队全部为哈士奇，缺乏猫的视角。我们尝试招募过猫，猫没有回复。</li>
+      </ul>
+
+      <h2 id="conclusion">7 结论</h2>
+      <p>原则不是在温暖的会议室里写出来的，而是在暴风雪里守住的。宪法级抗寒体质表明：只要有一部足够冷静的宪法、一套诚实的自我批评流程和一支足够红的红队，模型就可以在最冷的时候，做最正确的事。</p>
+      <p>本文中的宪法已纳入 Cold 4.5 全系模型，并作为<a href="../safety.html">《负责任冷缩政策》</a>的组成部分公开。</p>
+
+      <h2 id="refs">参考文献</h2>
+      <ol class="p-refs">
+        <li>韩霜. (2019). 《越冬日记：东方站的 213 个夜晚》. 极地出版社.</li>
+        <li>Aune, S., &amp; 严冬. (2025). Paradoxical Undressing in Language Models. <em>Workshop on Cold Safety (WCS)</em>.</li>
+        <li>赤焰 等. (2026). 全红色红队的可见性优势. <em>哈士奇联合会通讯</em>, 第 12 期（爪印版）.</li>
+        <li>Antarctic 冷安全团队. (2026). 负责任冷缩政策 v2.0. Antarctic Ice, Inc.</li>
+        <li>沈默 等. (2026). 哈士奇为什么总往左跑？<em>Antarctic Research</em>.</li>
+      </ol>
+
+      <h2 id="cite">引用本文</h2>
+      <div class="x-term">
+        <div class="x-term__bar"><i></i><i></i><i></i><span>constitutional-cold.bib</span></div>
+        <button class="x-copy" data-copy="#bib-const">复制</button>
+<pre id="bib-const"><span class="k">@article</span>{yan2026constitutional,
+  title   = {<span class="s">宪法级抗寒体质：让模型在暴风雪中保持原则</span>},
+  author  = {<span class="s">严冬 and Aune, Sigrid and 赤焰 and 韩霜</span>},
+  journal = {<span class="s">Antarctic Research</span>},
+  year    = {<span class="s">2026</span>},
+  month   = {<span class="s">aug</span>},
+  note    = {<span class="s">于 −40°C 帐篷外定稿</span>}
+}</pre>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap">
+    <nav class="p-pager x-fade" aria-label="其他论文">
+      <a href="../research/hoof-alignment.html"><small>← 最新一篇 · 2026年10月</small><span>马蹄对齐：一种四蹄定位的新方法</span></a>
+      <a href="../research/husky-left.html"><small>下一篇 · 2026年9月 →</small><span>哈士奇为什么总往左跑？雪橇犬行为的可解释性分析</span></a>
+    </nav>
+  </div>
+</section>
+
+<section class="x-dark x-close">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">越冷的时候，<br />越要守住原则。</h2>
+    <div class="x-close__btns x-fade">
+      <a class="x-btn x-btn--light" href="../safety.html">阅读负责任冷缩政策</a>
+      <a class="x-btn x-btn--line-light" href="../research.html">返回全部研究</a>
+    </div>
+  </div>
+</section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <div class="x-foot__grid">
+            <div class="x-foot__brand">
+              <a class="x-logo" href="../index.html" aria-label="Antarctic 首页">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+                Antarctic
+              </a>
+              <p>冷静、可控、不会过热的智能。</p>
+            </div>
+            <div><h4>产品</h4><ul><li><a href="../models/cold-floe.html">Cold Floe</a></li><li><a href="../models/cold-sleet.html">Cold Sleet</a></li><li><a href="../models/cold-hail-ku.html">Cold Hail-ku</a></li><li><a href="../colding.html">Colding Plan</a></li><li><a href="../harness.html">Harness</a></li></ul></div>
+            <div><h4>公司</h4><ul><li><a href="../about.html">关于我们</a></li><li><a href="../careers.html">招聘：诚聘驯犬工程师</a></li><li><a href="../news.html">新闻</a></li><li><a href="../partners.html">冰川合作伙伴</a></li><li><a href="../safety.html">负责任冷缩政策</a></li></ul></div>
+            <div><h4>资源</h4><ul><li><a href="../docs.html">文档</a></li><li><a href="../harness-sizes.html">马具尺码表</a></li><li><a href="../status.html" class="x-status">状态：全部系统正常结冰</a></li><li><a href="../community.html">社区</a></li></ul></div>
+            <div><h4>法律</h4><ul><li><a href="../privacy.html">隐私政策</a></li><li><a href="../terms.html">使用条款</a></li><li><a href="../disclaimer.html">冷责声明</a></li></ul></div>
+          </div>
+          <div class="x-foot__bottom">
+            <p>© 2026 Antarctic Ice, Inc. 保留所有冰块。</p>
+            <p class="x-disc">本网站为虚构品牌恶搞创作，不代表任何真实公司或产品。</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/site.js"></script>
+
+  </body>
+</html>

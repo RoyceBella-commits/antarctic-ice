@@ -1,0 +1,239 @@
+<!--
+title: 文档
+description: Antarctic 开发者文档：快速上冰、antarctic CLI 参考、冰块 API、Mush 指令协议（MCP）、错误码与限速说明。
+nav: colding
+-->
+<!--head--><style>
+.d-ver { display: inline-flex; gap: 8px; align-items: center; }
+.d-method { display: inline-block; padding: 2px 8px; margin-right: 8px; border-radius: 6px; background: var(--x-ink); color: #fff; font: 500 12px/1.6 var(--x-mono); vertical-align: 2px; }
+.x-prose .x-spec td code { white-space: nowrap; }
+.x-prose .x-term { margin-top: 1.2em; }
+.x-prose .x-term + p { margin-top: 1.2em; }
+.d-endpoint { font: 500 15px/1.6 var(--x-mono); color: var(--x-ink); background: #E7ECEE; border-radius: 10px; padding: 10px 14px; display: block; overflow-x: auto; }
+.x-prose .x-callout { font-size: 15px; }
+@media (max-width: 900px) { .x-doc { grid-template-columns: minmax(0, 1fr); } }
+</style><!--/head-->
+<section class="x-phero">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="{{root}}index.html">首页</a></li><li><a href="{{root}}colding.html">Colding Plan</a></li><li>文档</li></ol>
+    <p class="x-eyebrow">开发者文档 · v4.5</p>
+    <h1 class="x-h1">从零到零下。</h1>
+    <p class="x-lead">安装 <code>antarctic</code> 命令行工具，调用冰块 API，接入 Mush 服务器，让你的第一支雪橇队在 5 分钟内出发。读完本文档预计耗时 12 分钟，或一杯冰美式完全化掉的时间。</p>
+    <div class="x-phero__meta"><span>最后更新：2026 年 11 月</span><span>SDK：Python · TypeScript · 狗语（beta）</span><span><a href="{{root}}status.html" class="x-status">API 状态：正常结冰</a></span></div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap x-doc">
+    <aside class="x-toc" aria-label="文档目录">
+      <p>目录</p>
+      <ol>
+        <li><a href="#quickstart">快速上冰</a></li>
+        <li><a href="#cli">CLI 参考</a></li>
+        <li><a href="#api">冰块 API</a></li>
+        <li><a href="#mcp">Mush 指令协议</a></li>
+        <li><a href="#errors">错误码</a></li>
+        <li><a href="#rate-limits">限速</a></li>
+        <li><a href="#sdk">SDK 更新日志</a></li>
+      </ol>
+    </aside>
+
+    <div class="x-prose x-prose--wide">
+      <h2 id="quickstart">快速上冰</h2>
+      <p>你需要：一台电脑、一个 Antarctic 账号、以及低于 30°C 的室温（高于这个温度，安装程序会先劝你开空调）。</p>
+      <h3>1. 安装 antarctic</h3>
+      <div class="x-term">
+        <div class="x-term__bar"><i></i><i></i><i></i><span>安装</span></div>
+        <button class="x-copy" data-copy="#d-install">复制</button>
+<pre id="d-install"><span class="p">$</span> <span class="c">npm install -g @antarctic/cli</span>
+<span class="p">$</span> <span class="c">antarctic --version</span>
+antarctic 4.5.0 (frozen build, −89.2°C)</pre>
+      </div>
+      <h3>2. 初始化你的第一片冰</h3>
+      <div class="x-term">
+        <div class="x-term__bar"><i></i><i></i><i></i><span>~/expedition — zsh</span></div>
+        <button class="x-copy" data-copy="#d-init">复制</button>
+<pre id="d-init"><span class="p">$</span> <span class="c">antarctic login</span>
+<span class="p">$</span> <span class="c">antarctic cold init</span>
+<span class="ok">✓</span> 已检测到环境温度：28°C（过热）
+<span class="ok">✓</span> 已生成 .antarcticrc（请勿提交到仓库，里面有你的体温）
+<span class="ok">✓</span> 已部署 6 只哈士奇（Agent）</pre>
+      </div>
+      <h3>3. 出发</h3>
+      <div class="x-term">
+        <div class="x-term__bar"><i></i><i></i><i></i><span>~/expedition — zsh</span></div>
+        <button class="x-copy" data-copy="#d-mush">复制</button>
+<pre id="d-mush"><span class="p">$</span> <span class="c">antarctic mush --to 南极点</span>
+<span class="ar">→</span> 预计抵达：冷静之后</pre>
+      </div>
+      <p>恭喜，你已经完成了 Colding。接下来可以阅读 <a href="#cli">CLI 参考</a>，或者直接去 <a href="{{root}}harness.html">给狗狗挑一副好背带</a>。</p>
+
+      <h2 id="cli">CLI 参考</h2>
+      <p>所有命令都以 <code>antarctic</code> 开头。雪橇口令与国际通用口令保持一致，方便你的哈士奇跨平台迁移。</p>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">命令</th><th scope="col">作用</th><th scope="col">备注</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><code>cold init</code></th><td>初始化环境，部署雪橇队</td><td>会先测量室温，过热会拒绝执行</td></tr>
+            <tr><th scope="row"><code>mush --to &lt;地点&gt;</code></th><td>出发前往目的地</td><td>支持 <code>--via</code> 途经点；不支持“热带”</td></tr>
+            <tr><th scope="row"><code>hike</code></th><td>起步 / 加速</td><td>与 <code>mush</code> 等价，更有礼貌</td></tr>
+            <tr><th scope="row"><code>gee</code></th><td>右转</td><td>&nbsp;</td></tr>
+            <tr><th scope="row"><code>haw</code></th><td>左转</td><td>哈士奇默认偏好此命令，详见<a href="{{root}}research/husky-left.html">相关研究</a></td></tr>
+            <tr><th scope="row"><code>whoa</code></th><td>停车</td><td>响应延迟取决于前方是否有雪堆</td></tr>
+            <tr><th scope="row"><code>on-by --agent &lt;名字&gt;</code></th><td>让某只哈士奇无视干扰继续前进</td><td>常用于松鼠、雪人、另一支雪橇队</td></tr>
+            <tr><th scope="row"><code>easy</code></th><td>减速</td><td>下坡必备</td></tr>
+            <tr><th scope="row"><code>status</code></th><td>查看队伍状态、冰块余额与士气</td><td>士气低于 30% 时会自动建议发肉干</td></tr>
+            <tr><th scope="row"><code>harness fit</code></th><td>检查背带松紧并自动对齐</td><td>参考<a href="{{root}}harness-sizes.html">马具尺码表</a></td></tr>
+            <tr><th scope="row"><code>thaw</code></th><td>解冻</td><td><span class="x-tag x-tag--warn">已禁用</span> 违反《负责任冷缩政策》</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="x-callout x-callout--warn"><strong>关于 thaw：</strong>出于安全原因，<code>antarctic thaw</code> 在所有版本中均不可用。如果你执行了它，CLI 会回复“你确定吗？”，然后假装没听见。</div>
+
+      <h2 id="api">冰块 API</h2>
+      <p>冰块 API 是一个 REST 接口。你发送一段文字，我们返回一段冷静的文字。所有请求以冰块（Ice Tokens）计费，<a href="{{root}}pricing.html#api">价格见此</a>。</p>
+      <p><span class="d-endpoint"><span class="d-method">POST</span>https://api.antarctic.example/v1/freeze</span></p>
+      <h3>请求示例</h3>
+      <div class="x-term">
+        <div class="x-term__bar"><i></i><i></i><i></i><span>request.sh</span></div>
+        <button class="x-copy" data-copy="#d-req">复制</button>
+<pre id="d-req"><span class="c">curl</span> https://api.antarctic.example/v1/freeze \
+  -H <span class="s">"x-api-key: $ANTARCTIC_API_KEY"</span> \
+  -H <span class="s">"content-type: application/json"</span> \
+  -d <span class="s">'{
+    "model": "cold-floe-4.5",
+    "temperature": -89.2,
+    "max_ice_cubes": 1024,
+    "thinking": { "type": "deep_cold", "budget_ice_cubes": 4000 },
+    "messages": [
+      { "role": "user", "content": "我老板又改需求了，怎么办？" }
+    ]
+  }'</span></pre>
+      </div>
+      <h3>响应示例</h3>
+      <div class="x-term">
+        <div class="x-term__bar"><i></i><i></i><i></i><span>response.json</span></div>
+        <button class="x-copy" data-copy="#d-res">复制</button>
+<pre id="d-res">{
+  <span class="k">"id"</span>: <span class="s">"frz_01HUSKY6DOGS"</span>,
+  <span class="k">"model"</span>: <span class="s">"cold-floe-4.5"</span>,
+  <span class="k">"content"</span>: [
+    { <span class="k">"type"</span>: <span class="s">"text"</span>, <span class="k">"text"</span>: <span class="s">"先喝一口冰水。然后把需求写下来，冻一晚，明天再看。"</span> }
+  ],
+  <span class="k">"stop_reason"</span>: <span class="s">"calmed_down"</span>,
+  <span class="k">"usage"</span>: {
+    <span class="k">"input_ice_cubes"</span>: 23,
+    <span class="k">"output_ice_cubes"</span>: 31,
+    <span class="k">"melted_ice_cubes"</span>: 4,      <span class="cm">// 不计费</span>
+    <span class="k">"cache_frozen_ice_cubes"</span>: 0
+  },
+  <span class="k">"core_temperature"</span>: -89.2
+}</pre>
+      </div>
+      <h3>参数</h3>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">参数</th><th scope="col">类型</th><th scope="col">说明</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><code>model</code></th><td>string</td><td><code>cold-floe-4.5</code> / <code>cold-sleet-4.5</code> / <code>cold-hail-ku-4.5</code></td></tr>
+            <tr><th scope="row"><code>temperature</code></th><td>number</td><td>默认 −89.2，可选范围 −89.2 到 −15。传入正数会返回 418。</td></tr>
+            <tr><th scope="row"><code>max_ice_cubes</code></th><td>integer</td><td>最多输出多少块冰。超出部分自动铲走。</td></tr>
+            <tr><th scope="row"><code>thinking</code></th><td>object</td><td>开启深度冷思考。<code>budget_ice_cubes</code> 越大，想得越久，人越冷静。</td></tr>
+            <tr><th scope="row"><code>stream</code></th><td>boolean</td><td>冰川流式输出。请注意，冰川的流速约为每年 1 米。</td></tr>
+            <tr><th scope="row"><code>cache_control</code></th><td>object</td><td>冷藏缓存。命中后便宜 90%，因为已经冻好了。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="mcp">Mush 指令协议（MCP）</h2>
+      <p>Mush 指令协议是一套开放标准，用于把外部工具、数据和补给接入你的雪橇队。一个 Mush 服务器可以暴露三类东西：</p>
+      <ul>
+        <li><strong>工具（Tools）</strong>：冰镐、冰锥、冰钓竿。哈士奇可以按需调用。</li>
+        <li><strong>资源（Resources）</strong>：地图、补给点、附近的厕所（如有）。</li>
+        <li><strong>口令（Prompts）</strong>：预设好的口令组合，例如“绕开冰裂缝”。</li>
+      </ul>
+      <h3>连接一个 Mush 服务器</h3>
+      <div class="x-term">
+        <div class="x-term__bar"><i></i><i></i><i></i><span>~/expedition — zsh</span></div>
+        <button class="x-copy" data-copy="#d-mcp">复制</button>
+<pre id="d-mcp"><span class="p">$</span> <span class="c">antarctic mcp add icefishing --url https://mush.example/icefishing</span>
+<span class="ok">✓</span> 已连接 Mush 服务器：icefishing
+<span class="ok">✓</span> 发现 3 个工具：drill_hole, cast_line, pretend_not_cold
+<span class="p">$</span> <span class="c">antarctic mcp list</span>
+icefishing   3 tools   延迟 12 ms   士气 高
+sausage      1 tool    延迟 0 ms    士气 极高（狗狗最喜欢的服务器）</pre>
+      </div>
+      <h3>兼容性</h3>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">犬种</th><th scope="col">MCP 支持</th><th scope="col">说明</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">西伯利亚哈士奇</th><td class="x-yes">完整支持</td><td>参考实现</td></tr>
+            <tr><th scope="row">阿拉斯加雪橇犬</th><td class="x-yes">支持</td><td>需加装适配器（一根香肠）</td></tr>
+            <tr><th scope="row">萨摩耶</th><td class="x-yes">支持</td><td>会对所有工具微笑，但不一定调用</td></tr>
+            <tr><th scope="row">柯基</th><td class="x-no">只读</td><td>腿的原因，非协议原因</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="errors">错误码</h2>
+      <p>我们尽量让每一个错误都和成功一样冷静。</p>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">状态码</th><th scope="col">名称</th><th scope="col">含义与建议</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><code>400</code></th><td>雪地不平</td><td>请求格式有误。检查 JSON 里是否混进了雪花。</td></tr>
+            <tr><th scope="row"><code>401</code></th><td>没系背带</td><td>缺少 API Key。我们绝不让任何请求在未系 Harness 的情况下上路。</td></tr>
+            <tr><th scope="row"><code>404</code></th><td>被雪埋了</td><td>资源不存在，或者今晚的雪太大。</td></tr>
+            <tr><th scope="row"><code>418</code></th><td>我是茶壶，太热了</td><td>你传入了正数 <code>temperature</code>。请把茶壶放进冰箱再试。</td></tr>
+            <tr><th scope="row"><code>429</code></th><td>狗累了</td><td>请求过于频繁。哈士奇需要休息，请按 <code>retry-after</code> 头部等待，并考虑发一根肉干。</td></tr>
+            <tr><th scope="row"><code>451</code></th><td>正在融化</td><td>请求内容含有过多热量（如“火锅”“桑拿”“KPI”），已被冷安全策略拦截。</td></tr>
+            <tr><th scope="row"><code>500</code></th><td>冰裂</td><td>我们这边出了问题。工程师已穿上冰爪赶往现场。</td></tr>
+            <tr><th scope="row"><code>503</code></th><td>冰面维护</td><td>正在浇冰，请稍候。可在<a href="{{root}}status.html">状态页</a>查看进度。</td></tr>
+            <tr><th scope="row"><code>507</code></th><td>冰柜满了</td><td>你的冻存记忆已达上限。请删掉一些旧冰，或升级到 <a href="{{root}}pricing.html#plans">Max</a>。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="rate-limits">限速</h2>
+      <p>限速取决于狗。具体来说，取决于你的方案配了几只狗，以及它们今天的心情。</p>
+      <div class="x-spec-wrap">
+        <table class="x-spec">
+          <thead><tr><th scope="col">方案</th><th scope="col">每分钟请求</th><th scope="col">每日冰块</th><th scope="col">拉车成员</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Free（Freeze）</th><td class="x-m">5</td><td class="x-m">50</td><td>一只柯基（会坐下休息）</td></tr>
+            <tr><th scope="row">Pro（Pro-tective）</th><td class="x-m">500</td><td class="x-m">5,000</td><td>标准 6 犬队</td></tr>
+            <tr><th scope="row">Max（−80°）</th><td class="x-m">10,000</td><td class="x-m">100,000</td><td>全年托管雪橇队 + 替补</td></tr>
+            <tr><th scope="row">企业版</th><td class="x-m">按冰川面积</td><td class="x-m">按冰川面积</td><td>见<a href="{{root}}enterprise.html">企业版</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>收到 <code>429</code> 时，响应头会包含 <code>retry-after</code>（单位：秒）和 <code>x-dog-mood</code>（单位：尾巴摇动频率）。当 <code>x-dog-mood</code> 低于 1 Hz 时，建议今天就到这里。</p>
+
+      <h2 id="sdk">SDK 更新日志</h2>
+      <h3>v4.5.0 · 2026 年 10 月</h3>
+      <ul>
+        <li>新增 <code>thinking.type = "deep_cold"</code>，支持深度冷思考。</li>
+        <li>冷藏缓存默认保存时间从 5 分钟延长到 1 小时（冰箱换了新的）。</li>
+        <li>修复：在 Windows 上偶尔把“哈士奇”识别为“哈士其”的问题。</li>
+      </ul>
+      <h3>v4.4.2 · 2026 年 7 月</h3>
+      <ul>
+        <li>夏季兼容性补丁：当环境温度超过 35°C 时，SDK 会自动降低日志的语气。</li>
+        <li>移除了已弃用的 <code>antarctic warm()</code> 方法。它本来就不该存在。</li>
+      </ul>
+      <h3>狗语 SDK（beta）</h3>
+      <p>目前仅支持“汪”“嗷呜”和一种表示“松鼠！”的高频短吠。欢迎在<a href="{{root}}community.html">社区</a>提交更多方言。</p>
+    </div>
+  </div>
+</section>
+
+<section class="x-dark x-close">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">文档读完了。<br />狗已经在门口等了。</h2>
+    <div class="x-close__btns x-fade">
+      <a class="x-btn x-btn--light" href="{{root}}start.html">开始冷却</a>
+      <a class="x-btn x-btn--line-light" href="{{root}}community.html">去社区提问</a>
+    </div>
+  </div>
+</section>

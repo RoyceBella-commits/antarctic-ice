@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cold Hail-ku 4.5 · Antarctic 南极冰</title>
+    <meta name="description" content="Cold Hail-ku 4.5——Antarctic 「冰雹」级轻量模型。体积小，落地快，砸得准，所有回答严格遵守 5-7-5。" />
+    <meta property="og:title" content="Cold Hail-ku 4.5 · Antarctic 南极冰" />
+    <meta property="og:description" content="Cold Hail-ku 4.5——Antarctic 「冰雹」级轻量模型。体积小，落地快，砸得准，所有回答严格遵守 5-7-5。" />
+    <meta name="theme-color" content="#0E1A24" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script>document.documentElement.classList.add("x-js");</script>
+    <style>
+  .h-ku { font: 400 clamp(24px, 2.6vw, 32px)/1.75 var(--x-serif); color: var(--x-ink); letter-spacing: 0.04em; }
+  .h-ku span { display: block; }
+  .h-ku--s { font-size: 21px; }
+  .h-hero { align-items: center; }
+  .h-card { background: var(--x-card); border: 1px solid var(--x-line); border-radius: var(--r-l); padding: clamp(28px, 4vw, 48px); }
+  .h-card__meta { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--x-line); font: 400 12px/1.4 var(--x-mono); color: var(--x-ink-3); }
+  .h-ask { display: flex; gap: 10px; }
+  .h-ask input { flex: 1; min-width: 0; }
+  .h-ask .x-btn { flex: none; }
+  .h-out { margin-top: 28px; min-height: 180px; }
+  .h-out .h-ku { transition: opacity 0.25s var(--ease-out); }
+  .h-out.is-thinking .h-ku { opacity: 0.25; }
+  .h-q { font-size: 14px; color: var(--x-ink-3); margin-bottom: 14px; }
+  @media (max-width: 600px) { .h-ask { flex-direction: column; } .h-ask .x-btn { width: 100%; } }
+</style>
+  </head>
+  <body>
+    <div class="x-site" id="top">
+      <a class="x-skip" href="#main">跳到正文</a>
+      <a class="x-announce" href="../models/cold-floe.html"><b>Cold Floe 4.5</b>&nbsp;现已发布 — <span>迄今最冷静的模型 →</span></a>
+
+      <header class="x-nav" id="x-nav">
+        <div class="x-wrap x-nav__in">
+          <a class="x-logo" href="../index.html" aria-label="Antarctic 首页">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+            Antarctic
+          </a>
+          <ul class="x-nav__links" id="x-links">
+            <li><a href="../models.html" aria-current="page">模型</a></li>
+            <li><a href="../colding.html">Colding Plan</a></li>
+            <li><a href="../harness.html">Harness</a></li>
+            <li><a href="../research.html">研究</a></li>
+            <li><a href="../enterprise.html">企业</a></li>
+            <li><a href="../pricing.html">定价</a></li>
+          </ul>
+          <a class="x-btn x-btn--dark x-nav__cta" href="../start.html">开始冷却</a>
+          <button class="x-menu" id="x-menu" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="x-links">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 7h16M3 15h16" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="x-phero">
+          <div class="x-wrap">
+            <ol class="x-crumbs"><li><a href="../index.html">首页</a></li><li><a href="../models.html">模型</a></li><li>Cold Hail-ku 4.5</li></ol>
+            <div class="x-duo h-hero">
+              <div>
+                <p class="x-eyebrow">最快 · v4.5 · 冰雹</p>
+                <h1 class="x-h1">Cold Hail-ku 4.5</h1>
+                <p class="x-lead">「冰雹」级轻量模型。体积小，落地快，砸得准。延迟低至一次眨眼（睫毛结霜前）。它只用 5-7-5 回答问题。</p>
+                <div class="x-phero__btns">
+                  <a class="x-btn x-btn--dark" href="../start.html?plan=free">免费开始冷却</a>
+                  <a class="x-btn x-btn--ghost" href="#ask">问 Hail-ku 一个问题</a>
+                </div>
+              </div>
+              <figure class="h-card x-fade" style="margin:0">
+                <p class="h-ku"><span>冰雹落屋檐</span><span>你还没有问完话</span><span>答案已结霜</span></p>
+                <figcaption class="h-card__meta"><span>cold-hail-ku-4-5</span><span>延迟 0.2 s · 17 块冰</span></figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--tight">
+          <div class="x-wrap">
+            <div class="x-stats x-fade">
+              <div><b>0.2 s</b><span>首块冰落地延迟</span></div>
+              <div><b>17 字</b><span>最大输出长度（5-7-5，不可调）</span></div>
+              <div><b>120 m</b><span>上下文冰芯深度，刚好够用</span></div>
+              <div><b>¥7</b><span>每百万块输入冰，全家最便宜</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec">
+          <div class="x-wrap">
+            <p class="x-eyebrow x-fade">它擅长什么</p>
+            <p class="x-statement x-fade">我们问它：“请用一段话介绍你自己。”它回答：<em>“我是小冰雹 / 体积小落地很快 / 砸得还挺准”</em>。然后它就走了。</p>
+            <div class="x-cols">
+              <div class="x-fade"><p class="x-num">01</p><h3 class="x-h3">冷饮店高峰期</h3><p>每秒 1,200 杯，从不弄错少冰、去冰和正常冰。它对冰的态度非常专业。</p></div>
+              <div class="x-fade"><p class="x-num">02</p><h3 class="x-h3">分类与路由</h3><p>把复杂问题砸给 Cold Floe，把日常工作砸给 Cold Sleet，自己只负责砸这一下。</p></div>
+              <div class="x-fade"><p class="x-num">03</p><h3 class="x-h3">实时客服</h3><p>回答永远只有 17 个字。客户还没来得及生气，对话就结束了。满意度因此高达 91%。</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--tint" id="ask">
+          <div class="x-wrap x-duo">
+            <div class="x-fade">
+              <p class="x-eyebrow">在线试用</p>
+              <h2 class="x-h2">问 Hail-ku。</h2>
+              <p class="x-lead">随便问点什么。它会在你眨眼之前，用一首俳句回答你。问题越长，它越可能建议你去问别人。</p>
+              <p class="x-small x-muted x-mt-s">演示版不连接任何真实模型。所有俳句均由我们的诗人提前冻好，按需解冻。</p>
+            </div>
+            <div class="h-card x-fade">
+              <form class="h-ask" id="h-form" autocomplete="off">
+                <input class="x-input" id="h-input" name="q" type="text" aria-label="你的问题" maxlength="200" placeholder="比如：哈士奇为什么总往左跑？" />
+                <button class="x-btn x-btn--dark" type="submit">砸下来</button>
+              </form>
+              <div class="h-out" id="h-out" aria-live="polite">
+                <p class="h-q" id="h-q">示例问题：今天天气怎么样？</p>
+                <p class="h-ku" id="h-ku"><span>今天零下二</span><span>对我来说有点热</span><span>我先化一下</span></p>
+                <p class="h-card__meta"><span id="h-lat">延迟 0.18 s</span><span>消耗 17 块冰</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec">
+          <div class="x-wrap">
+            <div class="x-sec__head x-fade">
+              <p class="x-eyebrow">用户案例精选</p>
+              <h2 class="x-h2">十七个字，足够了。</h2>
+              <p class="x-lead">以下问答均来自 Cold Hail-ku 内测期间的真实对话。提问者的姓名已冷冻处理。</p>
+            </div>
+            <div class="x-cards3 x-mt0">
+              <article class="x-card x-fade">
+                <p class="h-q">“我们季度营收为什么下滑了？”</p>
+                <p class="h-ku h-ku--s"><span>问题太长了</span><span>请去问浮冰大哥</span><span>它不赶时间</span></p>
+              </article>
+              <article class="x-card x-fade">
+                <p class="h-q">“你会胡编乱造吗？”</p>
+                <p class="h-ku h-ku--s"><span>雪地没有字</span><span>我只是看不清楚</span><span>不是在幻觉</span></p>
+              </article>
+              <article class="x-card x-fade">
+                <p class="h-q">“能帮我写一段代码吗？”</p>
+                <p class="h-ku h-ku--s"><span>代码会过热</span><span>先把电脑放冰箱</span><span>然后再写吧</span></p>
+              </article>
+              <article class="x-card x-fade">
+                <p class="h-q">“推理的时候你会发热吗？”</p>
+                <p class="h-ku h-ku--s"><span>推理不发热</span><span>风扇在角落哭泣</span><span>它被裁掉了</span></p>
+              </article>
+              <article class="x-card x-fade">
+                <p class="h-q">“生命、宇宙以及一切的答案是什么？”</p>
+                <p class="h-ku h-ku--s"><span>人生的意义</span><span>我想了零点二秒</span><span>答案是冰块</span></p>
+              </article>
+              <article class="x-card x-fade">
+                <p class="h-q">“为什么还需要买 Harness？”</p>
+                <p class="h-ku h-ku--s"><span>冬日的清晨</span><span>再聪明的大模型</span><span>也需要背带</span></p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--tint">
+          <div class="x-wrap x-duo x-duo--wide">
+            <div>
+              <div class="x-fade">
+                <p class="x-eyebrow">规格 · 模型冰卡摘要</p>
+                <h2 class="x-h2">小，但是硬。</h2>
+              </div>
+              <dl class="x-kv x-mt-m x-fade">
+                <dt>模型 ID</dt><dd><code>cold-hail-ku-4-5</code></dd>
+                <dt>上下文窗口</dt><dd>120 m 冰芯（约上个冰期的一个周末）</dd>
+                <dt>最大输出</dt><dd>17 字，三行，5-7-5，不可调</dd>
+                <dt>首块冰延迟</dt><dd>0.2 秒</dd>
+                <dt>工作温度</dt><dd>−15°C（再热就变成冰雨了）</dd>
+                <dt>深度冷思考</dt><dd>不支持。没空想。</dd>
+                <dt>冰层安全等级</dt><dd><a class="x-textlink" style="min-height:0" href="../safety.html">ISL-1</a></dd>
+              </dl>
+              <div class="x-prose x-mt-m x-fade">
+                <h3>已知局限</h3>
+                <ul>
+                  <li>无法回答需要 18 个字以上的问题，会被截断成三行，最后一行通常是“剩下的下次”。</li>
+                  <li>偶尔为了凑字数在句尾加“啊”。我们正在研究这是否属于对齐问题。</li>
+                  <li>气温高于 0°C 时会退化为冰雨，回答变得湿漉漉的。</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="x-fade">
+              <div class="x-card x-card--flat">
+                <p class="x-eyebrow" style="margin-bottom:10px">API 价格</p>
+                <h3 class="x-h3">每百万块冰</h3>
+                <dl class="x-kv x-mt-s">
+                  <dt>输入冰块</dt><dd class="x-tabular">¥7</dd>
+                  <dt>输出冰水</dt><dd class="x-tabular">¥35</dd>
+                  <dt>冷藏缓存命中</dt><dd class="x-tabular">¥0.7</dd>
+                  <dt>批量制冰</dt><dd>5 折</dd>
+                </dl>
+                <p class="x-small x-muted x-mt-s">由于每次输出最多 17 字，你几乎不可能花完一百万块冰。我们对此也很困扰。</p>
+                <a class="x-textlink x-mt-s" href="../pricing.html#api">完整价格与计价器 →</a>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="x-sec">
+          <div class="x-wrap">
+            <div class="x-head-row x-fade">
+              <div><p class="x-eyebrow">同一家族</p><h2 class="x-h2">需要多于十七个字？</h2></div>
+              <a class="x-textlink" href="../models.html#compare">完整模型对比 →</a>
+            </div>
+            <div class="x-cards2 x-mt-m">
+              <a class="x-card x-fade" href="../models/cold-floe.html">
+                <div class="x-card__top"><span class="x-tag x-tag--solid">最强</span><span class="x-ver">旗舰 · v4.5</span></div>
+                <h3 class="x-h3">Cold Floe 4.5</h3>
+                <p>「浮冰」级旗舰。最大输出 64,000 块冰，相当于 3,764 首 Hail-ku。</p>
+                <span class="x-card__more">了解 Cold Floe</span>
+              </a>
+              <a class="x-card x-fade" href="../models/cold-sleet.html">
+                <div class="x-card__top"><span class="x-tag">均衡</span><span class="x-ver">v4.5</span></div>
+                <h3 class="x-h3">Cold Sleet 4.5</h3>
+                <p>「冻雨」级均衡模型。不写诗，但会准时把冰淇淋送到。</p>
+                <span class="x-card__more">了解 Cold Sleet</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-dark x-close">
+          <div class="x-wrap">
+            <h2 class="x-h2 x-fade">小冰雹一颗<br />砸在你的待办上<br />全部清空了</h2>
+            <div class="x-close__btns x-fade">
+              <a class="x-btn x-btn--light" href="../start.html?plan=free">免费开始冷却</a>
+              <a class="x-btn x-btn--line-light" href="../pricing.html">查看定价</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <div class="x-foot__grid">
+            <div class="x-foot__brand">
+              <a class="x-logo" href="../index.html" aria-label="Antarctic 首页">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+                Antarctic
+              </a>
+              <p>冷静、可控、不会过热的智能。</p>
+            </div>
+            <div><h4>产品</h4><ul><li><a href="../models/cold-floe.html">Cold Floe</a></li><li><a href="../models/cold-sleet.html">Cold Sleet</a></li><li><a href="../models/cold-hail-ku.html">Cold Hail-ku</a></li><li><a href="../colding.html">Colding Plan</a></li><li><a href="../harness.html">Harness</a></li></ul></div>
+            <div><h4>公司</h4><ul><li><a href="../about.html">关于我们</a></li><li><a href="../careers.html">招聘：诚聘驯犬工程师</a></li><li><a href="../news.html">新闻</a></li><li><a href="../partners.html">冰川合作伙伴</a></li><li><a href="../safety.html">负责任冷缩政策</a></li></ul></div>
+            <div><h4>资源</h4><ul><li><a href="../docs.html">文档</a></li><li><a href="../harness-sizes.html">马具尺码表</a></li><li><a href="../status.html" class="x-status">状态：全部系统正常结冰</a></li><li><a href="../community.html">社区</a></li></ul></div>
+            <div><h4>法律</h4><ul><li><a href="../privacy.html">隐私政策</a></li><li><a href="../terms.html">使用条款</a></li><li><a href="../disclaimer.html">冷责声明</a></li></ul></div>
+          </div>
+          <div class="x-foot__bottom">
+            <p>© 2026 Antarctic Ice, Inc. 保留所有冰块。</p>
+            <p class="x-disc">本网站为虚构品牌恶搞创作，不代表任何真实公司或产品。</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/site.js"></script>
+    <script>
+(function () {
+  var K = {
+    roof: ["冰雹落屋檐", "你还没有问完话", "答案已结霜"],
+    left: ["哈士奇向左", "雪橇跟着也向左", "南极在右边"],
+    price: ["价格很透明", "和冰块一样透明", "化了不收钱"],
+    hot: ["你说你很热", "请把窗户打开吧", "外面负八十"],
+    ctx: ["上下文很短", "一百二十米冰芯", "刚好够用了"],
+    corgi: ["柯基跑不快", "但它的腿已尽力", "请给它鼓掌"],
+    life: ["人生的意义", "我想了零点二秒", "答案是冰块"],
+    fan: ["推理不发热", "风扇在角落哭泣", "它被裁掉了"],
+    harness: ["冬日的清晨", "再聪明的大模型", "也需要背带"],
+    long: ["问题太长了", "请去问浮冰大哥", "它不赶时间"],
+    hit: ["冰雹砸下来", "准确命中了重点", "也砸了车顶"],
+    blind: ["雪地没有字", "我只是看不清楚", "不是在幻觉"],
+    hello: ["你好你好呀", "寒暄已经结束了", "下一位顾客"],
+    code: ["代码会过热", "先把电脑放冰箱", "然后再写吧"],
+    icecream: ["冰淇淋别急", "冷链车正在路上", "你先别化啊"],
+    horse: ["马儿套笼头", "每一针都已对齐", "跑吧大马型"],
+    weather: ["今天零下二", "对我来说有点热", "我先化一下"],
+    love: ["你说喜欢我", "我是一块冰雹啊", "请保持距离"],
+    me: ["我是小冰雹", "体积小落地很快", "砸得还挺准"],
+    empty: ["空白的问题", "像这片雪原一样", "我也看不清"]
+  };
+  var rules = [
+    [/哈士奇|狗|雪橇|左/, ["left", "corgi"]],
+    [/柯基/, ["corgi"]],
+    [/钱|价|贵|多少|便宜|免费/, ["price"]],
+    [/天气|下雪|冷不冷/, ["weather"]],
+    [/热|夏|温度|空调/, ["hot", "weather"]],
+    [/上下文|记忆|记得|忘/, ["ctx"]],
+    [/意义|人生|宇宙|为什么活/, ["life"]],
+    [/代码|编程|程序|bug|写.*(code|代码)/i, ["code"]],
+    [/冰淇淋|冷饮|奶茶|雪糕/, ["icecream"]],
+    [/马|背带|harness|马具/i, ["horse", "harness"]],
+    [/喜欢|爱你|爱/, ["love"]],
+    [/你是谁|介绍|名字|自我/, ["me"]],
+    [/幻觉|胡编|编造|骗/, ["blind"]],
+    [/风扇|推理|发热|显卡|GPU/i, ["fan"]],
+    [/^(你好|您好|hi|hello|嗨|哈喽)/i, ["hello"]]
+  ];
+  var general = ["roof", "hit", "blind", "life", "harness", "fan"];
+  var form = document.getElementById("h-form"), input = document.getElementById("h-input");
+  var out = document.getElementById("h-out"), ku = document.getElementById("h-ku"), qEl = document.getElementById("h-q"), lat = document.getElementById("h-lat");
+  var last = "weather";
+  function pick(list) {
+    var c = list.filter(function (k) { return k !== last; });
+    if (!c.length) c = list;
+    return c[Math.floor(Math.random() * c.length)];
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = input.value.trim(), key = null;
+    if (!q) key = "empty";
+    else if (q.length > 40) key = "long";
+    else {
+      for (var i = 0; i < rules.length; i++) { if (rules[i][0].test(q)) { key = pick(rules[i][1]); break; } }
+      if (!key) key = pick(general);
+    }
+    last = key;
+    out.classList.add("is-thinking");
+    var ms = 120 + Math.floor(Math.random() * 120);
+    setTimeout(function () {
+      qEl.textContent = q ? "你问：“" + q + "”" : "你什么也没问。";
+      ku.innerHTML = "";
+      K[key].forEach(function (line) { var s = document.createElement("span"); s.textContent = line; ku.appendChild(s); });
+      lat.textContent = "延迟 " + (ms / 1000).toFixed(2) + " s";
+      out.classList.remove("is-thinking");
+    }, ms);
+  });
+})();
+</script>
+  </body>
+</html>

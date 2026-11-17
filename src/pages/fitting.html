@@ -1,0 +1,205 @@
+<!--
+title: 预约马具试穿
+description: 预约 Antarctic Harness 线下试穿：哈士奇、马、人类均可。罗斯冰架旗舰店、漠河北极村快闪店、上海冷库体验店。
+nav: harness
+-->
+<!--head--><style>
+.f-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr); gap: 48px; align-items: start; }
+@media (max-width: 900px) { .f-layout { grid-template-columns: 1fr; } }
+.f-stores { display: grid; gap: 16px; }
+.f-store { padding: 22px 24px; border: 1px solid var(--x-line); border-radius: var(--r-m); background: var(--x-card); }
+.f-store h3 { font: 500 18px/1.4 var(--x-serif); }
+.f-store p { margin-top: 6px; font-size: 14px; color: var(--x-ink-2); }
+.f-store .x-tag { margin-top: 12px; }
+.f-ticket { border: 1px dashed var(--x-line-2); border-radius: var(--r-m); padding: 24px; margin-top: 24px; background: #FBFAF8; }
+.f-ticket .x-kv { font-size: 15px; }
+.f-ticket__no { font: 500 13px/1.4 var(--x-mono); color: var(--x-cognac); letter-spacing: 0.06em; margin-bottom: 16px; }
+.f-other[hidden] { display: none; }
+#f-ok h2 { font: 500 clamp(28px, 3.4vw, 40px)/1.25 var(--x-serif); }
+#f-ok > p { margin-top: 12px; color: var(--x-ink-2); }
+</style><!--/head-->
+<section class="x-phero">
+  <div class="x-wrap">
+    <ol class="x-crumbs"><li><a href="{{root}}index.html">首页</a></li><li><a href="{{root}}harness.html">Harness</a></li><li>预约马具试穿</li></ol>
+    <p class="x-eyebrow" style="color:var(--x-cognac)">线下试穿</p>
+    <h1 class="x-h1">带它来，<br />试一试。</h1>
+    <p class="x-lead">背带合不合身，只有穿上才知道。老周的徒弟会为你的狗、你的马、或者你自己，现场量体、调档、对齐。试穿免费，肉干管够。</p>
+    <div class="x-phero__meta"><span>每次试穿约 30 分钟（哈士奇约 90 分钟）</span><span>可携带最多 6 只狗，或 1 匹马</span></div>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tight">
+  <div class="x-wrap f-layout">
+    <div>
+      <div class="x-formcard x-fade">
+        <form class="x-form" data-fake="预约已提交。哈士奇们已经开始兴奋了。" data-result="#f-ok" data-hide id="f-form">
+          <fieldset class="x-field">
+            <legend>试穿对象</legend>
+            <div class="x-choices">
+              <label class="x-choice"><input type="radio" name="who" value="哈士奇" required data-err="请告诉我们要给谁试穿。" checked /><b>哈士奇</b><small>及其他雪橇犬</small></label>
+              <label class="x-choice"><input type="radio" name="who" value="马" /><b>马</b><small>请走正门</small></label>
+              <label class="x-choice"><input type="radio" name="who" value="人类" /><b>人类</b><small>工程师优先</small></label>
+              <label class="x-choice"><input type="radio" name="who" value="其他" /><b>其他</b><small>请描述</small></label>
+            </div>
+          </fieldset>
+          <div class="x-field f-other" id="f-other" hidden>
+            <label for="f-other-desc">请描述一下“其他”</label>
+            <input type="text" id="f-other-desc" name="other" placeholder="例如：一只自认为是哈士奇的猫" data-err="“其他”是什么？企鹅？我们需要提前准备尺码。" />
+          </div>
+
+          <div class="x-form__row">
+            <div class="x-field">
+              <label for="f-name">怎么称呼你</label>
+              <input type="text" id="f-name" name="name" required autocomplete="nickname" placeholder="例如：雪橇队长小王" data-err="我们需要知道该喊谁的名字。" />
+            </div>
+            <div class="x-field">
+              <label for="f-pet">怎么称呼它</label>
+              <input type="text" id="f-pet" name="pet" placeholder="例如：Kevin（人类试穿可留空）" />
+            </div>
+          </div>
+
+          <div class="x-form__row">
+            <div class="x-field">
+              <label for="f-count">数量</label>
+              <input type="number" id="f-count" name="count" min="1" max="6" value="1" required data-err="数量请在 1 到 6 之间。超过 6 只请联系企业版。" />
+              <span class="x-hint">一次最多 6 只狗。马请一匹一匹来。</span>
+            </div>
+            <div class="x-field">
+              <label for="f-store">门店</label>
+              <select id="f-store" name="store" required data-err="请选择一个门店，冰原太大，我们找不到你。">
+                <option value="">请选择门店</option>
+                <option value="罗斯冰架旗舰店">罗斯冰架旗舰店</option>
+                <option value="漠河北极村快闪店">漠河北极村快闪店</option>
+                <option value="上海冷库体验店">上海冷库体验店</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="x-form__row">
+            <div class="x-field">
+              <label for="f-date">日期</label>
+              <input type="date" id="f-date" name="date" required data-err="请选择日期。“等天冷了”不算日期。" />
+            </div>
+            <div class="x-field">
+              <label for="f-time">时段</label>
+              <select id="f-time" name="time" required data-err="请选择时段。">
+                <option value="">请选择时段</option>
+                <option value="09:00 – 10:30（狗最有精神）">09:00 – 10:30（狗最有精神）</option>
+                <option value="11:00 – 12:30">11:00 – 12:30</option>
+                <option value="14:00 – 15:30（马的午后时光）">14:00 – 15:30（马的午后时光）</option>
+                <option value="16:00 – 17:30（工程师摸鱼时段）">16:00 – 17:30（工程师摸鱼时段）</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="x-field">
+            <label for="f-notes">备注</label>
+            <textarea id="f-notes" name="notes" placeholder="例如：它怕吸尘器，见到松鼠会失控，冬天毛量是夏天的两倍。"></textarea>
+          </div>
+
+          <label class="x-check"><input type="checkbox" name="agree" required data-err="请确认已阅读试穿须知，尤其是关于洗澡的那条。" /><span>我已阅读<a class="x-textlink" style="min-height:0" href="#notes">试穿须知</a>，并保证试穿对象已洗过澡。</span></label>
+
+          <button class="x-btn x-btn--dark" type="submit">提交预约</button>
+        </form>
+
+        <div class="x-result" id="f-ok">
+          <div class="x-result__icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h2>预约成功，<span data-echo="name">你</span>。</h2>
+          <p>我们已经为 <span data-echo="pet">它</span> 准备好了软尺和肉干。到店后报预约号即可。</p>
+          <div class="f-ticket">
+            <p class="f-ticket__no">预约号 <span id="f-no">ICE-000000</span></p>
+            <dl class="x-kv">
+              <dt>试穿对象</dt><dd><span data-echo="who">哈士奇</span> × <span data-echo="count">1</span></dd>
+              <dt>门店</dt><dd data-echo="store">罗斯冰架旗舰店</dd>
+              <dt>日期</dt><dd data-echo="date">—</dd>
+              <dt>时段</dt><dd data-echo="time">—</dd>
+              <dt>接待</dt><dd>老周的第 7 位徒弟</dd>
+              <dt>状态</dt><dd><span class="x-tag x-tag--ok">已冻结（确认）</span></dd>
+            </dl>
+          </div>
+          <p class="x-muted x-small" style="margin-top:16px">本页面为恶搞创作，预约不会真的发送到任何地方。但我们真心建议你今天给狗狗洗个澡。</p>
+          <div class="x-phero__btns">
+            <a class="x-btn x-btn--dark" href="{{root}}harness.html">继续逛 Harness</a>
+            <a class="x-btn x-btn--ghost" href="{{root}}harness-sizes.html">先看看尺码表</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="f-stores x-fade" aria-label="门店信息">
+      <p class="x-eyebrow" style="color:var(--x-cognac);margin-bottom:0">门店</p>
+      <div class="f-store">
+        <h3>罗斯冰架旗舰店</h3>
+        <p>南极 · 罗斯冰架边缘，第三块大冰坨右转</p>
+        <p>营业时间：极昼期间 24 小时，极夜期间看心情</p>
+        <span class="x-tag x-tag--ok">可停雪橇</span>
+      </div>
+      <div class="f-store">
+        <h3>漠河北极村快闪店</h3>
+        <p>黑龙江 · 漠河，仅冬季营业（夏天太热，我们回南极了）</p>
+        <p>营业时间：10:00 – 16:00（天黑得早）</p>
+        <span class="x-tag">可停马</span>
+      </div>
+      <div class="f-store">
+        <h3>上海冷库体验店</h3>
+        <p>上海 · 某冷链仓库 3 号库，进门请先领羽绒服</p>
+        <p>营业时间：工作日 09:00 – 18:00，常年 −18°C</p>
+        <span class="x-tag x-tag--new">人类试穿专区</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="x-sec x-sec--tint" id="notes">
+  <div class="x-wrap">
+    <div class="x-sec__head x-fade">
+      <p class="x-eyebrow" style="color:var(--x-cognac)">试穿须知</p>
+      <h2 class="x-h2">来之前，<br />请读一下。</h2>
+    </div>
+    <div class="x-faq x-fade">
+      <details open><summary>需要提前给狗狗洗澡吗？</summary><div><p>需要。背带是植鞣皮，会记住它接触过的一切气味。请在试穿前 24 小时内洗澡，并在洗完后阻止它去雪地里打滚——我们知道这很难。</p></div></details>
+      <details><summary>马怎么进店？</summary><div><p>请走正门。侧门是给狗用的，马走侧门会卡住，然后用一种很受伤的眼神看着你。</p></div></details>
+      <details><summary>人类试穿需要准备什么？</summary><div><p>请穿便于活动的衣服，并如实告诉试穿师你每天开会的时长。不要隐瞒，背带会知道的。</p></div></details>
+      <details><summary>可以带猫来吗？</summary><div><p>可以，请在“其他”里注明。但根据我们的经验，猫会试穿 3 秒，然后从背带里液态流出，离开现场。</p></div></details>
+      <details><summary>迟到了怎么办？</summary><div><p>我们会为你保留 15 分钟。如果你乘坐的是雪橇，并且领头犬叫 Kevin，我们会保留 45 分钟。</p></div></details>
+      <details><summary>试穿收费吗？</summary><div><p>不收费。肉干、胡萝卜和冰水均免费供应。唯一可能的花费是，你的狗试完之后不肯脱下来。</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="x-dark x-close">
+  <div class="x-wrap">
+    <h2 class="x-h2 x-fade">保持冷静。<br />系好 Harness。</h2>
+    <div class="x-close__btns x-fade">
+      <a class="x-btn x-btn--light" href="{{root}}harness.html">逛逛 Harness 全系列</a>
+      <a class="x-btn x-btn--line-light" href="{{root}}harness-sizes.html">查看马具尺码表</a>
+    </div>
+  </div>
+</section>
+<!--scripts-->
+<script>
+(function () {
+  var form = document.getElementById("f-form");
+  if (!form) return;
+  var other = document.getElementById("f-other"), otherInput = document.getElementById("f-other-desc");
+  var date = document.getElementById("f-date");
+  var d = new Date(), pad = function (n) { return (n < 10 ? "0" : "") + n; };
+  date.min = d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+  function syncOther() {
+    var v = (form.querySelector('input[name="who"]:checked') || {}).value;
+    var on = v === "其他";
+    other.hidden = !on;
+    otherInput.required = on;
+  }
+  [].forEach.call(form.querySelectorAll('input[name="who"]'), function (r) { r.addEventListener("change", syncOther); });
+  syncOther();
+  form.addEventListener("x:submitted", function (e) {
+    var data = e.detail;
+    document.getElementById("f-no").textContent = "ICE-" + String(Math.floor(100000 + Math.random() * 899999));
+    if (data.get("who") === "其他" && data.get("other")) {
+      var w = document.querySelector('#f-ok [data-echo="who"]');
+      if (w) w.textContent = data.get("other");
+    }
+  });
+})();
+</script>

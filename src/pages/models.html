@@ -1,0 +1,305 @@
+<!--
+title: 模型
+description: Antarctic 4.5 系列模型总览：Cold Floe、Cold Sleet、Cold Hail-ku。完整对比、冰测成绩与选型测验。
+nav: models
+-->
+<!--head--><style>
+  .m-quiz__q + .m-quiz__q { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--x-line); }
+  .m-quiz__num { font: 400 13px/1 var(--x-mono); color: var(--x-ink-3); margin-bottom: 10px; }
+  .m-pick { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start; }
+  .m-pick__mark { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--x-ink); color: #fff; }
+  .m-pick__mark svg { width: 28px; height: 28px; }
+  .m-bench .x-h3 { font-size: 20px; }
+  .m-bench > p { margin-bottom: 28px; }
+  .m-bench .x-bars { margin-top: auto; }
+  .m-bench .x-bar { grid-template-columns: 132px minmax(0, 1fr) 60px; }
+  @media (max-width: 600px) { .m-bench .x-bar { grid-template-columns: 1fr 60px; } }
+  .m-side { position: sticky; top: 96px; }
+  @media (max-width: 900px) { .m-side { position: static; order: -1; } }
+  .x-spec th.x-hl, .x-spec td.x-hl { background: rgba(91,124,153,0.08); }
+</style><!--/head-->
+        <section class="x-phero x-phero--dark">
+          <div class="x-wrap">
+            <ol class="x-crumbs"><li><a href="{{root}}index.html">首页</a></li><li>模型</li></ol>
+            <p class="x-eyebrow">模型家族 · 4.5 系列</p>
+            <h1 class="x-h1">选一块适合你的冰。</h1>
+            <p class="x-lead">Antarctic 4.5 系列由三种天然形成的模型组成。它们没有经过训练，只经过冬天。每一个都在 −15°C 以下完成了预训练、后训练和售后。</p>
+            <div class="x-phero__btns">
+              <a class="x-btn x-btn--light" href="{{root}}start.html">开始冷却</a>
+              <a class="x-btn x-btn--line-light" href="#choose">帮我选一块</a>
+            </div>
+            <div class="x-phero__meta">
+              <span>训练数据截止：约 80 万年前（冰芯底部）</span>
+              <span>最近更新：本冰河世纪</span>
+              <span>风扇数量：0</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--tight">
+          <div class="x-wrap">
+            <div class="x-cards3 x-mt0">
+              <a class="x-card x-fade" href="{{root}}models/cold-floe.html">
+                <div class="x-card__top"><span class="x-tag x-tag--solid">最强</span><span class="x-ver">旗舰 · v4.5</span></div>
+                <h2 class="x-h3">Cold Floe 4.5</h2>
+                <p>「浮冰」级旗舰模型。想得很慢，但想得很冷。适合复杂长途任务、深度冷思考与跨冰原规划。</p>
+                <blockquote>“我们迄今最冷静的模型。”</blockquote>
+                <span class="x-card__more">了解 Cold Floe</span>
+              </a>
+              <a class="x-card x-fade" href="{{root}}models/cold-sleet.html">
+                <div class="x-card__top"><span class="x-tag">均衡</span><span class="x-ver">v4.5</span></div>
+                <h2 class="x-h3">Cold Sleet 4.5</h2>
+                <p>「冻雨」级均衡模型。速度与寒意兼得，日常主力。每天早上六点准时出现在你家门口。</p>
+                <blockquote>“不是最冷的那个，是最靠谱的那个。”</blockquote>
+                <span class="x-card__more">了解 Cold Sleet</span>
+              </a>
+              <a class="x-card x-fade" href="{{root}}models/cold-hail-ku.html">
+                <div class="x-card__top"><span class="x-tag">最快</span><span class="x-ver">v4.5</span></div>
+                <h2 class="x-h3">Cold Hail-ku 4.5</h2>
+                <p>「冰雹」级轻量模型。体积小，落地快，砸得准。所有回答严格遵守 5-7-5。</p>
+                <blockquote>“你还没问完话 / 答案已结霜。”</blockquote>
+                <span class="x-card__more">了解 Cold Hail-ku</span>
+              </a>
+            </div>
+            <div class="x-stats x-mt-l x-fade">
+              <div><b>3</b><span>种冰，各有各的冷</span></div>
+              <div><b>−89.2°C</b><span>最低工作温度（地表纪录，我们一直待在那儿）</span></div>
+              <div><b>3,200 m</b><span>最大上下文冰芯深度</span></div>
+              <div><b>0</b><span>台风扇。从来没有过。</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec" id="compare">
+          <div class="x-wrap">
+            <div class="x-sec__head x-fade">
+              <p class="x-eyebrow">完整对比</p>
+              <h2 class="x-h2">把三块冰并排放好。</h2>
+              <p class="x-lead">请尽快看完这张表。它在室温下的保质期大约是十分钟。</p>
+            </div>
+            <div class="x-spec-wrap x-fade">
+              <table class="x-spec">
+                <thead>
+                  <tr><th scope="col">规格</th><th scope="col" class="x-hl">Cold Floe 4.5</th><th scope="col">Cold Sleet 4.5</th><th scope="col">Cold Hail-ku 4.5</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">定位</th><td class="x-hl">旗舰 · 浮冰</td><td>均衡 · 冻雨</td><td>轻量 · 冰雹</td></tr>
+                  <tr><th scope="row">上下文（冰芯深度）</th><td class="x-m x-hl">3,200 m</td><td class="x-m">800 m</td><td class="x-m">120 m</td></tr>
+                  <tr><th scope="row">约等于</th><td class="x-hl">80 万年气候史</td><td>一整个冰期</td><td>上个冰期的一个周末</td></tr>
+                  <tr><th scope="row">工作温度</th><td class="x-m x-hl">−89.2°C</td><td class="x-m">−40°C（= −40°F）</td><td class="x-m">−15°C</td></tr>
+                  <tr><th scope="row">速度</th><td class="x-hl">企鹅散步</td><td>哈士奇小跑</td><td>冰雹落地</td></tr>
+                  <tr><th scope="row">首块冰延迟</th><td class="x-m x-hl">看心情（通常 40 分钟）</td><td class="x-m">1.1 s</td><td class="x-m">0.2 s</td></tr>
+                  <tr><th scope="row">输入冰块 / 百万块</th><td class="x-m x-hl">¥36</td><td class="x-m">¥21</td><td class="x-m">¥7</td></tr>
+                  <tr><th scope="row">输出冰水 / 百万块</th><td class="x-m x-hl">¥180</td><td class="x-m">¥105</td><td class="x-m">¥35</td></tr>
+                  <tr><th scope="row">深度冷思考</th><td class="x-yes x-hl">最长 72 小时</td><td class="x-yes">可选开启</td><td class="x-no">没空想</td></tr>
+                  <tr><th scope="row">Mush 指令协议（MCP）</th><td class="x-yes x-hl">支持</td><td class="x-yes">支持</td><td class="x-yes">支持</td></tr>
+                  <tr><th scope="row">可同时指挥哈士奇</th><td class="x-m x-hl">6 只</td><td class="x-m">4 只</td><td class="x-m">1 只柯基</td></tr>
+                  <tr><th scope="row">雪盲率（越低越好）</th><td class="x-m x-hl">0.3%</td><td class="x-m">0.8%</td><td class="x-m">2.1%（多发于正午）</td></tr>
+                  <tr><th scope="row">冰层安全等级</th><td class="x-hl"><a class="x-textlink" style="min-height:0" href="{{root}}safety.html">ISL-3</a></td><td>ISL-2</td><td>ISL-1</td></tr>
+                  <tr><th scope="row">最适合</th><td class="x-hl">横穿南极</td><td>日常冷链</td><td>冷饮店高峰期</td></tr>
+                  <tr><th scope="row">不适合</th><td class="x-hl">赶时间</td><td>写情诗（太理性）</td><td>超过 17 个字的回答</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="x-note" style="text-align:left">价格以人民币计，每百万块冰。输出以冰水计价，因为冰块在输出过程中会部分融化，融化部分不收费。完整价格见 <a class="x-textlink" style="min-height:0;font-size:13px" href="{{root}}pricing.html#api">冰块 API 价格</a>。</p>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--tint" id="benchmarks">
+          <div class="x-wrap">
+            <div class="x-sec__head x-fade">
+              <p class="x-eyebrow">冰测成绩</p>
+              <h2 class="x-h2">在零下四十度，<br />我们赢得很冷静。</h2>
+              <p class="x-lead">所有基准测试均在 −40°C、风速 12 m/s 条件下进行。竞品成绩来自对方公开资料，我们没有核实，因为我们不去热的地方。</p>
+            </div>
+            <div class="x-cards2">
+              <article class="x-card x-card--flat m-bench x-fade">
+                <div class="x-card__top"><span class="x-tag">编程 · 但是雪橇</span><span class="x-ver">% 解决率</span></div>
+                <h3 class="x-h3">SLED-bench Verified</h3>
+                <p>修复真实雪橇故障：断绳、翻车、两只狗在打架、领头犬拒绝出门。</p>
+                <div class="x-bars">
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Floe 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:82.4%"></span></span><span class="x-bar__val">82.4</span></div>
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Sleet 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:77%"></span></span><span class="x-bar__val">77.0</span></div>
+                  <div class="x-bar"><span class="x-bar__label">某温带模型</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:61.3%"></span></span><span class="x-bar__val">61.3</span></div>
+                  <div class="x-bar"><span class="x-bar__label">一台开着的电暖器</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:0.5%"></span></span><span class="x-bar__val">0.0</span></div>
+                </div>
+              </article>
+              <article class="x-card x-card--flat m-bench x-fade">
+                <div class="x-card__top"><span class="x-tag">服从性</span><span class="x-ver">% 照做率</span></div>
+                <h3 class="x-h3">HuskyEval</h3>
+                <p>给出一句口令，哈士奇是否照做。业界公认最难的基准，人类主人基线仅 12%。</p>
+                <div class="x-bars">
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Floe 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:34.1%"></span></span><span class="x-bar__val">34.1</span></div>
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Sleet 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:29.8%"></span></span><span class="x-bar__val">29.8</span></div>
+                  <div class="x-bar"><span class="x-bar__label">人类主人</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:12%"></span></span><span class="x-bar__val">12.0</span></div>
+                  <div class="x-bar"><span class="x-bar__label">某温带模型</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:8%"></span></span><span class="x-bar__val">8.0</span></div>
+                </div>
+              </article>
+              <article class="x-card x-card--flat m-bench x-fade">
+                <div class="x-card__top"><span class="x-tag">抽象推理</span><span class="x-ver">% 准确率</span></div>
+                <h3 class="x-h3">ARC-tic</h3>
+                <p>观察三块冰的融化方式，推测第四块冰会怎么化。没见过冰的模型普遍表现不佳。</p>
+                <div class="x-bars">
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Floe 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:68%"></span></span><span class="x-bar__val">68.0</span></div>
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Hail-ku 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:41%"></span></span><span class="x-bar__val">41.0</span></div>
+                  <div class="x-bar"><span class="x-bar__label">某温带模型</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:37.5%"></span></span><span class="x-bar__val">37.5</span></div>
+                  <div class="x-bar"><span class="x-bar__label">某热带模型</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:3%"></span></span><span class="x-bar__val">3.0</span></div>
+                </div>
+              </article>
+              <article class="x-card x-card--flat m-bench x-fade">
+                <div class="x-card__top"><span class="x-tag">终点站任务</span><span class="x-ver">% 抵达率</span></div>
+                <h3 class="x-h3">南极点-bench</h3>
+                <p>从任意坐标出发，独立规划并抵达南极点。中途不得向路过的企鹅问路。</p>
+                <div class="x-bars">
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Floe 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:59.3%"></span></span><span class="x-bar__val">59.3</span></div>
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Sleet 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:50.1%"></span></span><span class="x-bar__val">50.1</span></div>
+                  <div class="x-bar"><span class="x-bar__label">某温带模型</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:33%"></span></span><span class="x-bar__val">33.0</span></div>
+                  <div class="x-bar"><span class="x-bar__label">一只走丢的企鹅</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:21%"></span></span><span class="x-bar__val">21.0</span></div>
+                </div>
+              </article>
+              <article class="x-card x-card--flat m-bench x-fade">
+                <div class="x-card__top"><span class="x-tag">多任务理解</span><span class="x-ver">% 准确率</span></div>
+                <h3 class="x-h3">MMLU（Mush, Mush, Left, Up）</h3>
+                <p>57 个学科的口令理解，从基础 Gee/Haw 到高阶“On by，别理那只松鼠”。</p>
+                <div class="x-bars">
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Floe 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:92.1%"></span></span><span class="x-bar__val">92.1</span></div>
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Sleet 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:89.4%"></span></span><span class="x-bar__val">89.4</span></div>
+                  <div class="x-bar"><span class="x-bar__label">某温带模型</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:85%"></span></span><span class="x-bar__val">85.0</span></div>
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Hail-ku 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:80.2%"></span></span><span class="x-bar__val">80.2</span></div>
+                </div>
+              </article>
+              <article class="x-card x-card--flat m-bench x-fade">
+                <div class="x-card__top"><span class="x-tag x-tag--warn">越低越好</span><span class="x-ver">% 雪盲率</span></div>
+                <h3 class="x-h3">雪盲率（俗称幻觉）</h3>
+                <p>在纯白背景下凭空看见并不存在的东西的比例。我们的模型从不胡编，只是偶尔看不清。</p>
+                <div class="x-bars">
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Floe 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:0.8%"></span></span><span class="x-bar__val">0.3</span></div>
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Sleet 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:2%"></span></span><span class="x-bar__val">0.8</span></div>
+                  <div class="x-bar x-bar--ours"><span class="x-bar__label">Cold Hail-ku 4.5</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:5.6%"></span></span><span class="x-bar__val">2.1</span></div>
+                  <div class="x-bar"><span class="x-bar__label">某热带模型</span><span class="x-bar__track"><span class="x-bar__fill" style="--v:100%"></span></span><span class="x-bar__val">37.5</span></div>
+                </div>
+              </article>
+            </div>
+            <p class="x-note" style="text-align:left;margin-top:32px">测试说明：“一台开着的电暖器”组在测试开始 4 分钟后被冰面红队拔掉了插头，成绩按最后一次有效提交计。雪盲率图示按比例缩放；某热带模型的长条已超出比例，因为它第一次见到雪。</p>
+          </div>
+        </section>
+
+        <section class="x-sec" id="choose">
+          <div class="x-wrap x-duo x-duo--wide">
+            <div class="x-formcard x-fade">
+              <form class="x-form" id="m-quiz" novalidate>
+                <div class="m-quiz__q">
+                  <p class="m-quiz__num">01 / 04</p>
+                  <fieldset class="x-field">
+                    <legend>你这趟要去多远？</legend>
+                    <div class="x-choices">
+                      <label class="x-choice"><input type="radio" name="q1" value="floe" required /><b>横穿南极</b><small>2,800 km，带补给</small></label>
+                      <label class="x-choice"><input type="radio" name="q1" value="sleet" /><b>市区冷链</b><small>12 个站点，早上六点</small></label>
+                      <label class="x-choice"><input type="radio" name="q1" value="hail" /><b>楼下冷饮店</b><small>少冰，谢谢</small></label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="m-quiz__q">
+                  <p class="m-quiz__num">02 / 04</p>
+                  <fieldset class="x-field">
+                    <legend>你愿意等多久拿到答案？</legend>
+                    <div class="x-choices">
+                      <label class="x-choice"><input type="radio" name="q2" value="floe" required /><b>冷静之后再说</b><small>我有一整个极夜</small></label>
+                      <label class="x-choice"><input type="radio" name="q2" value="sleet" /><b>一杯咖啡的时间</b><small>冰美式</small></label>
+                      <label class="x-choice"><input type="radio" name="q2" value="hail" /><b>一次眨眼</b><small>睫毛结霜前</small></label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="m-quiz__q">
+                  <p class="m-quiz__num">03 / 04</p>
+                  <fieldset class="x-field">
+                    <legend>你的雪橇队规模是？</legend>
+                    <div class="x-choices">
+                      <label class="x-choice"><input type="radio" name="q3" value="floe" required /><b>6 只哈士奇</b><small>外加一架补给雪橇</small></label>
+                      <label class="x-choice"><input type="radio" name="q3" value="sleet" /><b>2–4 只</b><small>彼此还算和睦</small></label>
+                      <label class="x-choice"><input type="radio" name="q3" value="hail" /><b>一只柯基</b><small>尽力了</small></label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="m-quiz__q">
+                  <p class="m-quiz__num">04 / 04</p>
+                  <fieldset class="x-field">
+                    <legend>你希望回答长什么样？</legend>
+                    <div class="x-choices">
+                      <label class="x-choice"><input type="radio" name="q4" value="floe" required /><b>一份 40 页报告</b><small>附冰芯剖面图</small></label>
+                      <label class="x-choice"><input type="radio" name="q4" value="sleet" /><b>清楚的要点</b><small>三条以内</small></label>
+                      <label class="x-choice"><input type="radio" name="q4" value="hail" /><b>一首俳句</b><small>5-7-5，多一个字都不行</small></label>
+                    </div>
+                  </fieldset>
+                </div>
+                <p class="x-err" id="m-quiz-err" hidden>还有题没选。冰不会替你做决定。</p>
+                <button class="x-btn x-btn--dark" type="submit">算出我的冰</button>
+              </form>
+            </div>
+            <div class="x-fade m-side">
+              <p class="x-eyebrow">选型测验</p>
+              <h2 class="x-h2">不知道选哪块？<br />回答四个问题。</h2>
+              <p class="x-lead">我们的销售顾问也是用这套题来判断的。区别是他们会额外问一句“你冷不冷”。</p>
+              <div class="x-formcard x-result x-mt-m" id="m-quiz-result" aria-live="polite">
+                <div class="m-pick">
+                  <div class="m-pick__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /></svg></div>
+                  <div>
+                    <p class="x-eyebrow" style="margin-bottom:8px">你适合</p>
+                    <h3 class="x-h3" id="m-pick-name">Cold Sleet 4.5</h3>
+                    <p class="x-muted" style="margin-top:8px" id="m-pick-why">中庸之道，冷得刚刚好。</p>
+                    <div class="x-phero__btns" style="margin-top:20px">
+                      <a class="x-btn x-btn--dark" id="m-pick-link" href="{{root}}models/cold-sleet.html">了解这块冰</a>
+                      <a class="x-btn x-btn--ghost" href="{{root}}start.html">开始冷却</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-dark x-close">
+          <div class="x-wrap">
+            <h2 class="x-h2 x-fade">不确定？先从 Freeze 开始。</h2>
+            <p class="x-lead x-fade" style="margin-inline:auto">免费方案每日 50 块冰，附赠一只柯基。它跑不快，但它很爱你。</p>
+            <div class="x-close__btns x-fade">
+              <a class="x-btn x-btn--light" href="{{root}}start.html?plan=free">免费开始冷却</a>
+              <a class="x-btn x-btn--line-light" href="{{root}}pricing.html">查看完整定价</a>
+            </div>
+          </div>
+        </section>
+<!--scripts-->
+<script>
+(function () {
+  var form = document.getElementById("m-quiz");
+  var out = document.getElementById("m-quiz-result");
+  var err = document.getElementById("m-quiz-err");
+  var root = document.querySelector('link[rel="stylesheet"]').getAttribute("href").replace("assets/css/site.css", "");
+  var info = {
+    floe: { name: "Cold Floe 4.5", href: "models/cold-floe.html", why: "你有远方、有耐心、有六只哈士奇。去吧，横穿南极。预计抵达：冷静之后。" },
+    sleet: { name: "Cold Sleet 4.5", href: "models/cold-sleet.html", why: "你需要的是每天准时、从不出错的那一块冰。它不浪漫，但它会在六点整出现。" },
+    hail: { name: "Cold Hail-ku 4.5", href: "models/cold-hail-ku.html", why: "你赶时间 / 它比你还要赶时间 / 已经回答了" }
+  };
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var score = { floe: 0, sleet: 0, hail: 0 }, missing = false;
+    ["q1", "q2", "q3", "q4"].forEach(function (q) {
+      var v = form.querySelector('input[name="' + q + '"]:checked');
+      if (!v) missing = true; else score[v.value]++;
+    });
+    if (missing) { err.hidden = false; return; }
+    err.hidden = true;
+    var pick = "sleet";
+    if (score.floe > score.sleet && score.floe >= score.hail) pick = "floe";
+    else if (score.hail > score.sleet && score.hail > score.floe) pick = "hail";
+    if (score.floe === score.hail && score.floe > score.sleet) { pick = "sleet"; }
+    var p = info[pick];
+    document.getElementById("m-pick-name").textContent = p.name;
+    document.getElementById("m-pick-why").textContent = (pick === "sleet" && score.sleet < 2) ? "你的答案冷热不均。根据中庸之道，我们推荐均衡款：" + p.why : p.why;
+    document.getElementById("m-pick-link").setAttribute("href", root + p.href);
+    document.getElementById("m-pick-link").textContent = "了解 " + p.name.replace(" 4.5", "");
+    out.classList.remove("is-shown"); void out.offsetWidth; out.classList.add("is-shown");
+    if (window.matchMedia("(max-width: 900px)").matches) out.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+})();
+</script>
