@@ -28,7 +28,7 @@ tools/build.py                           构建脚本：套上公告条 + 导航
 
 3. 提交 `src/` 和生成的 HTML，推送后 GitHub Pages 会自动更新。
 
-如果仓库名不是 `-antarctic-ice`，构建时设置 `BASE_PATH`，让 404 页面的链接指向正确路径：
+如果仓库名不是 `antarctic-ice`，构建时设置 `BASE_PATH`，让 404 页面的链接指向正确路径：
 
 ```bash
 BASE_PATH=/你的仓库名/ python3 tools/build.py

@@ -26,7 +26,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src" / "pages"
 # 404.html is served from any depth on GitHub Pages, so it uses the absolute site path.
-BASE_PATH = os.environ.get("BASE_PATH", "/-antarctic-ice/")
+BASE_PATH = os.environ.get("BASE_PATH", "/antarctic-ice/")
 
 NAV = [
     ("models", "models.html", "模型"),
