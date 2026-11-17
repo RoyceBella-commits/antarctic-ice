@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="../assets/css/site.css" />
     <script>document.documentElement.classList.add("x-js");</script>
     <style>
+@media (max-width: 900px) { .x-doc { grid-template-columns: minmax(0, 1fr); } } /* shared .x-doc uses 1fr, which grows to the widest table */
+.x-phero .p-title { font-size: clamp(32px, 4.4vw, 56px); line-height: 1.18; max-width: 24ch; }
 .p-authors { margin-top: 28px; font-size: 15px; color: var(--x-ink); line-height: 1.8; }
 .p-authors sup { color: var(--x-steel-text); font-size: 11px; margin-left: 1px; }
 .p-affil { margin-top: 6px; font-size: 13px; color: var(--x-ink-3); line-height: 1.7; }
 .p-abstract { padding: 28px 32px; border-radius: var(--r-m); background: var(--x-card); border: 1px solid var(--x-line); }
 .p-abstract h2 { margin-top: 0 !important; font: 500 12px/1.4 var(--x-sans) !important; letter-spacing: 0.14em; color: var(--x-steel-text); }
 .p-abstract p { color: var(--x-ink) !important; }
+@media (max-width: 600px) { .p-abstract { padding: 22px 20px; } .x-prose { font-size: 16px; } .x-prose .x-spec { min-width: 620px; } }
 .p-refs { font-size: 14px; padding-left: 2em !important; }
 .p-refs li { color: var(--x-ink-2); }
 .p-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -29,7 +32,7 @@
 @media (max-width: 760px) { .p-pager { grid-template-columns: 1fr; } .p-pager a:last-child { text-align: left; } }
 .p-const { list-style: none; padding: 0 !important; display: grid; gap: 0; border-top: 1px solid var(--x-line); counter-reset: art; }
 .p-const li { counter-increment: art; display: grid; grid-template-columns: 76px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--x-line); margin: 0 !important; }
-.p-const li::before { content: "第" counter(art, simp-chinese-informal) "条"; font: 500 14px/1.85 var(--x-serif); color: var(--x-steel-text); }
+.p-const li::before { content: "第" counter(art, simp-chinese-informal) "条"; font: 500 14px/1.85 var(--x-serif); color: var(--x-steel-text); padding-top: 2px; }
 .p-const b { color: var(--x-ink); font-weight: 600; }
 @media (max-width: 600px) { .p-const li { grid-template-columns: 1fr; gap: 2px; } }
 .p-dialog { display: grid; gap: 10px; padding: 0 !important; list-style: none; }
@@ -70,7 +73,7 @@
   <div class="x-wrap">
     <ol class="x-crumbs"><li><a href="../index.html">首页</a></li><li><a href="../research.html">研究</a></li><li>宪法级抗寒体质</li></ol>
     <p class="x-eyebrow">2026年8月 · 安全</p>
-    <h1 class="x-h1" style="max-width:22ch">宪法级抗寒体质（Constitutional AI）：让模型在暴风雪中保持原则</h1>
+    <h1 class="x-h1 p-title">宪法级抗寒体质（Constitutional AI）：让模型在暴风雪中保持原则</h1>
     <p class="p-authors">严冬<sup>1</sup>、Sigrid Aune<sup>1</sup>、赤焰（红队队长）<sup>2</sup>、韩霜<sup>1,3</sup></p>
     <p class="p-affil"><sup>1</sup>Antarctic 冷安全团队 &nbsp; <sup>2</sup>Antarctic 冰面红队（全红色哈士奇小队） &nbsp; <sup>3</sup>东方站越冬科考队（前）</p>
     <div class="x-phero__btns">

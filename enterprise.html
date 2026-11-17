@@ -25,6 +25,7 @@
 @media (max-width: 900px) { .en-sec-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .en-sec-grid { grid-template-columns: 1fr; } }
 .en-case { display: flex; flex-direction: column; }
+.en-sla { min-width: 640px; }
 .en-list { list-style: none; padding: 20px 0 0; margin: auto 0 0; display: grid; gap: 8px; font-size: 14px; color: var(--x-ink-2); border-top: 1px solid var(--x-line); }
 .en-list li { padding-left: 18px; position: relative; }
 .en-list li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 1px; background: var(--x-steel); }
@@ -166,7 +167,7 @@
       <p class="x-lead">别人承诺可用性，我们承诺冰层厚度。厚度不达标，按比例退还冰块。</p>
     </div>
     <div class="x-spec-wrap x-fade">
-      <table class="x-spec">
+      <table class="x-spec en-sla">
         <thead><tr><th scope="col">等级</th><th scope="col">保障冰层厚度</th><th scope="col">冻结率</th><th scope="col">响应时间</th><th scope="col">能承载</th></tr></thead>
         <tbody>
           <tr><th scope="row">标准</th><td class="x-m">≥ 10 cm</td><td class="x-m">99.9%</td><td>1 个工作日</td><td>一辆雪地摩托</td></tr>

@@ -17,6 +17,7 @@ nav:
 .cr-job__apply .x-btn { border: 0; cursor: pointer; }
 @media (max-width: 900px) { .cr-job__body { grid-template-columns: 1fr; gap: 20px; } }
 .cr-perk { display: flex; flex-direction: column; }
+@media (max-width: 900px) { .cr-apply-intro { order: -1; } }
 .cr-perk b { font: 500 13px/1 var(--x-mono); color: var(--x-cognac); margin-bottom: 16px; }
 </style><!--/head-->
 <section class="x-phero">
@@ -225,7 +226,7 @@ nav:
         <p class="x-muted x-small" style="margin-top:20px">（这是一个恶搞网站，申请不会发送到任何地方。但我们欣赏你的勇气。）</p>
       </div>
     </div>
-    <div class="x-fade">
+    <div class="x-fade cr-apply-intro">
       <p class="x-eyebrow">申请</p>
       <h2 class="x-h2" style="font-size:clamp(28px,3.4vw,40px)">投递你的简历</h2>
       <p class="x-lead">简历请控制在一页以内。超过一页的部分会被视为“超长上下文”，交给 Cold Floe 阅读。</p>

@@ -1,0 +1,359 @@
+<!--
+title: 开始冷却
+description: 三分钟开通 Antarctic：选择方案、测量体感温度、领取你的雪橇队。本页为恶搞演示，不收集任何数据。
+nav:
+-->
+<!--head--><style>
+  .s-steps { display: flex; gap: 6px; margin: 0 0 28px; padding: 0; list-style: none; }
+  .s-steps li { flex: 1; height: 4px; border-radius: 999px; background: rgba(14,26,36,0.1); transition: background 0.4s var(--ease-out); }
+  .s-steps li.is-done { background: var(--x-ink); }
+  .s-stepnum { font: 400 13px/1 var(--x-mono); color: var(--x-ink-3); margin-bottom: 10px; }
+  .s-step h2 { font: 500 clamp(24px, 2.6vw, 30px)/1.3 var(--x-serif); letter-spacing: -0.01em; margin-bottom: 24px; }
+  .s-step[hidden], .s-nav .x-btn[hidden], [data-plan-only][hidden] { display: none !important; }
+  .s-nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--x-line); }
+  .s-nav .x-btn { border: 0; cursor: pointer; }
+  .s-nav .x-btn--ghost { border: 1px solid var(--x-line-2); }
+  .s-temp { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .s-temp output { font: 500 40px/1 var(--x-serif); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .s-tempmsg { margin-top: 8px; padding: 12px 16px; border-radius: 12px; font-size: 15px; background: #E7ECEE; color: var(--x-ink-2); transition: background 0.3s, color 0.3s; }
+  .s-tempmsg.is-hot { background: #F6EDE6; color: #6B3E22; }
+  .s-tempmsg.is-cool { background: #E3EFE8; color: #234B3A; }
+  .s-tip { min-height: 1.5em; font-size: 14px; color: var(--x-steel-text); }
+  .s-corgi { display: grid; grid-template-columns: 72px 1fr; gap: 20px; align-items: center; padding: 20px; border-radius: var(--r-m); background: #E7ECEE; }
+  .s-corgi svg { width: 72px; height: 72px; }
+  .s-side { position: sticky; top: 96px; }
+  .s-side .x-plan__price { font-size: 40px; }
+  .s-side ul { list-style: none; margin: 20px 0 0; padding: 20px 0 0; border-top: 1px solid var(--x-line); display: grid; gap: 10px; font-size: 15px; color: var(--x-ink-2); }
+  .s-side li { padding-left: 22px; position: relative; }
+  .s-side li::before { content: ""; position: absolute; left: 2px; top: 0.6em; width: 9px; height: 5px; border-left: 1.5px solid var(--x-steel); border-bottom: 1.5px solid var(--x-steel); transform: rotate(-45deg); }
+  .s-done .x-term { margin-top: 28px; }
+  #s-form, #s-card, #s-done { scroll-margin-top: 96px; }
+  @media (max-width: 900px) { .s-side { position: static; } }
+</style><!--/head-->
+        <section class="x-phero">
+          <div class="x-wrap">
+            <ol class="x-crumbs"><li><a href="{{root}}index.html">首页</a></li><li>开始冷却</li></ol>
+            <p class="x-eyebrow">开始冷却</p>
+            <h1 class="x-h1">三分钟，降到合适的温度。</h1>
+            <p class="x-lead">选一个方案，量一下体温，领走你的雪橇队。整个过程不需要密码，也不需要银行卡——我们只需要你冷静下来。</p>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--tight">
+          <div class="x-wrap x-duo x-duo--wide">
+            <div>
+              <div class="x-formcard" id="s-card">
+                <ol class="s-steps" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
+                <form class="x-form" id="s-form" novalidate autocomplete="off">
+
+                  <div class="s-step" data-step="1">
+                    <p class="s-stepnum">第 1 步 / 共 4 步</p>
+                    <h2>选择你的温度</h2>
+                    <fieldset class="x-field">
+                      <legend>方案</legend>
+                      <div class="x-choices">
+                        <label class="x-choice"><input type="radio" name="plan" value="free" required /><b>Free</b><small>Freeze · ¥0 · 一只柯基</small></label>
+                        <label class="x-choice"><input type="radio" name="plan" value="pro" /><b>Pro</b><small>Pro-tective · ¥140/月 · 全系模型</small></label>
+                        <label class="x-choice"><input type="radio" name="plan" value="max" /><b>Max</b><small>−80° · ¥1,400/月 · 6 犬雪橇队</small></label>
+                      </div>
+                    </fieldset>
+                    <fieldset class="x-field" style="margin-top:22px">
+                      <legend>计费周期</legend>
+                      <div class="x-choices">
+                        <label class="x-choice"><input type="radio" name="cycle" value="month" checked /><b>月付</b><small>随时降温，随时取消</small></label>
+                        <label class="x-choice"><input type="radio" name="cycle" value="year" /><b>年付</b><small>省 20%，赠一桶冰</small></label>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div class="s-step" data-step="2" hidden>
+                    <p class="s-stepnum">第 2 步 / 共 4 步</p>
+                    <h2>关于你</h2>
+                    <div class="x-form">
+                      <div class="x-form__row">
+                        <div class="x-field">
+                          <label for="s-name">我们该怎么称呼你？</label>
+                          <input id="s-name" name="name" type="text" maxlength="24" required placeholder="比如：冷静的人" data-err="随便起一个就好，比如“冷静的人”。哈士奇们需要知道该向谁汇报。" />
+                        </div>
+                        <div class="x-field">
+                          <label for="s-email">邮箱 <span class="x-muted" style="font-weight:400">（选填）</span></label>
+                          <input id="s-email" name="email" type="email" maxlength="80" placeholder="you@glacier.aq" data-err="这个邮箱看起来有点热，请检查一下格式。" />
+                          <span class="x-hint">仅用于本页显示，不会发往任何地方。冰封保存，随页面关闭融化。</span>
+                        </div>
+                      </div>
+                      <div class="x-field">
+                        <label for="s-temp">你现在的体感温度</label>
+                        <div class="s-temp"><span class="x-hint">拖动滑块，诚实一点</span><output id="s-temp-v" for="s-temp">28°C</output></div>
+                        <input id="s-temp" name="temp" type="range" min="-10" max="45" step="1" value="28" />
+                        <p class="s-tempmsg" id="s-tempmsg" aria-live="polite">检测到过热。我们会优先为你安排冷链。</p>
+                      </div>
+                      <div class="x-field">
+                        <label for="s-goal">你主要想冷却什么？</label>
+                        <select id="s-goal" name="goal">
+                          <option value="head">我的头脑</option>
+                          <option value="laptop">我的笔记本电脑</option>
+                          <option value="drink">我的饮料</option>
+                          <option value="team">我的雪橇队</option>
+                          <option value="code">我的代码</option>
+                          <option value="boss">我的老板</option>
+                        </select>
+                        <p class="s-tip" id="s-goaltip" aria-live="polite">很好。头脑是最需要冷却的部件。</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="s-step" data-step="3" hidden>
+                    <p class="s-stepnum">第 3 步 / 共 4 步</p>
+                    <h2>领取你的雪橇队</h2>
+                    <div data-plan-only="free">
+                      <div class="s-corgi">
+                        <svg viewBox="0 0 72 72" fill="none" stroke="#0E1A24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 44c0-8 8-12 18-12h14c6 0 10-4 12-10l2-8 4 10c2 6 0 12-4 15"/><path d="M14 44c-2 0-4-2-4-5"/><path d="M18 44v10M26 46v8M44 46v8M52 44v10"/><path d="M58 14l-6 6M62 18l-6 3"/><circle cx="58" cy="26" r="1"/><path d="M14 44h44"/></svg>
+                        <div>
+                          <p style="font-weight:500">一只柯基</p>
+                          <p class="x-muted x-small" style="margin-top:4px">Freeze 方案标准配置。非哈士奇，跑不快，腿很短，心很大。</p>
+                        </div>
+                      </div>
+                      <label class="x-check" style="margin-top:12px"><input type="checkbox" name="corgiok" data-need="free" data-err="请确认。柯基正在看着你。" /><span>我理解它跑不快，并且会一样爱它。</span></label>
+                    </div>
+                    <div data-plan-only="pro max" hidden>
+                      <div class="x-field" data-plan-only="max" hidden>
+                        <label for="s-lead">给你的领头犬起个名字</label>
+                        <input id="s-lead" name="lead" type="text" maxlength="16" placeholder="比如：冰糖" data-need="max" data-err="领头犬需要一个名字。没有名字，它不肯站到最前面。" />
+                        <span class="x-hint">Max 方案为你托管 6 只哈士奇。其余 5 只的名字由领头犬决定。</span>
+                      </div>
+                      <fieldset class="x-field" style="margin-top:22px">
+                        <legend>背带尺码</legend>
+                        <div class="x-choices">
+                          <label class="x-choice"><input type="radio" name="size" value="S" data-need="pro max" /><b>S</b><small>胸围 50–60 cm</small></label>
+                          <label class="x-choice"><input type="radio" name="size" value="M" /><b>M</b><small>胸围 60–70 cm</small></label>
+                          <label class="x-choice"><input type="radio" name="size" value="L" /><b>L</b><small>胸围 70–80 cm</small></label>
+                          <label class="x-choice"><input type="radio" name="size" value="XL" /><b>XL</b><small>胸围 80 cm 以上，或是一匹马</small></label>
+                        </div>
+                        <span class="x-hint">不确定？<a class="x-textlink" style="min-height:0;font-size:13px" href="{{root}}harness-sizes.html" target="_blank" rel="noopener">查看马具尺码表</a>（新窗口打开，你填的内容不会化掉）。</span>
+                      </fieldset>
+                    </div>
+                  </div>
+
+                  <div class="s-step" data-step="4" hidden>
+                    <p class="s-stepnum">第 4 步 / 共 4 步</p>
+                    <h2 id="s-step4-title">支付方式</h2>
+                    <div data-plan-only="free">
+                      <div class="x-callout">Freeze 方案无需付款。<b>冷静是免费的。</b></div>
+                    </div>
+                    <fieldset class="x-field" data-plan-only="pro max" hidden>
+                      <legend>选择一种支付方式</legend>
+                      <div class="x-choices">
+                        <label class="x-choice"><input type="radio" name="pay" value="ice" data-need="pro max" data-err="请选择一种支付方式。我们不收现金，只收冰、鱼干和拥抱。" /><b>冰块</b><small>按当日冰价折算</small></label>
+                        <label class="x-choice"><input type="radio" name="pay" value="fish" /><b>鱼干</b><small>哈士奇财务部首选</small></label>
+                        <label class="x-choice"><input type="radio" name="pay" value="hug" /><b>一个拥抱</b><small>仅限当面，需排队</small></label>
+                        <label class="x-choice"><input type="radio" name="pay" value="joke" /><b>一个冷笑话</b><small>需经柯基审核</small></label>
+                      </div>
+                      <div class="x-callout" style="margin-top:12px">本网站为恶搞作品，<b>不会收取任何费用</b>，也永远不会要求你输入卡号或密码。</div>
+                    </fieldset>
+                    <label class="x-check" style="margin-top:12px"><input type="checkbox" name="terms" required data-err="请先同意条款。不读也没关系，大家都没读。" /><span>我已阅读并同意《<a class="x-textlink" style="min-height:0" href="{{root}}terms.html" target="_blank" rel="noopener">使用条款</a>》与《<a class="x-textlink" style="min-height:0" href="{{root}}disclaimer.html" target="_blank" rel="noopener">冷责声明</a>》，并承诺在任何情况下保持冷静。</span></label>
+                  </div>
+
+                  <div class="s-nav">
+                    <button class="x-btn x-btn--ghost" type="button" id="s-back" hidden>上一步</button>
+                    <button class="x-btn x-btn--dark" type="submit" id="s-next">下一步</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="x-formcard x-result s-done" id="s-done">
+                <div class="x-result__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /></svg></div>
+                <p class="x-eyebrow" style="margin-bottom:8px">冷却已开始</p>
+                <h2 class="x-h2" style="font-size:clamp(28px,3.6vw,40px)">欢迎降温，<span id="s-d-name">冷静的人</span>。</h2>
+                <p class="x-lead" id="s-d-lead">你的方案已生效。冰块正在路上，请勿开窗。</p>
+                <div class="x-term">
+                  <div class="x-term__bar"><i></i><i></i><i></i><span>~/expedition — zsh</span></div>
+                  <button class="x-copy" data-copy="#s-d-term">复制</button>
+<pre id="s-d-term"></pre>
+                </div>
+                <p class="x-small x-muted x-mt-s">以上内容仅在你的浏览器里生成，没有发往任何地方。刷新页面，它就会像冰一样消失。</p>
+                <div class="x-phero__btns">
+                  <a class="x-btn x-btn--dark" href="{{root}}docs.html#quickstart">阅读快速开始</a>
+                  <a class="x-btn x-btn--ghost" href="{{root}}index.html">返回首页</a>
+                  <button class="x-btn x-btn--ghost" type="button" id="s-again" style="cursor:pointer;background:transparent">再冷却一次</button>
+                </div>
+              </div>
+            </div>
+
+            <aside class="s-side">
+              <div class="x-card x-card--flat" id="s-summary">
+                <p class="x-eyebrow" style="margin-bottom:10px">你的方案</p>
+                <p class="x-plan__name" id="s-sum-name">请选择方案</p>
+                <p class="x-plan__price" id="s-sum-price">—</p>
+                <p class="x-small x-muted" id="s-sum-note" style="margin-top:8px">价格不含冰的融化损耗。</p>
+                <ul id="s-sum-list"><li>先在左边选一个温度</li></ul>
+              </div>
+              <p class="x-small x-muted x-mt-s">还在犹豫？<a class="x-textlink" style="min-height:0;font-size:14px" href="{{root}}pricing.html#compare-plans">对比全部方案</a> · <a class="x-textlink" style="min-height:0;font-size:14px" href="{{root}}models.html#choose">帮我选模型</a></p>
+            </aside>
+          </div>
+        </section>
+<!--scripts-->
+<script>
+(function () {
+  var form = document.getElementById("s-form");
+  var steps = [].slice.call(form.querySelectorAll(".s-step"));
+  var bars = [].slice.call(document.querySelectorAll(".s-steps li"));
+  var back = document.getElementById("s-back"), next = document.getElementById("s-next");
+  var done = document.getElementById("s-done"), card = document.getElementById("s-card");
+  var cur = 0;
+  var PLANS = {
+    free: { name: "Free（Freeze）", month: "¥0", year: "¥0", note: { month: "冷静是免费的。", year: "冷静依然是免费的。年付也送不了你什么，但我们欣赏这份决心。" }, list: ["每日 50 块冰", "Cold Hail-ku", "一只柯基（非哈士奇，跑不快）"] },
+    pro: { name: "Pro（Pro-tective）", month: "¥140", year: "¥112", note: { month: "按月付费，随时降温。", year: "年付 ¥1,344，赠一桶冰。" }, list: ["每日 5,000 块冰", "全系模型", "标准雪橇犬背带一副", "优先冷链"] },
+    max: { name: "Max（−80°）", month: "¥1,400", year: "¥1,120", note: { month: "按月付费，随时降温。", year: "年付 ¥13,440，赠一桶冰（大桶）。" }, list: ["冰块用量 20 倍", "6 犬雪橇队全年托管", "马具私人定制", "专属马术顾问", "“限速”？只有狗跑累了的时候"] }
+  };
+  var GOALS = {
+    head: "很好。头脑是最需要冷却的部件。",
+    laptop: "建议同时把它从被子上拿下来。",
+    drink: "这个我们最擅长。少冰、去冰、正常冰，Cold Hail-ku 都不会弄错。",
+    team: "哈士奇本来就很冷静，是你需要冷静。",
+    code: "这里是 Colding Plan，不是 Coding Plan。不过我们可以冷却写代码的那台电脑。",
+    boss: "我们无法远程冷却他人。但可以寄一桶冰到他的办公室，附一张匿名卡片。"
+  };
+  var PAY = { ice: "冰块", fish: "鱼干", hug: "一个拥抱", joke: "一个冷笑话（柯基已审核通过）" };
+
+  function plan() { var p = form.querySelector('input[name="plan"]:checked'); return p ? p.value : null; }
+  function cycle() { return form.querySelector('input[name="cycle"]:checked').value; }
+
+  function applyPlan() {
+    var p = plan();
+    [].forEach.call(form.querySelectorAll("[data-plan-only]"), function (el) {
+      el.hidden = !p || el.getAttribute("data-plan-only").split(" ").indexOf(p) === -1;
+    });
+    document.getElementById("s-step4-title").textContent = p === "free" ? "最后一步" : "支付方式";
+    var name = document.getElementById("s-sum-name"), price = document.getElementById("s-sum-price"), note = document.getElementById("s-sum-note"), list = document.getElementById("s-sum-list");
+    if (!p) return;
+    var d = PLANS[p], c = cycle();
+    name.textContent = d.name;
+    price.innerHTML = d[c] + "<small>/月</small>";
+    note.textContent = d.note[c];
+    list.innerHTML = "";
+    d.list.forEach(function (t) { var li = document.createElement("li"); li.textContent = t; list.appendChild(li); });
+  }
+
+  function tempMsg() {
+    var t = parseInt(document.getElementById("s-temp").value, 10), m = document.getElementById("s-tempmsg");
+    document.getElementById("s-temp-v").textContent = (t < 0 ? "−" + Math.abs(t) : t) + "°C";
+    var msg, cls = "";
+    if (t <= 5) { msg = "你已经非常冷静了。说实话，你可能不需要我们。但我们需要你。"; cls = "is-cool"; }
+    else if (t <= 20) { msg = "很好，体感凉爽。你是我们的理想用户。"; cls = "is-cool"; }
+    else if (t <= 27) msg = "还行，稍微有点温。建议从 Cold Sleet 开始。";
+    else if (t <= 34) { msg = "检测到过热。我们会优先为你安排冷链。"; cls = "is-hot"; }
+    else { msg = "严重过热！请先喝一杯冰水再继续。我们等你。"; cls = "is-hot"; }
+    m.textContent = msg;
+    m.className = "s-tempmsg" + (cls ? " " + cls : "");
+  }
+
+  function show(i) {
+    cur = i;
+    steps.forEach(function (s, k) { s.hidden = k !== i; });
+    bars.forEach(function (b, k) { b.classList.toggle("is-done", k <= i); });
+    back.hidden = i === 0;
+    next.textContent = i === steps.length - 1 ? "开始冷却" : "下一步";
+  }
+
+  function clearErr(scope) {
+    [].forEach.call(scope.querySelectorAll("[aria-invalid]"), function (f) { f.removeAttribute("aria-invalid"); });
+    [].forEach.call(scope.querySelectorAll(".x-err[data-auto]"), function (m) { m.remove(); });
+  }
+  function fail(f, scopeFirst) {
+    f.setAttribute("aria-invalid", "true");
+    var msg = document.createElement("p");
+    msg.className = "x-err"; msg.setAttribute("data-auto", "");
+    msg.textContent = f.getAttribute("data-err") || "这里还空着，像一片没人踩过的雪地。";
+    var host = f.closest("fieldset") || f.closest(".x-field") || f.closest(".x-check") || f.parentNode;
+    if (host.classList.contains("x-check")) host.insertAdjacentElement("afterend", msg); else host.appendChild(msg);
+    return scopeFirst || f;
+  }
+  function validate(step) {
+    clearErr(step);
+    var p = plan(), first = null, seen = {};
+    [].forEach.call(step.querySelectorAll("input, select"), function (f) {
+      if (f.closest("[hidden]")) return;
+      var need = f.getAttribute("data-need");
+      if (f.type === "radio") {
+        if (seen[f.name]) return; seen[f.name] = true;
+        var group = step.querySelectorAll('input[name="' + f.name + '"]');
+        var required = [].some.call(group, function (g) { return g.required || (g.getAttribute("data-need") || "").split(" ").indexOf(p) !== -1; });
+        var errSrc = [].filter.call(group, function (g) { return g.getAttribute("data-err"); })[0] || f;
+        if (required && !step.querySelector('input[name="' + f.name + '"]:checked')) {
+          if (!errSrc.getAttribute("data-err")) errSrc.setAttribute("data-err", f.name === "plan" ? "先选一个温度。冰不会替你做决定。" : "请选一个。哈士奇们在等。");
+          first = fail(errSrc, first);
+        }
+        return;
+      }
+      var mustFill = f.required || (need && need.split(" ").indexOf(p) !== -1);
+      if (f.type === "checkbox") { if (mustFill && !f.checked) first = fail(f, first); return; }
+      var v = f.value.trim();
+      if (mustFill && !v) { first = fail(f, first); return; }
+      if (v && f.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) first = fail(f, first);
+    });
+    if (first) { first.focus(); return false; }
+    return true;
+  }
+
+  function finish() {
+    var p = plan(), d = PLANS[p], c = cycle();
+    var name = document.getElementById("s-name").value.trim() || "冷静的人";
+    var t = parseInt(document.getElementById("s-temp").value, 10);
+    var size = (form.querySelector('input[name="size"]:checked') || {}).value;
+    var pay = (form.querySelector('input[name="pay"]:checked') || {}).value;
+    var lead = document.getElementById("s-lead").value.trim();
+    document.getElementById("s-d-name").textContent = name;
+    document.getElementById("s-d-lead").textContent = (p === "free"
+      ? "你的 Freeze 方案已生效。柯基已出发，预计比你想象的晚一点到。"
+      : "你的 " + d.name + " 已生效（" + (c === "year" ? "年付，赠一桶冰" : "月付") + "）。冰块正在路上，请勿开窗。");
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]; }); };
+    var ok = '<span class="ok">✓</span> ', ar = '<span class="ar">→</span> ', P = '<span class="p">$</span> ';
+    var tempTxt = (t < 0 ? "−" + Math.abs(t) : t) + "°C" + (t > 27 ? "（过热）" : t <= 20 ? "（理想）" : "（偏温）");
+    var dogs = p === "free" ? "已部署 1 只柯基（Agent，跑不快）" : p === "max" ? "已部署 6 只哈士奇（Agent），领头犬：" + esc(lead || "冰糖") : "已就绪：你的哈士奇（自备）";
+    var lines = [
+      P + '<span class="c">antarctic cold init</span>',
+      ok + "已检测到环境温度：" + tempTxt,
+      ok + "用户：" + esc(name),
+      ok + "方案：" + d.name + (c === "year" ? " · 年付" : " · 月付"),
+      ok + "正在加载 " + (p === "free" ? "Cold Hail-ku 4.5" : "Cold Floe 4.5") + " …",
+      ok + dogs,
+      ok + (p === "free" ? "雪橇已就位（柯基尺寸）" : "雪橇已就位，Harness 已系紧（尺码 " + esc(size) + "）"),
+      p === "free" ? ok + "付款：无。冷静是免费的。" : ok + "付款方式：" + PAY[pay] + "（本演示不收取任何费用）",
+      P + '<span class="c">antarctic mush --to 南极点</span>',
+      ar + "预计抵达：冷静之后"
+    ];
+    document.getElementById("s-d-term").innerHTML = lines.join("\n");
+    card.hidden = true;
+    done.classList.add("is-shown");
+    done.setAttribute("tabindex", "-1");
+    done.focus({ preventScroll: true });
+    done.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (window.xToast) window.xToast("冷却已开始。请勿开窗。");
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!validate(steps[cur])) return;
+    if (cur < steps.length - 1) { show(cur + 1); form.scrollIntoView({ behavior: "smooth", block: "nearest" }); }
+    else finish();
+  });
+  back.addEventListener("click", function () { clearErr(steps[cur]); show(Math.max(0, cur - 1)); });
+  form.addEventListener("change", function (e) {
+    if (e.target.name === "plan" || e.target.name === "cycle") { applyPlan(); clearErr(steps[cur]); }
+    if (e.target.id === "s-goal") document.getElementById("s-goaltip").textContent = GOALS[e.target.value];
+  });
+  document.getElementById("s-temp").addEventListener("input", tempMsg);
+  document.getElementById("s-again").addEventListener("click", function () {
+    form.reset(); done.classList.remove("is-shown"); card.hidden = false;
+    preselect(); tempMsg(); document.getElementById("s-goaltip").textContent = GOALS.head; show(0);
+    card.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  function preselect() {
+    var q = (new URLSearchParams(location.search).get("plan") || "").toLowerCase();
+    if (PLANS[q]) form.querySelector('input[name="plan"][value="' + q + '"]').checked = true;
+    applyPlan();
+  }
+  preselect(); tempMsg(); show(0);
+})();
+</script>

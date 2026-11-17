@@ -20,6 +20,8 @@
 .ab-thermo__row:last-child { border-bottom: 0; }
 .ab-thermo__row b { font: 500 22px/1 var(--x-serif); color: var(--x-ink); white-space: nowrap; }
 .ab-thermo__row b.is-hot { color: #B4452F; }
+.ab-hero .x-h1 { max-width: none; }
+@media (max-width: 600px) { .ab-hero .x-h1 { font-size: 32px; } }
 .ab-values .x-card .x-num { margin-bottom: 14px; }
 </style>
   </head>
@@ -50,12 +52,12 @@
       </header>
 
       <main id="main">
-<section class="x-phero x-phero--img">
+<section class="x-phero x-phero--img ab-hero">
   <img src="assets/img/hero-sled-dogs.jpg" alt="黎明时分，南极冰原上一支套着背带的雪橇犬队" />
   <div class="x-wrap">
     <ol class="x-crumbs"><li><a href="index.html">首页</a></li><li>关于我们</li></ol>
     <p class="x-eyebrow">关于 Antarctic</p>
-    <h1 class="x-h1">我们不是一家 AI 公司。我们是一块 AI。</h1>
+    <h1 class="x-h1">我们不是一家 AI 公司。<br />我们是一块 AI。</h1>
     <p class="x-lead">Antarctic Ice 的使命是：确保变革性的 AI 帮助人类——以及哈士奇——都冷静下来。</p>
     <div class="x-phero__meta"><span>总部：一台步入式冷库</span><span>成立：约 2,000 万年前（工商注册：2021 年）</span><span>员工：214 人 · 386 只狗 · 1 匹马</span></div>
   </div>
@@ -104,7 +106,7 @@
     </div>
     <ol class="x-timeline x-fade">
       <li><p class="x-timeline__when">约 3,400 万年前</p><p class="x-timeline__what">南极开始结冰</p><p>预训练数据开始积累。当时没有人知道，这是史上最长的一次数据标注。</p></li>
-      <li><p class="x-timeline__when">约 2,000 万年前</p><p class="x-timeline__what">东南极冰盖基本成型</p><p>模型权重进入稳定冻结状态。冰盖平均厚度约 2 公里——我们第一次意识到“大”模型的含义。</p></li>
+      <li><p class="x-timeline__when">约 2,000 万年前（市场部口径）</p><p class="x-timeline__what">训练正式开始</p><p>模型权重进入稳定冻结状态，冰盖越积越厚，平均约 2 公里——我们第一次意识到“大”模型的含义。地质学家对这个日期有不同意见，我们尊重地质学家。</p></li>
       <li><p class="x-timeline__when">约 80 万年前</p><p class="x-timeline__what">最老的连续冰芯开始记录</p><p>上下文窗口正式开放。今天 Cold Floe 能一口气读完的，就是这一段。</p></li>
       <li><p class="x-timeline__when">1983 年 7 月 21 日</p><p class="x-timeline__what">东方站测得 −89.2°C</p><p>人类记录到的地面最低气温。我们把它定为旗舰模型的工作温度，并且至今不打算调高。</p></li>
       <li><p class="x-timeline__when">2021 年</p><p class="x-timeline__what">公司在步入式冷库中成立</p><p>首批员工：7 名工程师、2 只哈士奇、1 台从机房里救出来的、已经不转的风扇（现存于公司展厅）。</p></li>

@@ -9,9 +9,9 @@ nav: enterprise
 .ct-method:hover { border-color: var(--x-line-2); transform: translateY(-2px); }
 .ct-method__icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: #E7ECEE; color: var(--x-steel-text); }
 .ct-method__icon svg { width: 22px; height: 22px; }
-.ct-method b { display: block; font: 500 16px/1.4 var(--x-sans); color: var(--x-ink); }
-.ct-method span { display: block; margin-top: 4px; font-size: 14px; color: var(--x-ink-2); }
-.ct-method .x-tag { margin-top: 10px; }
+.ct-method__text b { display: block; font: 500 16px/1.4 var(--x-sans); color: var(--x-ink); }
+.ct-method__text > span { display: block; margin-top: 4px; font-size: 14px; color: var(--x-ink-2); }
+.ct-method__text > .x-tag { display: inline-flex; margin-top: 10px; }
 .ct-reply { margin-top: 24px; padding: 24px; border-radius: var(--r-m); background: #F4F6F5; border: 1px solid var(--x-line); font-size: 15px; color: var(--x-ink-2); }
 .ct-reply p + p { margin-top: 12px; }
 .ct-reply__from { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 14px; color: var(--x-ink-3); }
@@ -80,19 +80,19 @@ nav: enterprise
       <p class="x-eyebrow" style="margin-bottom:4px">其他联系方式</p>
       <button class="ct-method" type="button" data-toast="南极邮局已收到你的请求。下一班邮船预计在明年 1 月出发。">
         <span class="ct-method__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-        <span><b>南极邮局</b><span>南极半岛 · 洛克罗伊港。明信片约 2 至 6 周送达，邮票上有企鹅。</span></span>
+        <span class="ct-method__text"><b>南极邮局</b><span>南极半岛 · 洛克罗伊港。明信片约 2 至 6 周送达，邮票上有企鹅。</span></span>
       </button>
       <button class="ct-method" type="button" data-toast="不推荐：信鸽在 −30°C 下会冻住。请改用表单。">
         <span class="ct-method__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M4 14c3 0 5-2 6-5 1 3 4 5 8 5-2 3-5 5-8 5-3 0-5-2-6-5z"/><path d="M10 9l2-4 2 1"/></svg></span>
-        <span><b>信鸽</b><span>传统而浪漫。但信鸽会冻住，所以我们不推荐。</span><span class="x-tag x-tag--warn">不推荐</span></span>
+        <span class="ct-method__text"><b>信鸽</b><span>传统而浪漫。但信鸽会冻住，所以我们不推荐。</span><span class="x-tag x-tag--warn">不推荐</span></span>
       </button>
       <button class="ct-method" type="button" data-toast="嗷呜——嗷呜呜——（哈士奇热线已接通，但它只是想聊天。）">
         <span class="ct-method__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a11 11 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span>
-        <span><b>哈士奇热线</b><span>由值班哈士奇接听。工作时间 7×24，但它想不想接看心情。</span></span>
+        <span class="ct-method__text"><b>哈士奇热线</b><span>由值班哈士奇接听。工作时间 7×24，但它想不想接看心情。</span></span>
       </button>
       <button class="ct-method" type="button" data-toast="烽火已点燃……然后被风雪吹灭了。">
         <span class="ct-method__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 3c3 4 5 6 5 10a5 5 0 01-10 0c0-2 1-3 2-4 0 2 1 3 2 3-1-3 0-6 1-9z"/></svg></span>
-        <span><b>烽火台</b><span>与公司价值观“绝不过热”冲突，已停用。</span><span class="x-tag">已停用</span></span>
+        <span class="ct-method__text"><b>烽火台</b><span>与公司价值观“绝不过热”冲突，已停用。</span><span class="x-tag">已停用</span></span>
       </button>
       <div class="x-callout x-mt-s"><strong>已经是客户？</strong> 请查看<a class="x-textlink" style="min-height:0" href="{{root}}docs.html">文档</a>或<a class="x-textlink" style="min-height:0" href="{{root}}status.html">系统状态</a>。如果冰化了，先关窗。</div>
     </aside>

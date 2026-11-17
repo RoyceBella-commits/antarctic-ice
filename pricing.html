@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>定价 · Antarctic 南极冰</title>
+    <meta name="description" content="Antarctic 定价：Free（Freeze）、Pro（Pro-tective）、Max（−80°）三档方案，冰块 API 价格与冰块计价器。化了不收钱。" />
+    <meta property="og:title" content="定价 · Antarctic 南极冰" />
+    <meta property="og:description" content="Antarctic 定价：Free（Freeze）、Pro（Pro-tective）、Max（−80°）三档方案，冰块 API 价格与冰块计价器。化了不收钱。" />
+    <meta name="theme-color" content="#0E1A24" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script>document.documentElement.classList.add("x-js");</script>
+    <style>
+  .p-toggle { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; background: #E7ECEE; border: 1px solid var(--x-line); margin-top: 28px; }
+  .p-toggle .x-chip { border: 0; min-height: 38px; }
+  .p-toggle .x-chip[aria-pressed="false"]:hover { background: rgba(14,26,36,0.06); }
+  .p-gift { display: block; margin-top: 10px; font-size: 13px; color: var(--x-ink-3); min-height: 1.4em; }
+  .x-plan--pop .p-gift { color: #8FA2B2; }
+  .p-calc { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0; border: 1px solid var(--x-line); border-radius: var(--r-l); overflow: hidden; background: var(--x-card); }
+  .p-calc .x-form { padding: clamp(24px, 4vw, 40px); }
+  .p-calc__out { padding: clamp(24px, 4vw, 40px); background: var(--x-ink); color: #DCE4EA; display: flex; flex-direction: column; }
+  .p-calc__total { font: 500 clamp(40px, 5vw, 56px)/1.1 var(--x-serif); color: #fff; letter-spacing: -0.02em; margin-top: 8px; font-variant-numeric: tabular-nums; }
+  .p-calc__rows { margin: 28px 0 0; padding: 20px 0 0; border-top: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr auto; gap: 10px 16px; font-size: 14px; }
+  .p-calc__rows dt { color: #A9B7C3; }
+  .p-calc__rows dd { margin: 0; color: #fff; text-align: right; font-variant-numeric: tabular-nums; }
+  .p-calc__rows .p-refund { color: #8FC9A9; }
+  .p-calc__note { margin-top: auto; padding-top: 24px; font-size: 14px; color: #C9D7E3; }
+  .p-temp { display: flex; justify-content: space-between; font: 400 13px/1 var(--x-mono); color: var(--x-ink-3); }
+  .p-temp output { color: var(--x-ink); font-weight: 500; }
+  @media (max-width: 900px) { .p-calc { grid-template-columns: 1fr; } }
+</style>
+  </head>
+  <body>
+    <div class="x-site" id="top">
+      <a class="x-skip" href="#main">跳到正文</a>
+      <a class="x-announce" href="models/cold-floe.html"><b>Cold Floe 4.5</b>&nbsp;现已发布 — <span>迄今最冷静的模型 →</span></a>
+
+      <header class="x-nav" id="x-nav">
+        <div class="x-wrap x-nav__in">
+          <a class="x-logo" href="index.html" aria-label="Antarctic 首页">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+            Antarctic
+          </a>
+          <ul class="x-nav__links" id="x-links">
+            <li><a href="models.html">模型</a></li>
+            <li><a href="colding.html">Colding Plan</a></li>
+            <li><a href="harness.html">Harness</a></li>
+            <li><a href="research.html">研究</a></li>
+            <li><a href="enterprise.html">企业</a></li>
+            <li><a href="pricing.html" aria-current="page">定价</a></li>
+          </ul>
+          <a class="x-btn x-btn--dark x-nav__cta" href="start.html">开始冷却</a>
+          <button class="x-menu" id="x-menu" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="x-links">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 7h16M3 15h16" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="x-phero">
+          <div class="x-wrap">
+            <ol class="x-crumbs"><li><a href="index.html">首页</a></li><li>定价</li></ol>
+            <p class="x-eyebrow">定价</p>
+            <h1 class="x-h1">选择你的温度。</h1>
+            <p class="x-lead">价格按月计，按冰块计，从不按体感计。所有方案均可随时降温，也可随时取消——取消后你的冰块会在 30 天内自然融化，不留痕迹。</p>
+            <div class="x-phero__meta">
+              <span>所有价格以人民币计</span>
+              <span>不含冰的融化损耗</span>
+              <span>化了不收钱</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec" id="plans">
+          <div class="x-wrap">
+            <div class="x-center x-fade">
+              <p class="x-eyebrow">方案</p>
+              <h2 class="x-h2">三种温度，总有一种适合你。</h2>
+              <div class="p-toggle" role="group" aria-label="计费周期">
+                <button class="x-chip" type="button" data-cycle="month" aria-pressed="true">月付</button>
+                <button class="x-chip" type="button" data-cycle="year" aria-pressed="false">年付 · 省 20% 并赠一桶冰</button>
+              </div>
+            </div>
+            <div class="x-cards3">
+              <article class="x-card x-plan x-fade">
+                <p class="x-plan__name">Free <span>（Freeze）</span></p>
+                <p class="x-plan__price" data-month="¥0" data-year="¥0">¥0<small>/月</small></p>
+                <span class="p-gift" data-month="冷静是免费的" data-year="冷静依然是免费的">冷静是免费的</span>
+                <ul><li>每日 50 块冰</li><li>Cold Hail-ku</li><li>一只柯基（非哈士奇，跑不快）</li></ul>
+                <a class="x-btn x-btn--ghost" href="start.html?plan=free">免费开始冷却</a>
+              </article>
+              <article class="x-card x-plan x-plan--pop x-fade">
+                <span class="x-tag x-tag--new x-plan__badge">最受欢迎</span>
+                <p class="x-plan__name">Pro <span>（Pro-tective）</span></p>
+                <p class="x-plan__price" data-month="¥140" data-year="¥112">¥140<small>/月</small></p>
+                <span class="p-gift" data-month="按月付费，随时降温" data-year="年付 ¥1,344，赠一桶冰">按月付费，随时降温</span>
+                <ul><li>每日 5,000 块冰</li><li>全系模型</li><li>标准雪橇犬背带一副</li><li>优先冷链</li></ul>
+                <a class="x-btn x-btn--light" href="start.html?plan=pro">升级至 Pro</a>
+              </article>
+              <article class="x-card x-plan x-fade">
+                <p class="x-plan__name">Max <span>（−80°）</span></p>
+                <p class="x-plan__price" data-month="¥1,400" data-year="¥1,120">¥1,400<small>/月</small></p>
+                <span class="p-gift" data-month="按月付费，随时降温" data-year="年付 ¥13,440，赠一桶冰（大桶）">按月付费，随时降温</span>
+                <ul><li>冰块用量 20 倍</li><li>6 犬雪橇队全年托管</li><li>马具私人定制</li><li>专属马术顾问</li><li>“限速”？不存在的，只有狗跑累了的时候</li></ul>
+                <a class="x-btn x-btn--dark" href="start.html?plan=max">升级至 Max</a>
+              </article>
+            </div>
+            <p class="x-note">所有方案均支持按年付费，年付赠送一桶冰。价格不含冰的融化损耗。</p>
+
+            <div class="x-ent x-fade">
+              <div>
+                <p class="x-eyebrow" style="margin-bottom:8px">企业</p>
+                <h3 class="x-h3">Antarctic 企业版</h3>
+                <p>为冷链、极地科考与大型马场打造。私有化部署于贵司自有冰川，按冰川面积计价。没有冰川？我们可以帮你找一条。</p>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;gap:12px">
+                <a class="x-btn x-btn--ghost" href="enterprise.html">了解企业版</a>
+                <a class="x-btn x-btn--dark" href="contact.html">联系销售</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec" id="compare-plans">
+          <div class="x-wrap">
+            <div class="x-sec__head x-fade">
+              <p class="x-eyebrow">方案对比</p>
+              <h2 class="x-h2">每一格都冻得很清楚。</h2>
+            </div>
+            <div class="x-spec-wrap x-fade">
+              <table class="x-spec">
+                <thead><tr><th scope="col">功能</th><th scope="col">Free（Freeze）</th><th scope="col">Pro（Pro-tective）</th><th scope="col">Max（−80°）</th><th scope="col">企业版</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">每日冰块</th><td class="x-m">50</td><td class="x-m">5,000</td><td class="x-m">100,000</td><td>按冰川面积</td></tr>
+                  <tr><th scope="row">可用模型</th><td>Cold Hail-ku</td><td>全系</td><td>全系 + 优先深度冷思考</td><td>全系 + 私有冰芯</td></tr>
+                  <tr><th scope="row">上下文上限</th><td class="x-m">120 m</td><td class="x-m">3,200 m</td><td class="x-m">3,200 m</td><td>贵司冰川有多厚就多厚</td></tr>
+                  <tr><th scope="row">雪橇犬</th><td>一只柯基</td><td>自备（附背带）</td><td>6 犬雪橇队全年托管</td><td>整个犬舍</td></tr>
+                  <tr><th scope="row">Harness</th><td class="x-no">—</td><td>标准雪橇犬背带一副</td><td>马具私人定制</td><td>第三代匠人驻场</td></tr>
+                  <tr><th scope="row">冷链</th><td>普通</td><td>优先</td><td>专线</td><td>自有冷链</td></tr>
+                  <tr><th scope="row">冷藏缓存</th><td class="x-no">—</td><td class="x-yes">支持</td><td class="x-yes">支持</td><td class="x-yes">支持</td></tr>
+                  <tr><th scope="row">Mush 指令协议（MCP）</th><td class="x-yes">支持</td><td class="x-yes">支持</td><td class="x-yes">支持</td><td class="x-yes">支持</td></tr>
+                  <tr><th scope="row">防风窗（Context Window）</th><td>单层玻璃</td><td>双层中空</td><td>双层中空 Low-E</td><td>双层中空 Low-E + 窗帘</td></tr>
+                  <tr><th scope="row">专属马术顾问</th><td class="x-no">—</td><td class="x-no">—</td><td class="x-yes">1 位</td><td class="x-yes">1 位 + 1 匹马</td></tr>
+                  <tr><th scope="row">限速</th><td>狗累了就停</td><td>狗累了就停</td><td>狗累了就停（狗多，累得慢）</td><td>可协商（需征得狗同意）</td></tr>
+                  <tr><th scope="row">单点冰封登录（SSO）</th><td class="x-no">—</td><td class="x-no">—</td><td class="x-no">—</td><td class="x-yes">支持</td></tr>
+                  <tr><th scope="row">客服响应</th><td>本冰河世纪内</td><td>24 小时</td><td>冷静之后立即</td><td>专属冷静顾问</td></tr>
+                  <tr><th scope="row">年付赠品</th><td>一张冰的照片</td><td>一桶冰</td><td>一桶冰（大桶）</td><td>一座冰山（运费自理）</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--tint" id="api">
+          <div class="x-wrap">
+            <div class="x-sec__head x-fade">
+              <p class="x-eyebrow">冰块 API 价格</p>
+              <h2 class="x-h2">按冰块计费，<br />化了不收钱。</h2>
+              <p class="x-lead">开发者可通过 API 按量使用全部模型。输入以冰块计，输出以冰水计——冰块在输出过程中会部分融化，融化部分不收费。</p>
+            </div>
+            <div class="x-spec-wrap x-fade">
+              <table class="x-spec">
+                <thead><tr><th scope="col">模型（每百万块）</th><th scope="col">输入冰块</th><th scope="col">输出冰水</th><th scope="col">冷藏缓存命中</th><th scope="col">批量制冰</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row"><a class="x-textlink" style="min-height:0" href="models/cold-floe.html">Cold Floe 4.5</a></th><td class="x-m">¥36</td><td class="x-m">¥180</td><td class="x-m">¥3.6</td><td>5 折</td></tr>
+                  <tr><th scope="row"><a class="x-textlink" style="min-height:0" href="models/cold-sleet.html">Cold Sleet 4.5</a></th><td class="x-m">¥21</td><td class="x-m">¥105</td><td class="x-m">¥2.1</td><td>5 折</td></tr>
+                  <tr><th scope="row"><a class="x-textlink" style="min-height:0" href="models/cold-hail-ku.html">Cold Hail-ku 4.5</a></th><td class="x-m">¥7</td><td class="x-m">¥35</td><td class="x-m">¥0.7</td><td>5 折</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="x-cards3 x-mt-m" style="margin-top:40px">
+              <div class="x-fade"><p class="x-num">冷藏缓存</p><h3 class="x-h3">已经冻好了，所以便宜 90%</h3><p class="x-muted" style="margin-top:8px">重复出现的上下文会被放进冷藏室。下次取出来时不用重新冻，我们也就不好意思收全价。</p></div>
+              <div class="x-fade"><p class="x-num">批量制冰</p><h3 class="x-h3">不急的活，一律 5 折</h3><p class="x-muted" style="margin-top:8px">提交后 24 小时内交付。我们会在夜里气温最低的时候统一制冰，省下的电费分你一半。</p></div>
+              <div class="x-fade"><p class="x-num">一块冰是多少</p><h3 class="x-h3">约 3/4 个汉字</h3><p class="x-muted" style="margin-top:8px">标准冰块为 2.5 cm 立方体。一个汉字约 1.3 块冰，一首 Cold Hail-ku 俳句约 17 块冰。</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec" id="calculator">
+          <div class="x-wrap">
+            <div class="x-sec__head x-fade">
+              <p class="x-eyebrow">冰块计价器</p>
+              <h2 class="x-h2">算算这个月要花多少冰。</h2>
+              <p class="x-lead">环境温度越高，路上化掉的冰越多，你付的钱就越少。我们知道这个商业模式有问题，但我们说过：化了不收钱。</p>
+            </div>
+            <div class="p-calc x-fade">
+              <form class="x-form" id="p-calc" onsubmit="return false">
+                <div class="x-field">
+                  <label for="p-model">模型</label>
+                  <select id="p-model">
+                    <option value="floe">Cold Floe 4.5</option>
+                    <option value="sleet" selected>Cold Sleet 4.5</option>
+                    <option value="hail">Cold Hail-ku 4.5</option>
+                  </select>
+                </div>
+                <div class="x-form__row">
+                  <div class="x-field">
+                    <label for="p-in">输入冰块（百万块）</label>
+                    <input id="p-in" type="number" min="0" max="100000" step="0.1" value="20" inputmode="decimal" />
+                  </div>
+                  <div class="x-field">
+                    <label for="p-out">输出冰水（百万块）</label>
+                    <input id="p-out" type="number" min="0" max="100000" step="0.1" value="4" inputmode="decimal" />
+                  </div>
+                </div>
+                <div class="x-field">
+                  <label for="p-cache">冷藏缓存命中率</label>
+                  <input id="p-cache" type="range" min="0" max="90" step="5" value="30" />
+                  <div class="p-temp"><span>0%</span><output id="p-cache-v" for="p-cache">30%</output><span>90%</span></div>
+                </div>
+                <div class="x-field">
+                  <label for="p-temp">环境温度</label>
+                  <input id="p-temp" type="range" min="-60" max="45" step="1" value="22" />
+                  <div class="p-temp"><span>−60°C</span><output id="p-temp-v" for="p-temp">22°C</output><span>45°C</span></div>
+                </div>
+                <label class="x-check"><input type="checkbox" id="p-batch" /><span>使用批量制冰（不急，5 折）</span></label>
+              </form>
+              <div class="p-calc__out" aria-live="polite">
+                <p class="x-eyebrow" style="margin:0;color:#8FB0CC">本月预计</p>
+                <p class="p-calc__total" id="p-total">¥0</p>
+                <dl class="p-calc__rows">
+                  <dt>输入冰块</dt><dd id="p-r-in">¥0</dd>
+                  <dt>冷藏缓存命中</dt><dd id="p-r-cache">¥0</dd>
+                  <dt>输出冰水</dt><dd id="p-r-out">¥0</dd>
+                  <dt>批量制冰折扣</dt><dd id="p-r-batch">—</dd>
+                  <dt>融化减免（化了不收钱）</dt><dd class="p-refund" id="p-r-melt">−¥0</dd>
+                </dl>
+                <p class="p-calc__note" id="p-note">冰块状态良好。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--tint" id="faq">
+          <div class="x-wrap">
+            <div class="x-sec__head x-sec__head--center x-fade">
+              <p class="x-eyebrow">常见问题</p>
+              <h2 class="x-h2">冷静地回答你的问题。</h2>
+            </div>
+            <div class="x-faq x-faq--center x-fade">
+              <details>
+                <summary>“一块冰”到底是多少？</summary>
+                <div><p>一块冰约等于 3/4 个汉字，或一个英文单词的 3/4。物理上，它是一块 2.5 cm 的标准立方冰。我们用标准冰格冻的，误差不超过一根睫毛上的霜。</p></div>
+              </details>
+              <details>
+                <summary>冰化了怎么办？</summary>
+                <div><p>化了不收钱。任何在交付途中融化的冰块都会自动从账单中扣除。你不需要拍照、不需要申诉，也不需要把水寄回来。</p><p>请不要把水寄回来。</p></div>
+              </details>
+              <details>
+                <summary>免费版的柯基可以换成哈士奇吗？</summary>
+                <div><p>升级至 Pro 即可自备哈士奇并获得一副标准雪橇犬背带；升级至 Max 则由我们托管一整支 6 犬雪橇队。</p><p>柯基会留在你身边。它不走。它已经认定你了。</p></div>
+              </details>
+              <details>
+                <summary>年付赠送的那桶冰怎么领？</summary>
+                <div><p>在冷链配送范围内的用户，冰会在年付生效后 7 天内送达。不在范围内的用户，我们会寄一张冰的照片，并在背面写上“想象一下”。</p></div>
+              </details>
+              <details>
+                <summary>可以随时取消吗？</summary>
+                <div><p>可以，随时。取消后你账户里剩余的冰块会在 30 天内自然融化。我们不会挽留你，只会在门口放一杯冰水。</p></div>
+              </details>
+              <details>
+                <summary>“限速”到底是什么意思？</summary>
+                <div><p>Antarctic 没有人为限速。唯一的限制来自狗：狗跑累了，就会停下来。这在 API 中表现为 <code>429 狗累了</code>，通常休息 60 秒并发一根肉干即可恢复。详见 <a class="x-textlink" style="min-height:0" href="docs.html#rate-limits">速率限制文档</a>。</p></div>
+              </details>
+              <details>
+                <summary>学生和科考队有优惠吗？</summary>
+                <div><p>极地科考队免费使用全部方案，前提是你真的在极地。学生凭学生证可享受“寒假价”，仅在寒假期间有效。</p></div>
+              </details>
+              <details>
+                <summary>你们接受哪些付款方式？</summary>
+                <div><p>本网站是一个恶搞作品，不接受任何真实付款，也不会向你索要卡号或密码。在故事里，我们接受冰块、鱼干，以及一个真诚的拥抱。</p></div>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-dark x-close">
+          <div class="x-wrap">
+            <h2 class="x-h2 x-fade">先冷静，再付钱。</h2>
+            <div class="x-close__btns x-fade">
+              <a class="x-btn x-btn--light" href="start.html?plan=pro">升级至 Pro</a>
+              <a class="x-btn x-btn--line-light" href="models.html#choose">帮我选模型</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <div class="x-foot__grid">
+            <div class="x-foot__brand">
+              <a class="x-logo" href="index.html" aria-label="Antarctic 首页">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" /><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5M3.6 10.4L6.8 9.5 5.9 6.3M18.1 17.7l-.9-3.2 3.2-.9M3.6 13.6l3.2.9-.9 3.2M18.1 6.3l-.9 3.2 3.2.9" /></svg>
+                Antarctic
+              </a>
+              <p>冷静、可控、不会过热的智能。</p>
+            </div>
+            <div><h4>产品</h4><ul><li><a href="models/cold-floe.html">Cold Floe</a></li><li><a href="models/cold-sleet.html">Cold Sleet</a></li><li><a href="models/cold-hail-ku.html">Cold Hail-ku</a></li><li><a href="colding.html">Colding Plan</a></li><li><a href="harness.html">Harness</a></li></ul></div>
+            <div><h4>公司</h4><ul><li><a href="about.html">关于我们</a></li><li><a href="careers.html">招聘：诚聘驯犬工程师</a></li><li><a href="news.html">新闻</a></li><li><a href="partners.html">冰川合作伙伴</a></li><li><a href="safety.html">负责任冷缩政策</a></li></ul></div>
+            <div><h4>资源</h4><ul><li><a href="docs.html">文档</a></li><li><a href="harness-sizes.html">马具尺码表</a></li><li><a href="status.html" class="x-status">状态：全部系统正常结冰</a></li><li><a href="community.html">社区</a></li></ul></div>
+            <div><h4>法律</h4><ul><li><a href="privacy.html">隐私政策</a></li><li><a href="terms.html">使用条款</a></li><li><a href="disclaimer.html">冷责声明</a></li></ul></div>
+          </div>
+          <div class="x-foot__bottom">
+            <p>© 2026 Antarctic Ice, Inc. 保留所有冰块。</p>
+            <p class="x-disc">本网站为虚构品牌恶搞创作，不代表任何真实公司或产品。</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/js/site.js"></script>
+    <script>
+(function () {
+  /* monthly / yearly toggle */
+  var chips = [].slice.call(document.querySelectorAll("[data-cycle]"));
+  chips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      var cycle = chip.getAttribute("data-cycle");
+      chips.forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
+      [].forEach.call(document.querySelectorAll(".x-plan__price[data-month]"), function (p) {
+        p.innerHTML = p.getAttribute("data-" + cycle) + "<small>/月</small>";
+      });
+      [].forEach.call(document.querySelectorAll(".p-gift"), function (g) { g.textContent = g.getAttribute("data-" + cycle); });
+    });
+  });
+
+  /* ice calculator */
+  var P = { floe: [36, 180, 3.6], sleet: [21, 105, 2.1], hail: [7, 35, 0.7] };
+  var $ = function (id) { return document.getElementById(id); };
+  var fmt = function (n) { return "¥" + n.toLocaleString("zh-CN", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+  function num(id) { var v = parseFloat($(id).value); return isFinite(v) && v > 0 ? Math.min(v, 100000) : 0; }
+  function calc() {
+    var p = P[$("p-model").value], inM = num("p-in"), outM = num("p-out");
+    var cache = parseInt($("p-cache").value, 10) / 100, t = parseInt($("p-temp").value, 10), batch = $("p-batch").checked;
+    $("p-cache-v").textContent = Math.round(cache * 100) + "%";
+    $("p-temp-v").textContent = (t < 0 ? "−" + Math.abs(t) : t) + "°C";
+    var cIn = inM * (1 - cache) * p[0], cCache = inM * cache * p[2], cOut = outM * p[1];
+    var sub = cIn + cCache + cOut, disc = batch ? sub * 0.5 : 0, after = sub - disc;
+    var melt = t > 0 ? Math.min(95, Math.round(t * 2.5)) : 0, refund = after * melt / 100, total = after - refund;
+    $("p-r-in").textContent = fmt(cIn);
+    $("p-r-cache").textContent = fmt(cCache);
+    $("p-r-out").textContent = fmt(cOut);
+    $("p-r-batch").textContent = batch ? "−" + fmt(disc) : "—";
+    $("p-r-melt").textContent = "−" + fmt(refund) + (melt ? "（" + melt + "%）" : "");
+    $("p-total").textContent = fmt(total);
+    var note;
+    if (t <= -40) note = "极寒环境，冰块完好率 100%，无融化减免。我们为你感到骄傲。";
+    else if (t <= 0) note = "冰块状态良好，无融化减免。这是我们最喜欢的温度区间。";
+    else if (t <= 25) note = "约 " + melt + "% 的冰块会在交付途中融化，已为你免单 " + fmt(refund) + "。化了不收钱。";
+    else if (t <= 35) note = "约 " + melt + "% 的冰块会在路上化掉。建议开空调，或升级至 Pro-tective 享受优先冷链。";
+    else note = "你所在的环境严重过热，约 " + melt + "% 的冰块会化掉。说实话，这单我们几乎是送你的。请先照顾好自己。";
+    if (inM === 0 && outM === 0) note = "你还没用一块冰。冷静得令人敬佩。";
+    $("p-note").textContent = note;
+  }
+  ["p-model", "p-in", "p-out", "p-cache", "p-temp", "p-batch"].forEach(function (id) {
+    $(id).addEventListener("input", calc);
+    $(id).addEventListener("change", calc);
+  });
+  calc();
+})();
+</script>
+  </body>
+</html>

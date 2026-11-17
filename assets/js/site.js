@@ -80,17 +80,21 @@
     form.setAttribute("novalidate", "");
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var firstBad = null;
+      var firstBad = null, seenRadio = {};
       $$("[aria-invalid]", form).forEach(function (f) { f.removeAttribute("aria-invalid"); });
-      $$(".x-err[data-auto]", form).forEach(function (m) { m.remove(); });
+      $$(".x-err[data-auto]", form).forEach(function (m) { m.parentNode.removeChild(m); });
       $$("input, select, textarea", form).forEach(function (f) {
         if (!f.willValidate || f.checkValidity()) return;
+        if (f.type === "radio") {
+          if (seenRadio[f.name]) return;
+          seenRadio[f.name] = true;
+        }
         f.setAttribute("aria-invalid", "true");
         var msg = doc.createElement("p");
         msg.className = "x-err";
         msg.setAttribute("data-auto", "");
         msg.textContent = f.getAttribute("data-err") || "这里还空着，像一片没人踩过的雪地。";
-        var host = f.closest(".x-field") || f.parentNode;
+        var host = f.closest("fieldset") || f.closest(".x-field") || f.parentNode;
         host.appendChild(msg);
         if (!firstBad) firstBad = f;
       });
